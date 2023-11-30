@@ -47,12 +47,12 @@ class InverionOperation{
 	+ execute(stack : Stack<ComplexNumber>) : void
 }
 
-MathOperation <.up. MathInterface
-MathOperation --> SumOperation
-MathOperation --> DifferenceOperation
-MathOperation --> DivisionOperation
-MathOperation --> MultiplicationOperation
-MathOperation --> SqrtOperation
-MathOperation --> InverionOperation
+class MathOperation implements MathInterface
+class SumOperation extends MathOperation
+class DifferenceOperation extends MathOperation
+class DivisionOperation extends MathOperation
+class MultiplicationOperation extends MathOperation
+class SqrtOperation extends MathOperation
+class InverionOperation extends MathOperation
 
 @enduml

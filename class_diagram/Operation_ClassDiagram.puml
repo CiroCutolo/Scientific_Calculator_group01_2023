@@ -53,8 +53,8 @@ interface StackInterface{
 
 abstract class StackOperation{
 	- numOperands: int
-	+ MathOperation()	
-	+ MathOperation(numOperands : int)
+	+ StackOperation()	
+	+ StackOperation(numOperands : int)
 	+ abstract execute(stack : Stack<ComplexNumber>) : void
 	# MinOperandsToOperate(size : int) : boolean
 }
@@ -90,8 +90,8 @@ interface VariablesInterface{
 
 abstract class VariablesOperation{
 	- numOperands: int
-	+ MathOperation()	
-	+ MathOperation(numOperands : int)
+	+ VariablesOperation()	
+	+ VariablesOperation(numOperands : int)
 	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
 	# MinOperandsToOperate(size : int) : boolean
 }
@@ -116,24 +116,24 @@ class PlusVarOperation{
         + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
-MathOperation <.up. MathInterface
-MathOperation --> SumOperation
-MathOperation --> DifferenceOperation
-MathOperation --> DivisionOperation
-MathOperation --> MultiplicationOperation
-MathOperation --> SqrtOperation
-MathOperation --> InverionOperation
+class MathOperation implements MathInterface
+class SumOperation extends MathOperation
+class DifferenceOperation extends MathOperation
+class DivisionOperation extends MathOperation
+class MultiplicationOperation extends MathOperation
+class SqrtOperation extends MathOperation
+class InverionOperation extends MathOperation
 
-StackInterface <.down. StackOperation
-StackOperation --> ClearOperation
-StackOperation --> DropOperation
-StackOperation --> DupOperation
-StackOperation --> SwapOperation
-StackOperation --> OverOperation
+class StackOperation implements StackInterface 
+class ClearOperation extends StackOperation 
+class DropOperation extends StackOperation
+class DupOperation extends StackOperation
+class SwapOperation extends StackOperation
+class OverOperation extends StackOperation
 
-VariablesInterface <.down. VariablesOperation
-VariablesOperation --> SaveIntoVarOperation
-VariablesOperation --> GetFromVarOperation
-VariablesOperation --> MinusVarOperation
-VariablesOperation --> PlusVarOperation
+class VariablesOperation implements VariablesInterface 
+class SaveIntoVarOperation extends VariablesOperation
+class GetFromVarOperation extends VariablesOperation
+class MinusVarOperation extends VariablesOperation
+class PlusVarOperation extends VariablesOperation
 @enduml

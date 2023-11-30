@@ -11,8 +11,8 @@ interface VariablesInterface{
 
 abstract class VariablesOperation{
 	- numOperands: int
-	+ MathOperation()	
-	+ MathOperation(numOperands : int)
+	+ VariablesOperation()	
+	+ VariablesOperation(numOperands : int)
 	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
 	# MinOperandsToOperate(size : int) : boolean
 }
@@ -37,10 +37,10 @@ class PlusVarOperation{
         + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
-VariablesInterface <.down. VariablesOperation
-VariablesOperation --> SaveIntoVarOperation
-VariablesOperation --> GetFromVarOperation
-VariablesOperation --> MinusVarOperation
-VariablesOperation --> PlusVarOperation
+class VariablesOperation implements VariablesInterface 
+class SaveIntoVarOperation extends VariablesOperation
+class GetFromVarOperation extends VariablesOperation
+class MinusVarOperation extends VariablesOperation
+class PlusVarOperation extends VariablesOperation
 
 @enduml
