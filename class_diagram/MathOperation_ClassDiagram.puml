@@ -1,0 +1,58 @@
+@startuml ClassDiagram_group01
+
+title ClassDiagram_group01
+
+skinparam ClassAttributeIconSize 0
+
+interface MathInterface{
+	+ {abstract} execute(stack : Stack<ComplexNumber>)
+}
+
+abstract class MathOperation{
+	- numOperands
+	+ MathOperation()	
+	+ MathOperation()
+	+ abstract execute(stack : Stack<ComplexNumber>)
+	+ abstract stackError()
+	# enoughOperationInStack(size : int)
+}
+
+class SumOperation{
+	+ SumOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class DifferenceOperation{
+	+ DifferencaOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class DivisionOperation{
+	+ DivisionOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class MultiplicationOperation{
+	+ MultiplicationOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class SqrtOperation{
+	+ SqrtOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class InverionOperation{
+	+ InversionOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+MathOperation <.. MathInterface
+MathOperation -> SumOperation
+MathOperation -> DivisionOperation
+MathOperation -> MultiplicationOperation
+MathOperation -> SqrtOperation
+MathOperation -> InverionOperation
+MathOperation -> DifferenceOperation
+
+@enduml

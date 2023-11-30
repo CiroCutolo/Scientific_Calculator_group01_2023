@@ -1,0 +1,52 @@
+@startuml ClassDiagram_group01
+
+title ClassDiagram_group01
+
+skinparam ClassAttributeIconSize 0
+
+interface StackInterface{
+	+ {abstract} execute(stack : Stack<ComplexNumber>)
+}
+
+abstract class StackOperation{
+	- numOperands
+	+ StackOperation()	
+	+ StackOperation()
+	+ abstract execute(stack : Stack<ComplexNumber>)
+	+ abstract stackError()
+	# enoughOperationInStack(size : int)
+}
+
+class ClearOperation{
+	+ ClearOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class DropOperation{
+	+ DropOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class DupOperation{
+	+ DupOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class SwapOperation{
+	+ SwapOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+class OverOperation{
+	+ OverOperation()
+	+ execute(stack : Stack<ComplexNumber>)
+}
+
+StackOperation <.. StackInterface
+StackOperation -> ClearOperation
+StackOperation -> DupOperation
+StackOperation -> SwapOperation
+StackOperation -> OverOperation
+StackOperation -> DropOperation
+
+@enduml
