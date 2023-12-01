@@ -19,6 +19,7 @@ class ComplexNumber{
     + setB(b : double) : void
 }
 
+
 class InputDistinguisher{
     + InputDistinguisher()
     + isComplexNumber(text : String) : boolean
