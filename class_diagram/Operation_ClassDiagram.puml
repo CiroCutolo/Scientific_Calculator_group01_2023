@@ -1,0 +1,140 @@
+@startuml ClassDiagram_group01
+
+
+title ClassDiagram_group01
+
+skinparam ClassAttributeIconSize 0
+
+interface MathInterface{
+	+ {abstract} execute(stack : Stack<ComplexNumber>) : void
+}
+
+abstract class MathOperation{
+	- numOperands: int
+	+ MathOperation()	
+	+ MathOperation(numOperands : int)
+	+ abstract execute(stack : Stack<ComplexNumber>)
+	# MinOperandsToOperate(size : int) : boolean
+}
+
+class SumOperation{
+	+ SumOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+class DifferenceOperation{
+	+ DifferenceOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+class DivisionOperation{
+	+ DivisionOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+class MultiplicationOperation{
+	+ MultiplicationOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+class SqrtOperation{
+	+ SqrtOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+class InverionOperation{
+	+ InversionOperation()
+	+ execute(stack : Stack<ComplexNumber>) : void
+}
+
+interface StackInterface{
+	+ {abstract} execute(stack : Stack<ComplexNumber>): void
+}
+
+abstract class StackOperation{
+	- numOperands: int
+	+ StackOperation()	
+	+ StackOperation(numOperands : int)
+	+ abstract execute(stack : Stack<ComplexNumber>) : void
+	# MinOperandsToOperate(size : int) : boolean
+}
+
+class ClearOperation{
+        + ClearOperation()
+        + execute(stack : Stack<ComplexNumber>) : void
+}
+
+class DropOperation{
+        + DropOperation()
+        + execute(stack : Stack<ComplexNumber>) : void
+}
+
+class DupOperation{
+        + DupOperation()
+        + execute(stack : Stack<ComplexNumber>) : void
+}
+
+class SwapOperation{
+        + SwapOperation()
+        + execute(stack : Stack<ComplexNumber>) : void
+}
+
+class OverOperation{
+        + OverOperation()
+        + execute(stack : Stack<ComplexNumber>) : void
+}
+
+interface VariablesInterface{
+	+ {abstract} execute(variables : Variables, stack : Stack<ComplexNumber>, name : char): void
+}
+
+abstract class VariablesOperation{
+	- numOperands: int
+	+ VariablesOperation()	
+	+ VariablesOperation(numOperands : int)
+	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+	# MinOperandsToOperate(size : int) : boolean
+}
+
+class SaveIntoVarOperation{
+        + SaveIntoVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class GetFromVarOperation{
+        + GetFromVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class MinusVarOperation{
+        + MinusVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class PlusVarOperation{
+        + PlusVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class MathOperation implements MathInterface
+class SumOperation extends MathOperation
+class DifferenceOperation extends MathOperation
+class DivisionOperation extends MathOperation
+class MultiplicationOperation extends MathOperation
+class SqrtOperation extends MathOperation
+class InverionOperation extends MathOperation
+
+class StackOperation implements StackInterface 
+class ClearOperation extends StackOperation 
+class DropOperation extends StackOperation
+class DupOperation extends StackOperation
+class SwapOperation extends StackOperation
+class OverOperation extends StackOperation
+
+class VariablesOperation implements VariablesInterface 
+class SaveIntoVarOperation extends VariablesOperation
+class GetFromVarOperation extends VariablesOperation
+class MinusVarOperation extends VariablesOperation
+class PlusVarOperation extends VariablesOperation
+
+@enduml

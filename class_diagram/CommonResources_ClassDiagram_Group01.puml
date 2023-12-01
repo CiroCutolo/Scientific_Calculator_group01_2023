@@ -1,0 +1,63 @@
+@startuml Common utils ClassDiagram, Group01.
+
+skinparam ClassAttributeIconSize 0
+class Variables{
+    + Variables()
+    + get(name : char) : ComplexNumber
+    + set(name : char, value : ComplexNumber) : void
+}
+
+class ComplexNumber{
+    - a : double
+    - b : double
+    + ComplexNumber(a : double,b : double)
+    + ComplexNumber(a : double)
+    + ComplexNumber(text : String)
+    + getA() : double
+    + getB() : double 
+    + setA(a : double) : void
+    + setB(b : double) : void
+}
+
+
+class InputDistinguisher{
+    + InputDistinguisher()
+    + isComplexNumber(text : String) : boolean
+    + isStackOperation(text : String) : boolean
+    + isVariablesOperation (text : String) : boolean
+    + isMathOperation (text : String) : boolean
+}
+
+class MathErrorException{
+    + MathErrorException()
+    + MathErrorException(msg : Stirng)
+}
+class StackErrorException{
+    + StackErrorException()
+    + StackErrorException(msg : Stirng)
+}
+class SyntaxErrorException{
+    + SyntaxErrorException()
+    + SyntaxErrorException(msg : Stirng)
+}
+
+class ScientificCalculator{
+    - complexNumbersStack : Stack<ComplexNumber>
+    - variables : Variables
+    - inputDistinguisher : InputDistinguisher
+    + Calculator()
+    + getTop12Numbers : List<ComplexNumber>
+    + calculate(input : String) : void 
+    + calculateMathOperation(operation : String) : void
+    + calculateStackOperation(operation : String) : void
+    + calculateVariablesOperation(operation : String) : void
+}
+
+ComplexNumber "many" o-- "1" ScientificCalculator
+Variables "many" *-- "1" ScientificCalculator
+InputDistinguisher "1" *-- "1" ScientificCalculator
+MathErrorException <.. ScientificCalculator : throws
+SyntaxErrorException <.. ScientificCalculator : throws
+StackErrorException <.. ScientificCalculator : throws
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml ClassDiagram_group01
+
+
+title Variables Operation ClassDiagram, Group01.
+
+skinparam ClassAttributeIconSize 0
+
+interface VariablesInterface{
+	+ {abstract} execute(variables : Variables, stack : Stack<ComplexNumber>, name : char): void
+}
+
+abstract class VariablesOperation{
+	- numOperands: int
+	+ VariablesOperation()	
+	+ VariablesOperation(numOperands : int)
+	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+	# MinOperandsToOperate(size : int) : boolean
+}
+
+class SaveIntoVarOperation{
+        + SaveIntoVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class GetFromVarOperation{
+        + GetFromVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class MinusVarOperation{
+        + MinusVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class PlusVarOperation{
+        + PlusVarOperation()
+        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+}
+
+class VariablesOperation implements VariablesInterface 
+class SaveIntoVarOperation extends VariablesOperation
+class GetFromVarOperation extends VariablesOperation
+class MinusVarOperation extends VariablesOperation
+class PlusVarOperation extends VariablesOperation
+
+@enduml
