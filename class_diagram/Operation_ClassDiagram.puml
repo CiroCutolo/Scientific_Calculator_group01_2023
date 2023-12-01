@@ -136,4 +136,5 @@ class SaveIntoVarOperation extends VariablesOperation
 class GetFromVarOperation extends VariablesOperation
 class MinusVarOperation extends VariablesOperation
 class PlusVarOperation extends VariablesOperation
+
 @enduml
