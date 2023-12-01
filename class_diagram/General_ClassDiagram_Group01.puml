@@ -160,7 +160,7 @@ class ScientificCalculator{
     - variables : Variables
     - inputDistinguisher : InputDistinguisher
     + Calculator()
-    + getTop12Numbers : List<ComplexNumber>
+    + getTop12Numbers(stack : Stack<ComplexNumber>) : List<ComplexNumber>
     + calculate(input : String) : void 
     + calculateMathOperation(operation : String) : void
     + calculateStackOperation(operation : String) : void
