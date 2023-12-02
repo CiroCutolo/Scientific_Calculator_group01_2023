@@ -142,6 +142,11 @@ class InputDistinguisher{
     + isMathOperation (text : String) : boolean
 }
 
+class Exception{
+    + Exception()
+    + Exception(msg : Stirng)
+}
+
 class MathErrorException{
     + MathErrorException()
     + MathErrorException(msg : Stirng)
@@ -170,10 +175,10 @@ class ScientificCalculator{
 ComplexNumber "many" o-- "1" ScientificCalculator
 Variables "many" *-- "1" ScientificCalculator
 InputDistinguisher "1" *-- "1" ScientificCalculator
-MathErrorException <.. ScientificCalculator : throws
-SyntaxErrorException <.. ScientificCalculator : throws
-StackErrorException <.. ScientificCalculator : throws
 
+class MathErrorException extends Exception
+class SyntaxErrorException extends Exception
+class StackErrorException extends Exception
 class MathOperation implements MathInterface
 class SumOperation extends MathOperation
 class DifferenceOperation extends MathOperation
