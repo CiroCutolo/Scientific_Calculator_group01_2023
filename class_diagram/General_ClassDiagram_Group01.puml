@@ -13,7 +13,7 @@ abstract class MathOperation{
 	- numOperands: int
 	+ MathOperation()	
 	+ MathOperation(numOperands : int)
-	+ abstract execute(stack : Stack<ComplexNumber>)
+	+ abstract execute(stack : Stack<ComplexNumber>) : void
 	# minOperandsToOperate(size : int) : boolean
 }
 
