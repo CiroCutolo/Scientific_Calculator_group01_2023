@@ -42,7 +42,7 @@ class SqrtOperation{
 	+ execute(stack : Stack<ComplexNumber>) : void
 }
 
-class InverionOperation{
+class InversionOperation{
 	+ InversionOperation()
 	+ execute(stack : Stack<ComplexNumber>) : void
 }
@@ -180,13 +180,14 @@ InputDistinguisher "1" *-- "1" ScientificCalculator
 class MathErrorException extends Exception
 class SyntaxErrorException extends Exception
 class StackErrorException extends Exception
+
 class MathOperation implements MathInterface
 class SumOperation extends MathOperation
 class DifferenceOperation extends MathOperation
 class DivisionOperation extends MathOperation
 class MultiplicationOperation extends MathOperation
 class SqrtOperation extends MathOperation
-class InverionOperation extends MathOperation
+class InversionOperation extends MathOperation
 
 class StackOperation implements StackInterface 
 class ClearOperation extends StackOperation 
