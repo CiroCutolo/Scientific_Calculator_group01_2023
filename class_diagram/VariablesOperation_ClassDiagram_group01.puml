@@ -1,4 +1,4 @@
-@startuml ClassDiagram_group01
+@startuml VariablesOperation_ClassDiagram_Group01
 
 
 title Variables Operation ClassDiagram, Group01.
@@ -14,7 +14,7 @@ abstract class VariablesOperation{
 	+ VariablesOperation()	
 	+ VariablesOperation(numOperands : int)
 	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class SaveIntoVarOperation{

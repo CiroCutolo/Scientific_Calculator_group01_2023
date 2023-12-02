@@ -1,4 +1,4 @@
-@startuml ClassDiagram_group01
+@startuml StackOperation_ClassDiagram_Group01
 
 
 title Stack Operation ClassDiagram, Group01.
@@ -14,7 +14,7 @@ abstract class StackOperation{
 	+ StackOperation()	
 	+ StackOperation(numOperands : int)
 	+ abstract execute(stack : Stack<ComplexNumber>) : void
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class ClearOperation{

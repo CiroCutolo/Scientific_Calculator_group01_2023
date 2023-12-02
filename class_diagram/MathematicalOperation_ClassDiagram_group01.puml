@@ -1,4 +1,4 @@
-@startuml ClassDiagram_group01
+@startuml MathematicalOperation_ClassDiagram_Group01
 
 
 title Mathematical Operation ClassDiagram, Group01.
@@ -10,11 +10,11 @@ interface MathInterface{
 }
 
 abstract class MathOperation{
-	- numOperands: int
+	- numOperands : int
 	+ MathOperation()	
 	+ MathOperation(numOperands : int)
 	+ abstract execute(stack : Stack<ComplexNumber>)
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class SumOperation{

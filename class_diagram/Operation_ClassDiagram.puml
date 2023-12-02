@@ -1,4 +1,4 @@
-@startuml ClassDiagram_group01
+@startuml Operation_ClassDiagram_Group01
 
 
 title Operation Class Diagram, Group01.
@@ -14,7 +14,7 @@ abstract class MathOperation{
 	+ MathOperation()	
 	+ MathOperation(numOperands : int)
 	+ abstract execute(stack : Stack<ComplexNumber>)
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class SumOperation{
@@ -56,7 +56,7 @@ abstract class StackOperation{
 	+ StackOperation()	
 	+ StackOperation(numOperands : int)
 	+ abstract execute(stack : Stack<ComplexNumber>) : void
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class ClearOperation{
@@ -93,7 +93,7 @@ abstract class VariablesOperation{
 	+ VariablesOperation()	
 	+ VariablesOperation(numOperands : int)
 	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
-	# MinOperandsToOperate(size : int) : boolean
+	# minOperandsToOperate(size : int) : boolean
 }
 
 class SaveIntoVarOperation{
