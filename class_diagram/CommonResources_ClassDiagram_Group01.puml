@@ -1,4 +1,6 @@
-@startuml Common utils ClassDiagram, Group01.
+@startuml Common Resources ClassDiagram, Group01.
+
+title Common Resources Class Diagram, Group01.
 
 skinparam ClassAttributeIconSize 0
 class Variables{
@@ -28,19 +30,6 @@ class InputDistinguisher{
     + isMathOperation (text : String) : boolean
 }
 
-class MathErrorException{
-    + MathErrorException()
-    + MathErrorException(msg : Stirng)
-}
-class StackErrorException{
-    + StackErrorException()
-    + StackErrorException(msg : Stirng)
-}
-class SyntaxErrorException{
-    + SyntaxErrorException()
-    + SyntaxErrorException(msg : Stirng)
-}
-
 class ScientificCalculator{
     - complexNumbersStack : Stack<ComplexNumber>
     - variables : Variables
@@ -48,6 +37,7 @@ class ScientificCalculator{
     + Calculator()
     + getTop12Numbers : List<ComplexNumber>
     + calculate(input : String) : void 
+    + saveComplexNumber(number : String) : void
     + calculateMathOperation(operation : String) : void
     + calculateStackOperation(operation : String) : void
     + calculateVariablesOperation(operation : String) : void
@@ -56,8 +46,5 @@ class ScientificCalculator{
 ComplexNumber "many" o-- "1" ScientificCalculator
 Variables "many" *-- "1" ScientificCalculator
 InputDistinguisher "1" *-- "1" ScientificCalculator
-MathErrorException <.. ScientificCalculator : throws
-SyntaxErrorException <.. ScientificCalculator : throws
-StackErrorException <.. ScientificCalculator : throws
 
 @enduml

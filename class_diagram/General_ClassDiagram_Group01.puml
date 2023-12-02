@@ -1,7 +1,7 @@
-@startuml ClassDiagram_group01
+@startuml General ClassDiagram Group01.
 
 
-title ClassDiagram_group01
+title General Class Diagram, Group01.
 
 skinparam ClassAttributeIconSize 0
 
@@ -144,20 +144,20 @@ class InputDistinguisher{
 
 class Exception{
     + Exception()
-    + Exception(msg : Stirng)
+    + Exception(msg : String)
 }
 
 class MathErrorException{
     + MathErrorException()
-    + MathErrorException(msg : Stirng)
+    + MathErrorException(msg : String)
 }
 class StackErrorException{
     + StackErrorException()
-    + StackErrorException(msg : Stirng)
+    + StackErrorException(msg : String)
 }
 class SyntaxErrorException{
     + SyntaxErrorException()
-    + SyntaxErrorException(msg : Stirng)
+    + SyntaxErrorException(msg : String)
 }
 
 class ScientificCalculator{
@@ -167,6 +167,7 @@ class ScientificCalculator{
     + Calculator()
     + getTop12Numbers(stack : Stack<ComplexNumber>) : List<ComplexNumber>
     + calculate(input : String) : void 
+    + saveComplexNumber(number : String) : void
     + calculateMathOperation(operation : String) : void
     + calculateStackOperation(operation : String) : void
     + calculateVariablesOperation(operation : String) : void

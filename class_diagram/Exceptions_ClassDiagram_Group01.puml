@@ -1,0 +1,28 @@
+@startuml Exceptions ClassDiagram Group01
+
+
+title Exceptions Class Diagram, Group01.
+
+skinparam ClassAttributeIconSize 0
+
+class Exception{
+    + Exception()
+    + Exception(msg : String)
+}
+
+class MathErrorException{
+    + MathErrorException()
+    + MathErrorException(msg : String)
+}
+class StackErrorException{
+    + StackErrorException()
+    + StackErrorException(msg : String)
+}
+class SyntaxErrorException{
+    + SyntaxErrorException()
+    + SyntaxErrorException(msg : String)
+}
+
+class MathErrorException extends Exception
+class SyntaxErrorException extends Exception
+class StackErrorException extends Exception
