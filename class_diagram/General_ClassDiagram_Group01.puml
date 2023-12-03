@@ -118,8 +118,8 @@ class PlusVarOperation{
 
 class Variables{
     + Variables()
-    + get(name : char) : ComplexNumber
-    + set(name : char, value : ComplexNumber) : void
+    + getVariable(name : char) : ComplexNumber
+    + setVariable(name : char, value : ComplexNumber) : void
 }
 
 class ComplexNumber{
