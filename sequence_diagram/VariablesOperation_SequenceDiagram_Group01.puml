@@ -1,4 +1,4 @@
-@startuml SequenceDiagram
+@startuml VariablesOperation_SequenceDiagram_Group01
 
 title Variables Operation Sequence Diagram, Group01.
 
@@ -11,14 +11,13 @@ activate calc
 
 calc -> input : IsVariablesOperation()
 activate input
+input -> input : checks if input is a variables operation
 input --> calc : VariablesOperation : boolean
 deactivate input
 
 calc -> calc : calculateVariablesOperation()
-
-calc -> Variables : execute()
+Variables -> Variables : execute()
 activate Variables
-Variables --> calc
-deactivate Variables
+deactivate Variables
 
 @enduml

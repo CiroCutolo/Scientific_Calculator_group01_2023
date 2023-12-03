@@ -1,4 +1,4 @@
-@startuml SequenceDiagram
+@startuml StackOperation_SequenceDiagram_Group01
 
 title Stack Operation Sequence Diagram Group01.
 
@@ -11,14 +11,13 @@ activate calc
 
 calc -> input : IsStackOperation()
 activate input
+input -> input : checks if input is a stack operation
 input --> calc : stackOperation : boolean
 deactivate input
 
 calc -> calc : calculateStackOperation()
-
-calc -> stack : execute()
+stack -> stack : execute()
 activate stack
-stack --> calc
-deactivate stack
+deactivate stack
 
 @enduml
