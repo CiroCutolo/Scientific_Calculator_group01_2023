@@ -4,6 +4,7 @@ title Complex Number Sequence Diagram, Group01.
 
 participant ScientificCalculator as calc
 participant InputDistinguisher as input
+participant complexNumbersStack as num_stack
 
 
 -> calc:calculate()
@@ -14,6 +15,10 @@ activate input
 input --> calc : ComplexNumber : boolean
 deactivate input
 
-calc -> calc : saveComplexNumber()
+calc -> num_stack : saveComplexNumber()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack --> calc
+deactivate num_stack
 
 @enduml
