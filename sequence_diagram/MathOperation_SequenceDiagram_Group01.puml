@@ -5,6 +5,7 @@ title Math Operation Sequence Diagram, Group01.
 participant ScientificCalculator as calc
 participant InputDistinguisher as input
 participant MathOperation as math
+participant complexNumbersStack as num_stack
 
 -> calc:calculate()
 activate calc
@@ -16,8 +17,14 @@ input --> calc : mathOperation : boolean
 deactivate input
 
 calc -> calc : calculateMathOperation()
-math -> math : execute()
+calc -> math : execute()
 activate math
+math -> num_stack : execute()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack --> math
+deactivate num_stack
+math --> calc
 deactivate math
 
 @enduml

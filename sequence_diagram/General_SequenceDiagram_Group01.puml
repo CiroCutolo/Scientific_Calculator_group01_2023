@@ -7,6 +7,8 @@ participant InputDistinguisher as input
 participant MathOperation as math
 participant StackOperation as stack
 participant VariablesOperation as Variables
+participant complexNumbersStack as num_stack
+participant variablesMap as var_map
 
 -> calc:calculate()
 activate calc
@@ -22,9 +24,16 @@ input --> calc : mathOperation : boolean
 deactivate input
 
 calc -> calc : calculateMathOperation()
-math -> math : execute()
+calc -> math : execute()
 activate math
+math -> num_stack : execute()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack --> math
+deactivate num_stack
+math --> calc
 deactivate math
+
 
 
 ' stack op case starts
@@ -37,8 +46,14 @@ input --> calc : stackOperation : boolean
 deactivate input
 
 calc -> calc : calculateStackOperation()
-stack -> stack : execute()
+calc -> stack : execute()
 activate stack
+stack -> num_stack : execute()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack --> stack
+deactivate num_stack
+stack --> calc
 deactivate stack
 
 
@@ -52,8 +67,14 @@ input --> calc : VariablesOperation : boolean
 deactivate input
 
 calc -> calc : calculateVariablesOperation()
-Variables -> Variables : execute()
+calc -> Variables : execute()
 activate Variables
+Variables -> var_map : execute()
+activate var_map
+var_map -> var_map : [Update variable]
+var_map --> Variables
+deactivate var_map
+Variables --> calc
 deactivate Variables
 
 
@@ -66,8 +87,11 @@ input -> input : checks if input is a complex number
 input --> calc : ComplexNumber : boolean
 deactivate input
 
-calc -> calc : saveComplexNumber()
-
+calc -> num_stack : saveComplexNumber()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack --> calc
+deactivate num_stack
 end
 
 @enduml

@@ -5,6 +5,7 @@ title Variables Operation Sequence Diagram, Group01.
 participant ScientificCalculator as calc
 participant InputDistinguisher as input
 participant VariablesOperation as Variables
+participant variablesMap as var_map
 
 -> calc:calculate()
 activate calc
@@ -16,8 +17,14 @@ input --> calc : VariablesOperation : boolean
 deactivate input
 
 calc -> calc : calculateVariablesOperation()
-Variables -> Variables : execute()
+calc -> Variables : execute()
 activate Variables
+Variables -> var_map : execute()
+activate var_map
+var_map -> var_map : [Update variable]
+var_map --> Variables
+deactivate var_map
+Variables --> calc
 deactivate Variables
 
 @enduml
