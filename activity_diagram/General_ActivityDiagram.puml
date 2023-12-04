@@ -42,11 +42,11 @@ case (IsAVariablesOperation)
 	endif
 	->yes;
 	if (What kind of VariablesOperation is?) then
-		->Operation is Variable to Stack;
-		
-
+		:Operation is Variable to Stack;
+		:Update the Stack state;
 	else
 		:Operation is Stack to Variable;
+		:Update the Variable state;
 	endif
 case (isAComplexNumber)
 	if (Is valid?) then
