@@ -117,6 +117,7 @@ class PlusVarOperation{
 }
 
 class Variables{
+    - varMap : Map<Character, ComplexNumber>
     + Variables()
     + getVariable(name : char) : ComplexNumber
     + setVariable(name : char, value : ComplexNumber) : void
