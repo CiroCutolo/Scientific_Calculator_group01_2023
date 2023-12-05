@@ -69,11 +69,19 @@ deactivate input
 calc -> calc : calculateVariablesOperation()
 calc -> Variables : execute()
 activate Variables
+alt is a stack to variable operation
 Variables -> var_map : execute()
 activate var_map
 var_map -> var_map : [Update variable]
 var_map --> Variables
 deactivate var_map
+else is a variable to stack operation
+Variables -> num_stack : execute()
+activate num_stack
+num_stack -> num_stack : [Update stack]
+num_stack -->Variables
+deactivate num_stack
+end
 Variables --> calc
 deactivate Variables
 
