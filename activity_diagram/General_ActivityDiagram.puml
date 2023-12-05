@@ -1,0 +1,64 @@
+@startuml ActivityDiagram
+
+start
+switch (Input Recognition)
+case (IsAMathOperation)
+	if (Min Operands To Operate?) then
+		->no;
+		#red:stack error;
+		kill
+	endif
+	->yes;
+	:Pop operand(s) from Stack;
+	if(Is possible to calculate?) then
+		->no;
+		#red: math error;
+		kill
+	endif
+	->yes;
+	:Execute operation;
+	:Push result into Stack;
+
+case (IsAStackOperation)
+	if (Min Operands To Operate?) then
+		->no;
+		#red:stack error;
+		kill
+	endif
+	->yes;
+	:Manipulate stack;
+
+case (IsAVariablesOperation)
+	if (Is valid?) then
+		->no;
+		#red:syntax error;
+		kill
+	endif
+	->yes;
+	if (Min Operands To Operate?) then
+		->no;
+		#red:stack error;
+		kill
+	endif
+	->yes;
+	if (What kind of VariablesOperation is?) then
+		:Operation is Variable to Stack;
+		:Update the Stack state;
+	else
+		:Operation is Stack to Variable;
+		:Update the Variable state;
+	endif
+case (isAComplexNumber)
+	if (Is valid?) then
+		->no;
+		#red:syntax error;
+		kill
+	endif
+	->yes;
+	:Save Complex Number into Stack;
+endswitch
+
+-Show last 12 stack elements
+stop
+
+@enduml
