@@ -5,10 +5,49 @@
  */
 package scientificcalculator_group01.mathoperations;
 
+import java.util.Stack;
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.exceptions.StackErrorException;
+
 /**
  *
- * @author ciroc
+ * @author Gaetano Frasca
+ * 
+ * Questa classe fornisce un metodo per eseguire una moltiplicazione tra
+ * due numeri complessi presenti nello stack.
  */
-public class MultiplicationOperation {
+public class MultiplicationOperation extends MathOperation{
+    
+    /**
+     * @descrizione Costruttore di default
+     *              Richiama il costruttore della superclasse MathOperation, 
+     *              fornendo come parametro il numero di operandi necessari 
+     *              affinchè una moltiplicazione possa essere effettuata 
+     *              correttamente, ossia 2
+     */
+    public MultiplicationOperation(){
+        super(2);
+    }
+    
+    /**
+     * @descrizione Esegue l'operazione matematica di moltiplicazione sugli
+     *              ultimi due elementi inseriti nello stack.
+     * @param stack
+     * @throws StackErrorException 
+     */
+    public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
+        
+        if(!super.minOperandsToOperate(2))
+            throw new StackErrorException("Not enough operands given...");
+        
+        ComplexNumber num1 = stack.pop();
+        ComplexNumber num2 = stack.pop();
+        
+        ComplexNumber result = new ComplexNumber(
+                num1.getA() * num2.getA() - num1.getB() * num2.getB() ,
+                num1.getA() * num2.getB() + num2.getA() * num1.getB()   );
+        
+        stack.push(result);
+    }
     
 }
