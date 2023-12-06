@@ -9,13 +9,13 @@ package scientificcalculator_group01.exceptions;
  *
  * @author ciroc
  */
-public class MathErrorException extends Exception{
+public class MathErrorException {
 
     /**
      * Creates a new instance of <code>MathErrorException</code> without detail
      * message.
      */
-    public MathErrorException(){
+    public MathErrorException() {
     }
 
     /**

@@ -9,7 +9,7 @@ package scientificcalculator_group01.exceptions;
  *
  * @author ciroc
  */
-public class StackErrorException extends Exception{
+public class StackErrorException {
 
     /**
      * Creates a new instance of <code>StackErrorException</code> without detail
