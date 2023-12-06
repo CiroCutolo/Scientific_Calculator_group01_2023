@@ -9,7 +9,7 @@ package scientificcalculator_group01.exceptions;
  *
  * @author ciroc
  */
-public class SyntaxErrorException {
+public class SyntaxErrorException extends Exception{
 
     /**
      * Creates a new instance of <code>SyntaxErrorException</code> without
