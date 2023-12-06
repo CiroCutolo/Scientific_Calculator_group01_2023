@@ -2,15 +2,15 @@
 
 start
 switch (Input Recognition)
-case (IsAMathOperation)
-	if (Min Operands To Operate?) then
+case (It's a MathOperation)
+	if (Are there enough operands to operate?) then
 		->no;
 		#red:stack error;
 		kill
 	endif
 	->yes;
 	:Pop operand(s) from Stack;
-	if(Is possible to calculate?) then
+	if(It's possible to calculate?) then
 		->no;
 		#red: math error;
 		kill
@@ -19,37 +19,37 @@ case (IsAMathOperation)
 	:Execute operation;
 	:Push result into Stack;
 
-case (IsAStackOperation)
-	if (Min Operands To Operate?) then
+case (It's a StackOperation)
+	if (Are there enough operands to operate?) then
 		->no;
 		#red:stack error;
 		kill
 	endif
 	->yes;
-	:Manipulate stack;
+	:Manipulate Stack;
 
-case (IsAVariablesOperation)
-	if (Is valid?) then
+case (It's a VariablesOperation)
+	if (It's valid?) then
 		->no;
 		#red:syntax error;
 		kill
 	endif
 	->yes;
-	if (Min Operands To Operate?) then
+	if (Are there enough operands to operate?) then
 		->no;
 		#red:stack error;
 		kill
 	endif
 	->yes;
-	if (What kind of VariablesOperation is?) then
-		:Operation is Variable to Stack;
+	if (What kind of operation is it?) then
+		->Variable to Stack;
 		:Update the Stack state;
 	else
-		:Operation is Stack to Variable;
+		->Stack to Variable;
 		:Update the Variable state;
 	endif
-case (isAComplexNumber)
-	if (Is valid?) then
+case (It's a ComplexNumber)
+	if (It's valid?) then
 		->no;
 		#red:syntax error;
 		kill
@@ -58,7 +58,7 @@ case (isAComplexNumber)
 	:Save Complex Number into Stack;
 endswitch
 
--Show last 12 stack elements
+-Show last 12 Stack elements
 stop
 
 @enduml

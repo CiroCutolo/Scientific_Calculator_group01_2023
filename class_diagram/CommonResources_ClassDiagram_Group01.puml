@@ -4,6 +4,7 @@ title Common Resources Class Diagram, Group01.
 
 skinparam ClassAttributeIconSize 0
 class Variables{
+    - varMap : Map<Character, ComplexNumber>
     + Variables()
     + getVariable(name : char) : ComplexNumber
     + setVariable(name : char, value : ComplexNumber) : void
