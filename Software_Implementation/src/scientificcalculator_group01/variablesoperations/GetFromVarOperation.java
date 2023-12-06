@@ -5,10 +5,26 @@
  */
 package scientificcalculator_group01.variablesoperations;
 
+import java.util.Stack;
+
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.common_resources.Variables;
+
 /**
  *
- * @author ciroc
+ * @author Aurora Campione
  */
-public class GetFromVarOperation {
+public class GetFromVarOperation extends VariablesOperation{
+    public GetFromVarOperation(){
+        super(0);
+    }
+
+    @Override
+    public void execute(Variables variable, Stack<ComplexNumber> stack, char name){
+        ComplexNumber value = variable.getVariable(name);
+
+        stack.push(value);
+    }
+
     
 }

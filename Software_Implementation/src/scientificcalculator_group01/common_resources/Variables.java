@@ -13,14 +13,20 @@ import java.util.Map;
  * @author ciroc
  */
 public class Variables {
-    private Map<Character,ComplexNumber> varMap;
+    private Map <Character,ComplexNumber> varMap;
     
     public Variables(){
-        varMap = new HashMap();
+        varMap = new HashMap <Character,ComplexNumber> ();
+        ComplexNumber num = new ComplexNumber(0);
+
+        for (char letter = 'a'; letter <= 'z'; letter++) {
+            varMap.put(Character.valueOf(letter), num);
+        }
         
     }
     
     public ComplexNumber getVariable(char name){
+    
         
     }
     
