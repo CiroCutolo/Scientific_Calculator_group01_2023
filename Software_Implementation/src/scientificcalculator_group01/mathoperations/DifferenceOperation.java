@@ -23,9 +23,15 @@ public class DifferenceOperation extends MathOperation{
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){
             throw new StackErrorException();
-
         }
         
+        ComplexNumber num1 = stack.pop();
+        ComplexNumber num2= stack.pop();
+
+        ComplexNumber result = new ComplexNumber(num2.getA()-num1.getA(), num2.getB()-num1.getB());
+
+        stack.push(result);
+
     }
     
 }
