@@ -11,7 +11,6 @@ package scientificcalculator_group01.common_resources;
  */
 public class InputDistinguisher {
     public InputDistinguisher(){
-        
     }
     
     public boolean isComplexNumber(String text){
@@ -28,14 +27,47 @@ public class InputDistinguisher {
     }
     
     public boolean isStackOperation(String text){
+        if(text.matches("drop")){
+            return true;
+        }else if(text.matches("dup")){
+            return true;
+        }else if(text.matches("clear")){
+            return true;
+        }else if(text.matches("over")){
+            return true;
+        }else if(text.matches("swap")){
+            return true;
+        }
         return false;
     }
     
     public boolean isMathOperation(String text){
+        if(text.matches("+")){
+            return true;
+        }else if(text.matches("-")){
+            return true;
+        }else if(text.matches("*")){
+            return true;
+        }else if(text.matches("/")){
+            return true;
+        }else if(text.matches("+-")){
+            return true;
+        }else if(text.matches("sqrt")){
+            return true;
+        }
         return false;
     }
     
     public boolean isVariablesOperation(String text){
+        if(text.matches("^<[a-z]$")){
+            return true;
+        }else if(text.matches("^>[a-z]$")){
+            return true;
+        }else if(text.matches("^+[a-z]$")){
+            return true;
+        }else if(text.matches("^-[a-z]$")){
+            return true;
+        }
         return false;
     }
 }
