@@ -9,6 +9,25 @@ package scientificcalculator_group01.stackoperations;
  *
  * @author ciroc
  */
-public class StackOperation {
+public class StackOperation implements StackInterface{
+    private final int numOperands;
+    
+    public StackOperation(){
+        
+    }
+    
+    
+    public StackOperation(int numOperands){
+        this.numOperands = numOperands;
+    }
+    
+    @Override
+    public abstract void execute(Stack<ComplexNumber> stack);
+    
+    protected boolean minOperandsToOperate(int size){
+        return size >= numOperands; 
+        
+    }
+    
     
 }

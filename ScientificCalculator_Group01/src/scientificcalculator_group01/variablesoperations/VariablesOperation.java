@@ -9,6 +9,22 @@ package scientificcalculator_group01.variablesoperations;
  *
  * @author ciroc
  */
-public class VariablesOperation {
+public abstract class VariablesOperation implements VariablesInterface{
+    private final int numOperands;
     
+    public VariablesOperation(){
+        
+    }
+    
+    
+    public VariablesOperation(int numOperands){
+        this.numOperands = numOperands;
+    }
+    
+    @Override
+    public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name);
+    
+    protected boolean minOperandsToOperate(int size){
+        return size >= numOperands;    
+    }
 }
