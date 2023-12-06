@@ -5,6 +5,10 @@
  */
 package scientificcalculator_group01.variablesoperations;
 
+import java.util.Stack;
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.common_resources.Variables;
+
 /**
  *
  * @author ciroc
@@ -13,7 +17,7 @@ public abstract class VariablesOperation implements VariablesInterface{
     private final int numOperands;
     
     public VariablesOperation(){
-        
+        numOperands = 0;
     }
     
     

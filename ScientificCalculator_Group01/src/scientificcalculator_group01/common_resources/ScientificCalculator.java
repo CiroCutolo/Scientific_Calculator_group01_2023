@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class ScientificCalculator {
     private Stack<ComplexNumber> complexNumberStack;
-    private Variables variables;
+    private Variables variable;
     private InputDistinguisher inputDistinguisher;
     
     public ScientificCalculator(){
@@ -25,16 +25,21 @@ public class ScientificCalculator {
     }
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
         
+        
     }
+    
     public void saveComplexNumber(String number){
         
     }
+    
     void calculateMathOperation(String operation){
         
     }
+    
     void calculateStackOperation(String operation){
         
     }
+    
     void calculateVariablesOperation(String operation){
         
     }

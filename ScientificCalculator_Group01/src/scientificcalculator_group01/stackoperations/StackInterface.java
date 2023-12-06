@@ -5,10 +5,13 @@
  */
 package scientificcalculator_group01.stackoperations;
 
+import java.util.Stack;
+import scientificcalculator_group01.common_resources.ComplexNumber;
+
 /**
  *
  * @author ciroc
  */
 public interface StackInterface {
-    
+    public abstract void execute(Stack<ComplexNumber> stack);
 }

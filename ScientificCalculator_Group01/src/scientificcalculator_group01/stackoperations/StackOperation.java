@@ -5,15 +5,18 @@
  */
 package scientificcalculator_group01.stackoperations;
 
+import java.util.Stack;
+import scientificcalculator_group01.common_resources.ComplexNumber;
+
 /**
  *
  * @author ciroc
  */
-public class StackOperation implements StackInterface{
+public abstract class StackOperation implements StackInterface{
     private final int numOperands;
     
     public StackOperation(){
-        
+        numOperands = 0;
     }
     
     
