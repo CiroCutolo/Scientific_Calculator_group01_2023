@@ -5,14 +5,10 @@
  */
 package scientificcalculator_group01.variablesoperations;
 
-import java.util.Stack;
-import scientificcalculator_group01.common_resources.ComplexNumber;
-import scientificcalculator_group01.common_resources.Variables;
-
 /**
  *
  * @author ciroc
  */
 public interface VariablesInterface {
-    public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name);
+    
 }

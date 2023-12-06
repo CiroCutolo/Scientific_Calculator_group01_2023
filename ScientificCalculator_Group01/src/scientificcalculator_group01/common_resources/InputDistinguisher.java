@@ -10,24 +10,5 @@ package scientificcalculator_group01.common_resources;
  * @author ciroc
  */
 public class InputDistinguisher {
-    public InputDistinguisher(){
-        
-    }
     
-    public boolean isComplexNumber(String text){
-        
-    }
-    
-    public boolean isStackOperation(String text){
-        
-    }
-    
-    public boolean isMathOperation(String text){
-        
-    }
-    
-    public boolean isVariablesOperation(String text){
-        
-    }
 }
-
