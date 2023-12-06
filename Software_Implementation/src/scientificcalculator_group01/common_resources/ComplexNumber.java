@@ -35,10 +35,20 @@ public class ComplexNumber {
             if(text.compareTo("i") == 0){
                 a = "0";
                 b = "1";
-            }else if(text.indexOf("i")>0){
-                
+            }else if(text.indexOf("i") > 0){
+                a = "0";
+                b = text.substring(0, text.length()-1);
+            }else{
+                a = text.substring(0, text.length()-1);
+                b = 0;
             }
+        }else{
+            a = text.substring(0, pos);
+            b = text.substring(pos, text.length()-1);
         }
+
+        this.a = Double.parseDouble(a);
+        this.b = Double.parseDouble(b);
         
     }
 
