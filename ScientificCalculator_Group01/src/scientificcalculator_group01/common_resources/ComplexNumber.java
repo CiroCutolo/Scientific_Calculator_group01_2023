@@ -10,5 +10,5 @@ package scientificcalculator_group01.common_resources;
  * @author ciroc
  */
 public class ComplexNumber {
-    
+     
 }
