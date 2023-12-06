@@ -5,10 +5,37 @@
  */
 package scientificcalculator_group01.variablesoperations;
 
+import java.util.Stack;
+
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.common_resources.Variables;
+import scientificcalculator_group01.exceptions.StackErrorException;
+import scientificcalculator_group01.exceptions.SyntaxErrorException;
+import scientificcalculator_group01.mathoperations.SumOperation;
+
 /**
  *
  * @author ciroc
  */
-public class PlusVarOperation {
+public class PlusVarOperation extends VariablesOperation{
+    public PlusVarOperation(){
+        super(1);
+    }
+
+    @Override
+    public void execute(Variables variable, Stack<ComplexNumber> stack, char name)
+            throws StackErrorException{
+                if(!super.minOperandsToOperate(stack.size())){
+                    throw new StackErrorException("Not enough operands given...");
+                }
+
+                ComplexNumber var = variable.getVariable(name);
+
+                stack.push(var);
+                SumOperation sum = new SumOperation();
+                sum.execute(stack);
+                variable.setVariable(name, stack.pop());
+
+    }
     
 }

@@ -20,7 +20,7 @@ public class SqrtOperation extends MathOperation{
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
         if(!super.minOperandsToOperate(stack.size())){
-            throw new StackErrorException();
+            throw new StackErrorException("Not enough operands given...");
         }
     }
 
