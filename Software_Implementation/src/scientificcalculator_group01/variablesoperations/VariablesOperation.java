@@ -8,6 +8,8 @@ package scientificcalculator_group01.variablesoperations;
 import java.util.Stack;
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.Variables;
+import scientificcalculator_group01.exceptions.StackErrorException;
+import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
@@ -26,7 +28,7 @@ public abstract class VariablesOperation implements VariablesInterface{
     }
     
     @Override
-    public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name);
+    public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException;
     
     protected boolean minOperandsToOperate(int size){
         return size >= numOperands;    

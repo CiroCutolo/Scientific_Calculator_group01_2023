@@ -7,6 +7,9 @@ package scientificcalculator_group01.mathoperations;
 
 import java.util.Stack;
 import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.exceptions.MathErrorException;
+import scientificcalculator_group01.exceptions.StackErrorException;
+import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
@@ -25,7 +28,7 @@ public abstract class MathOperation implements MathInterface{
     }
     
     @Override
-    public abstract void execute(Stack<ComplexNumber> stack);
+    public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException, SyntaxErrorException, MathErrorException;
     
     protected boolean minOperandsToOperate(int size){
         return size >= numOperands;    
