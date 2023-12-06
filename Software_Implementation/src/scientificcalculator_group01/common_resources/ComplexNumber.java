@@ -14,14 +14,31 @@ public class ComplexNumber {
     private double b;
     
     public ComplexNumber(double a, double b){
-        
+        this.a = a;
+        this.b = b;
     }
     
     public ComplexNumber(double a){
+        this.a = a;
+        this.b = 0;
         
     }
     
     public ComplexNumber(String text){
+        String a,b;
+
+        int pos = text.indexOf("+", 1);
+        if(pos < 0)
+            pos = text.indexOf("-", 1);
+        
+        if(pos < 0){
+            if(text.compareTo("i") == 0){
+                a = "0";
+                b = "1";
+            }else if(text.indexOf("i")>0){
+                
+            }
+        }
         
     }
 
