@@ -35,6 +35,7 @@ public class MultiplicationOperation extends MathOperation{
      * @param stack
      * @throws StackErrorException 
      */
+    @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         
         if(!super.minOperandsToOperate(2))
