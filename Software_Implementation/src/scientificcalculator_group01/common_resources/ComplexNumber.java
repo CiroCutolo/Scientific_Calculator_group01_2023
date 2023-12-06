@@ -40,7 +40,7 @@ public class ComplexNumber {
                 b = text.substring(0, text.length()-1);
             }else{
                 a = text.substring(0, text.length()-1);
-                b = 0;
+                b = "0";
             }
         }else{
             a = text.substring(0, pos);
