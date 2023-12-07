@@ -34,7 +34,7 @@ public class GetFromVarOperation extends VariablesOperation{
     @Override
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws SyntaxErrorException {
         ComplexNumber value = variable.getVariable(name);
-        if(value == null){
+        if(value != null){
             stack.push(value);
         }
         else{
