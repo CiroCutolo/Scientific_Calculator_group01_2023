@@ -13,11 +13,17 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Claudia Carucci
+ * La classe consente di eseguire il comando swap sugli elementi inserito nello stack..
  */
 public class SwapOperation extends StackOperation{
     public SwapOperation(){
         super(2);
     }
+    /**@descrizione Il comando eseguito consente di invertire gli ultimi due elementi presenti nello stack.
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
+    */
 
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
