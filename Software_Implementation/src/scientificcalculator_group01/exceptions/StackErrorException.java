@@ -7,7 +7,7 @@ package scientificcalculator_group01.exceptions;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class StackErrorException extends Exception {
 

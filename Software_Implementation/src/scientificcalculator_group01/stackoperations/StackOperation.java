@@ -11,7 +11,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Aurora Campione
  */
 public abstract class StackOperation implements StackInterface{
     private final int numOperands;

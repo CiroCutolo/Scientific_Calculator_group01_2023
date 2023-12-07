@@ -12,7 +12,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class SwapOperation extends StackOperation{
     public SwapOperation(){
