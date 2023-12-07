@@ -5,6 +5,7 @@
  */
 package scientificcalculator_group01.common_resources;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -66,7 +67,9 @@ public class ScientificCalculator {
     }
 
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
-        
+        List<ComplexNumber> list = new LinkedList<>();
+
+        return list;
     }
     
     public void saveComplexNumber(String number){
