@@ -18,13 +18,6 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  */
 public class MultiplicationOperation extends MathOperation{
     
-    /**
-     * @descrizione Costruttore di default
-     *              Richiama il costruttore della superclasse MathOperation, 
-     *              fornendo come parametro il numero di operandi necessari 
-     *              affinchè una moltiplicazione possa essere effettuata 
-     *              correttamente, ossia 2
-     */
     public MultiplicationOperation(){
         super(2);
     }
@@ -32,7 +25,7 @@ public class MultiplicationOperation extends MathOperation{
     /**
      * @descrizione Esegue l'operazione matematica di moltiplicazione sugli
      *              ultimi due elementi inseriti nello stack.
-     * @param stack
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
      * @throws StackErrorException 
      */
     @Override
