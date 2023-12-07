@@ -111,13 +111,13 @@ public class ScienticCalculator_Group01Controller implements Initializable {
             LA.setVisible(false); 
         });
         
-        for(char letter = 'a'; letter <= 'z'; letter++){ //SI DEVE FARE UN ARRAY DI BOTTONI
+        /*for(char letter = 'a'; letter <= 'z'; letter++){ //SI DEVE FARE UN ARRAY DI BOTTONI
             letter.setOnAction((event) -> {
                 inputNum.setText(inputNum.getText() + a.getText());
                 inputLet.setText(inputLet.getText() + a.getText());
         
         });
-        }
+        }*/
     }    
     
     
