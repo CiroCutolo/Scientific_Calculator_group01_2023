@@ -10,27 +10,27 @@ import java.util.Map;
 
 /**
  *
- * @author ciroc
+ * @author Aurora Campione
  */
 public class Variables {
     private Map <Character,ComplexNumber> varMap;
     
     public Variables(){
         varMap = new HashMap <Character,ComplexNumber> ();
-        ComplexNumber num = new ComplexNumber(0);
 
         for (char letter = 'a'; letter <= 'z'; letter++) {
-            varMap.put(Character.valueOf(letter), num);
+            varMap.put(letter, null);
         }
         
     }
     
     public ComplexNumber getVariable(char name){
+        return varMap.get(name);
     
         
     }
     
     public void setVariable(char name, ComplexNumber value){
-        
+        varMap.put(name, value);
     }
 }
