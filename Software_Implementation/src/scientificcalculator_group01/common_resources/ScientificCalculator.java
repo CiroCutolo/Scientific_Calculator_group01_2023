@@ -66,6 +66,7 @@ public class ScientificCalculator {
     }
 
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
+        
         List<ComplexNumber> list = new LinkedList<>();
 
         return list;
