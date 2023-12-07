@@ -6,6 +6,7 @@
 package scientificcalculator_group01.mathoperations;
 
 import java.util.Stack;
+import java.util.Vector;
 
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.exceptions.StackErrorException;
@@ -34,18 +35,38 @@ public class SqrtOperation extends MathOperation{
         }
 
         ComplexNumber num = stack.pop();
+        Vector<ComplexNumber> ans = new Vector<ComplexNumber>();
+        
+        double x1 = Math.abs(Math.sqrt((num.getA() + Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())/2)));
+        double y1 = num.getB() / (2*x1);
 
-        if( num.getA() != 0 && num.getB() == 0 ){
-            if( num.getA() < 0 ){
-                double mod = Math.abs(num.getA());
-                ComplexNumber result = new ComplexNumber(0,Math.sqrt(mod));
-            }else{
-                ComplexNumber result = new ComplexNumber(Math.sqrt(num.getA()));
-            }
+        ans.add(new ComplexNumber(x1, y1));
 
+        double x2 = -1 * x1;
+        double y2 = num.getB() / (2 * x2);
+
+        if (x2 != 0){
+            ans.add(new ComplexNumber(x2, y2));
         }
 
-        stack.push(result);
+        double x3 = (num.getA() - Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())) / 2;
+
+        if(x3 > 0){
+            x3 = Math.abs(Math.sqrt(x3));
+            double y3 = num.getB() / (2* x3);
+            ans.add(new ComplexNumber(x3, y3));
+
+            double x4 = -1 * x3;
+            double y4 = num.getB() / (2 * x4);
+
+            if( x4 != 0){
+                ans.add(new ComplexNumber(x4, y4));
+            }
+        }
+
+        for(ComplexNumber c : ans){
+            stack.push(c);
+        }
 
     }
 
