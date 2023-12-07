@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  * 
  * La classe rappresenta l'operazione matematica di divisione esguita
  * su due numeri complessi presenti nello stack.
