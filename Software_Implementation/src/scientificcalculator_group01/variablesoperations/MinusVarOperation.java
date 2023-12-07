@@ -34,8 +34,8 @@ public class MinusVarOperation extends VariablesOperation{
  	 * @param stack Struttura su cui si basa la calcolatrice.
  	 * @param variable mappa di variabili in cui viene salvato il valore corrispondente al nome della variabile (ad esempio'x').
 	 * @param name Nome della variabile in cui deve essere salvato il valore dell'ultimo operando inserito nello stack.  
-	 * @throw StackErrorException Lanciata se lo stack non contiene abbastanza elementi per eseguire il comando.
- 	 * @throw SyntaxErrorException Lanciata se gli input non sono stati inseriti nel formato corretto o nella maniera corretta.
+	 * @throws StackErrorException Lanciata se lo stack non contiene abbastanza elementi per eseguire il comando.
+ 	 * @throws SyntaxErrorException Lanciata se gli input non sono stati inseriti nel formato corretto o nella maniera corretta.
 	 */
 	@Override
 	public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException{
