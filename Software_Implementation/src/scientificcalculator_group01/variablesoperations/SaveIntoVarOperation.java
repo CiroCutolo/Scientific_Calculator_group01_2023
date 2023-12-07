@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  * 
- * @author ciroc
+ * @author Ciro Cutolo
  * 
  * La classe consente di salvare l'ultimo elemento dello stack nella variabile.
  */

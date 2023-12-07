@@ -30,26 +30,8 @@ import scientificcalculator_group01.variablesoperations.SaveIntoVarOperation;
 /**
  *
  * @author Ciro Cutolo
- * 
- * @method public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException:
- *         Sfrutta l'inut distinguisher per differenziare i possibili input, 
- *         così da reindirizzarli ai metodi dediti al calcolo delle specifiche operazioni, od al salvataggio del numero inserito.
- *    
- * @method public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack):
- *         Restituisce una lista contenente gli ultimi 12 elementi dello stack. 
- * 
- * @method public void calculateMathOperation(String operation) throws MathErrorException, StackErrorException, SyntaxErrorException:
- *         Controlla quale delle operazioni matematiche è stata digitata e ne richiama l'esecuzione.
- * 
- * @method public void calculateStackOperation(String operation) throws StackErrorException, SyntaxErrorException:
- *         Controlla quale delle operazioni agenti sullo stack è stata digitata e ne richiama l'esecuzione.
- * 
- * @method public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException:  
- *         Controlla quale delle operazioni agenti sulle variabili è stata digitata e ne richiama l'esecuzione.
- * 
- * @method public void saveComplexNumber(String number):
- *         Salva l'input nello stack, nel caso in cui questo sia un numero complesso. 
- */
+ */ 
+
 public class ScientificCalculator {
     private Stack<ComplexNumber> complexNumberStack;
     private Variables variable;
@@ -58,6 +40,38 @@ public class ScientificCalculator {
     public ScientificCalculator(){
         
     }
+
+    /** 
+     * @param private Stack<ComplexNumber> complexNumberStack:
+     *        Struttura in cui vengono salvati i numeri ed i risultati delle operazioni.
+     * 
+     * @param private Variables variable:
+     *        Mappa di variabili le cui chiavi sono i nomi delle variabili su cui operare.
+     * 
+     * @param private InputDistinguisher inputDistinguisher:
+     *        Oggetto della classe InputDistinguisher utile 
+     *        alla distinzione del tipo di input ricevuto dalla calcolatrice
+     * 
+     * @method public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException:
+     *         Sfrutta l'inut distinguisher per differenziare i possibili input, 
+     *         così da reindirizzarli ai metodi dediti al calcolo delle specifiche operazioni, od al salvataggio del numero inserito.
+     *    
+     * @method public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack):
+     *         Restituisce una lista contenente gli ultimi 12 elementi dello stack. 
+     * 
+     * @method public void calculateMathOperation(String operation) throws MathErrorException, StackErrorException, SyntaxErrorException:
+     *         Controlla quale delle operazioni matematiche è stata digitata e ne richiama l'esecuzione.
+     * 
+     * @method public void calculateStackOperation(String operation) throws StackErrorException, SyntaxErrorException:
+     *         Controlla quale delle operazioni agenti sullo stack è stata digitata e ne richiama l'esecuzione.
+     * 
+     * @method public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException:  
+     *         Controlla quale delle operazioni agenti sulle variabili è stata digitata e ne richiama l'esecuzione.
+     * 
+     * @method public void saveComplexNumber(String number):
+     *         Salva l'input nello stack, nel caso in cui questo sia un numero complesso. 
+     */
+
     public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException {
     
         if(this.inputDistinguisher.isComplexNumber(input)){

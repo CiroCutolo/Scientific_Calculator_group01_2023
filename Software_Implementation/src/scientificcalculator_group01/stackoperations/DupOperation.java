@@ -12,7 +12,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  * La classe consente di eseguire il comando dup sull'ultimo elemento inserito nello stack..
  */
 public class DupOperation extends StackOperation{
