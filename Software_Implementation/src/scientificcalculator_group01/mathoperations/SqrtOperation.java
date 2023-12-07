@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class SqrtOperation extends MathOperation{
 
@@ -31,7 +31,7 @@ public class SqrtOperation extends MathOperation{
         ComplexNumber result = new ComplexNumber(r*Math.cos(theta), r*Math.sin(theta));
 
         stack.push(result);
-        
+
     }
 
     

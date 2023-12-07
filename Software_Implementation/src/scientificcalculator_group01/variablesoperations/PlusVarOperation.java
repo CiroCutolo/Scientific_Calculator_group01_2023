@@ -14,7 +14,7 @@ import scientificcalculator_group01.mathoperations.SumOperation;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class PlusVarOperation extends VariablesOperation{
     public PlusVarOperation(){

@@ -7,7 +7,7 @@ package scientificcalculator_group01.common_resources;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class ComplexNumber {
     private double a;
