@@ -14,6 +14,9 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 /**
  *
  * @author Gaetano Frasca
+ * 
+ * Questa interfaccia dichiara un metodo che esegue una generica
+ * operazione su una variabile.
  */
 public interface VariablesInterface {
     public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException;

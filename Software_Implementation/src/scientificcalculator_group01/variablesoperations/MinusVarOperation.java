@@ -31,14 +31,11 @@ public class MinusVarOperation extends VariablesOperation{
 	/**
 	 * @descrizione Esegue la sottrazione tra il valore della variabile specificata
 	 * 				e l'ultimo elemento inserito nello stack.
-	 * 
-	 * @param stack     Stack su cui si basa il funzionamento della calcolatrice.
-     * @param varName   Nome della variabile su cui eseguire l'operazione.
-	 * 
-     * @throws NotEnoughOperandsException Lanciata se lo stack non contiene abbastanza
-	 * 										abbastanza elementi per eseguire l'operazione.
-     * @throws VariableWithoutValueException Lanciata se la variabile specificata
-	 * 											non ha valore.
+ 	 * @param stack Struttura su cui si basa la calcolatrice.
+ 	 * @param variable mappa di variabili in cui viene salvato il valore corrispondente al nome della variabile (ad esempio'x').
+	 * @param name Nome della variabile in cui deve essere salvato il valore dell'ultimo operando inserito nello stack.  
+	 * @throw StackErrorException Lanciata se lo stack non contiene abbastanza elementi per eseguire il comando.
+ 	 * @throw SyntaxErrorException Lanciata se gli input non sono stati inseriti nel formato corretto o nella maniera corretta.
 	 */
 	@Override
 	public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException{

@@ -14,6 +14,8 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 /**
  *
  * @author Aurora Campione
+ * 
+ * La classe rappresenta un'operazione eseguibile su una variabile.
  */
 public abstract class VariablesOperation implements VariablesInterface{
     private final int numOperands;
