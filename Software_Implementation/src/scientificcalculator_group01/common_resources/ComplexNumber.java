@@ -75,6 +75,9 @@ public class ComplexNumber {
             return "0";
         }else if(getA() == 0 && getB() != 0){
                 if(this.b > 0){
+                    if(this.b == 1){
+                        return "+"+"i";
+                    }
                     return "+"+ Double.toString(this.b) + "i";
                 }
                 return Double.toString(this.b) + "i";
@@ -82,6 +85,9 @@ public class ComplexNumber {
             return Double.toString(this.a);
         }else{
             if(this.b > 0){
+                if(this.b == 1){
+                    return Double.toString(a) + "+"+"i";
+                }
                 return Double.toString(a) + "+"+ Double.toString(this.b) + "i";
             }else{
                 return Double.toString(a) + Double.toString(this.b) + "i";

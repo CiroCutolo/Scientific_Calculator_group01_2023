@@ -35,10 +35,15 @@ public class SqrtOperation extends MathOperation{
 
         ComplexNumber num = stack.pop();
 
-        double r = Math.sqrt(num.getA());
-        double theta = Math.atan2(num.getB(), num.getA());
+        if( num.getA() != 0 && num.getB() == 0 ){
+            if( num.getA() < 0 ){
+                double mod = Math.abs(num.getA());
+                ComplexNumber result = new ComplexNumber(0,Math.sqrt(mod));
+            }else{
+                ComplexNumber result = new ComplexNumber(Math.sqrt(num.getA()));
+            }
 
-        ComplexNumber result = new ComplexNumber(r*Math.cos(theta), r*Math.sin(theta));
+        }
 
         stack.push(result);
 

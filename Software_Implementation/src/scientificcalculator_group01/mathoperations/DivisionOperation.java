@@ -30,6 +30,8 @@ public class DivisionOperation extends MathOperation{
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
      * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
+     * @throws MathErrorException Lanciata se l'operazione prende dallo stack un
+     *                              divisore uguale a 0.
      */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException, MathErrorException{
