@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Claudia Carucci
  */
 public class SqrtOperation extends MathOperation{
 
@@ -22,6 +22,16 @@ public class SqrtOperation extends MathOperation{
         if(!super.minOperandsToOperate(stack.size())){
             throw new StackErrorException("Not enough operands given...");
         }
+
+        ComplexNumber num = stack.pop();
+
+        double r = Math.sqrt(num.getA());
+        double theta = Math.atan2(num.getB(), num.getA());
+
+        ComplexNumber result = new ComplexNumber(r*Math.cos(theta), r*Math.sin(theta));
+
+        stack.push(result);
+
     }
 
     

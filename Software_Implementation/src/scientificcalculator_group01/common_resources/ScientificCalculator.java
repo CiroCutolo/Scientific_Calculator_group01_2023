@@ -5,6 +5,7 @@
  */
 package scientificcalculator_group01.common_resources;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -41,87 +42,157 @@ public class ScientificCalculator {
         
     }
     public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException {
+    
         if(this.inputDistinguisher.isComplexNumber(input)){
+    
             this.saveComplexNumber(input);
+    
         }else if(this.inputDistinguisher.isMathOperation(input)){
+    
             this.calculateMathOperation(input);
+    
         }else if(this.inputDistinguisher.isStackOperation(input)){
+    
             this.calculateStackOperation(input);
+    
         }else if(this.inputDistinguisher.isVariablesOperation(input)){
+    
             this.calculateVariablesOperation(input);
+    
         }else{
+    
             throw new SyntaxErrorException("The input was wrongly typed...");
+    
         }
     }
 
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
-        
+        List<ComplexNumber> list = new LinkedList<>();
+
+        return list;
     }
     
     public void saveComplexNumber(String number){
+        
         ComplexNumber num = new ComplexNumber(number);
+        
         this.complexNumberStack.push(num);
+    
     }
     
     public void calculateMathOperation(String operation) throws MathErrorException, StackErrorException, SyntaxErrorException{
+        
         if(operation.equals("+")){
+        
             SumOperation sum = new SumOperation();
+        
             sum.execute(this.complexNumberStack);
+        
         }else if(operation.equals("-")){
+        
             DifferenceOperation dif = new DifferenceOperation();
+        
             dif.execute(complexNumberStack);
+        
         }else if(operation.equals("*")){
+        
             MultiplicationOperation mul = new MultiplicationOperation();
+        
             mul.execute(this.complexNumberStack);
+        
         }else if(operation.equals("/")){
+        
             DivisionOperation div = new DivisionOperation();
+        
             div.execute(complexNumberStack); 
+        
         }else if(operation.equals("sqrt")){
+        
             SqrtOperation sqrt = new SqrtOperation();
+        
             sqrt.execute(complexNumberStack);
+        
         }else if(operation.equals("+-")){
+        
             InversionOperation inv = new InversionOperation();
+        
             inv.execute(this.complexNumberStack);
+        
         }
     }
     
     public void calculateStackOperation(String operation) throws StackErrorException, SyntaxErrorException{
+        
         if(operation.equals("dup")){
+        
             DupOperation dup = new DupOperation();
+        
             dup.execute(this.complexNumberStack);
+        
         }else if(operation.equals("drop")){
+        
             DropOperation drop = new DropOperation();
+        
             drop.execute(complexNumberStack);
+        
         }else if(operation.equals("swap")){
+        
             SwapOperation swap = new SwapOperation();
+        
             swap.execute(this.complexNumberStack);
+        
         }else if(operation.equals("clear")){
+        
             ClearOperation clear = new ClearOperation();
+        
             clear.execute(complexNumberStack); 
+        
         }else if(operation.equals("over")){
+           
             OverOperation over = new OverOperation();
+           
             over.execute(complexNumberStack);
+        
         }
     }
     
     public void calculateVariablesOperation(String operation){
+
         char[] ch = new char[2];
+        
         if(operation.matches("^<[a-z]$")){
+        
             GetFromVarOperation get = new GetFromVarOperation();
-            operation.getChars(0, 1, ch, 0);
+            
+            operation.getChars(0, 1, ch, 0);//essendo l'operazione formata da 2 char di cui il secondo è la variabile, 
+                                            //trasformo la stringa in un array di char, cosa che permette di prendere separatamente gli elementi.
+            
             get.execute(this.variable, this.complexNumberStack, ch[1]);
+        
         }else if(operation.matches("^>[a-z]$")){
+        
             SaveIntoVarOperation save = new SaveIntoVarOperation();
+            
             operation.getChars(0, 1, ch, 0);
+            
             save.execute(this.variable, complexNumberStack, ch[1]);
+        
         }else if(operation.matches("^+[a-z]$")){
+        
             PlusVarOperation plus = new PlusVarOperation();
+            
             operation.getChars(0, 1, ch, 0);
+            
             plus.execute(this.variable, this.complexNumberStack, ch[1]);
+        
         }else if(operation.matches("^-[a-z]$")){
+        
             MinusVarOperation minus = new MinusVarOperation();
+
             operation.getChars(0, 1, ch, 0);
+            
             minus.execute(this.variable, complexNumberStack, ch[1]); 
+        
         }
     }
     

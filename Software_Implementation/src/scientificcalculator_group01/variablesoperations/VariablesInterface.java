@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Gaetano Frasca
  */
 public interface VariablesInterface {
     public abstract void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException;
