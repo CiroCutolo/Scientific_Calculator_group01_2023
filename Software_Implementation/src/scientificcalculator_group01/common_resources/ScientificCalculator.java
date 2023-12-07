@@ -5,7 +5,6 @@
  */
 package scientificcalculator_group01.common_resources;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
@@ -30,7 +29,26 @@ import scientificcalculator_group01.variablesoperations.SaveIntoVarOperation;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
+ * 
+ * @method public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException:
+ *         Sfrutta l'inut distinguisher per differenziare i possibili input, 
+ *         così da reindirizzarli ai metodi dediti al calcolo delle specifiche operazioni, od al salvataggio del numero inserito.
+ *    
+ * @method public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack):
+ *         Restituisce una lista contenente gli ultimi 12 elementi dello stack. 
+ * 
+ * @method public void calculateMathOperation(String operation) throws MathErrorException, StackErrorException, SyntaxErrorException:
+ *         Controlla quale delle operazioni matematiche è stata digitata e ne richiama l'esecuzione.
+ * 
+ * @method public void calculateStackOperation(String operation) throws StackErrorException, SyntaxErrorException:
+ *         Controlla quale delle operazioni agenti sullo stack è stata digitata e ne richiama l'esecuzione.
+ * 
+ * @method public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException:  
+ *         Controlla quale delle operazioni agenti sulle variabili è stata digitata e ne richiama l'esecuzione.
+ * 
+ * @method public void saveComplexNumber(String number):
+ *         Salva l'input nello stack, nel caso in cui questo sia un numero complesso. 
  */
 public class ScientificCalculator {
     private Stack<ComplexNumber> complexNumberStack;
@@ -66,10 +84,9 @@ public class ScientificCalculator {
     }
 
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
-        
-        List<ComplexNumber> list = new LinkedList<>();
 
-        return list;
+        return stack.subList(0, 11);
+
     }
     
     public void saveComplexNumber(String number){

@@ -7,7 +7,7 @@ package scientificcalculator_group01.common_resources;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  */
 public class InputDistinguisher {
     public InputDistinguisher(){
