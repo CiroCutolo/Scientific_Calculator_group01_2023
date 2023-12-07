@@ -11,6 +11,7 @@ import scientificcalculator_group01.common_resources.ComplexNumber;
 /**
  *
  * @author Gaetano Frasca
+ * 
  * Questa classe fornisce un metodo per eseguire il comando "clear", che
  * consente di eliminare tutti gli elementi presenti nello stack.
  */
@@ -22,8 +23,8 @@ public class ClearOperation extends StackOperation{
      *              fornendo come parametro il numero di operandi necessari 
      *              affinchè il comando "clear" possa essere eseguito 
      *              correttamente, in questo caso viene specificato come
-     *              parametro 0, perchè l'operazione rimuove tutti gli elementi
-     *              presenti nellos tack.
+     *              parametro 0, perchè il comando non necessita di un nummero
+     *              minimo di elementi per operare.
      */
     public ClearOperation(){
         super(0);
@@ -32,7 +33,7 @@ public class ClearOperation extends StackOperation{
     /**
      * @descrizione Esegue il comando "clear", il metodo non fa altro che
      *              richiamare il metodo già presente nella libreria java.util.Stack.
-     * @param stack 
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
      */
     @Override
     public void execute(Stack<ComplexNumber> stack){
