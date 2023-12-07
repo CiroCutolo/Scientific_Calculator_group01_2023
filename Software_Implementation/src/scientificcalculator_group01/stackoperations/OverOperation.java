@@ -25,7 +25,7 @@ public class OverOperation extends StackOperation{
 	/**
 	 * @descrizione Inserisce nello stack una copia del penultimo elemento inserito.
 	 * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-	 * @throws StackErrorException lanciata se lo stack non contiene abbastanza
+	 * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
 	 */	
 	@Override
