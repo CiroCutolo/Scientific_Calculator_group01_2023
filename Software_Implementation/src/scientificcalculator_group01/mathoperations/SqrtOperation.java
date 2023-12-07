@@ -37,6 +37,13 @@ public class SqrtOperation extends MathOperation{
         ComplexNumber num = stack.pop();
         Vector<ComplexNumber> ans = new Vector<ComplexNumber>();
         
+        if(num.getA() != 0 && num.getB() == 0){
+            if(num.getA() < 0){
+                double x1 = Math.abs(num.getA());
+                ans.add(new ComplexNumber(0, Math.sqrt(x1)));
+            }
+
+        }else{
         double x1 = Math.abs(Math.sqrt((num.getA() + Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())/2)));
         double y1 = num.getB() / (2*x1);
 
@@ -62,6 +69,7 @@ public class SqrtOperation extends MathOperation{
             if( x4 != 0){
                 ans.add(new ComplexNumber(x4, y4));
             }
+        }
         }
 
         for(ComplexNumber c : ans){
