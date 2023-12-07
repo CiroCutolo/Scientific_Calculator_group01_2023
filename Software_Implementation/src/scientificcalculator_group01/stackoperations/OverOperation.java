@@ -30,7 +30,7 @@ public class OverOperation extends StackOperation{
 	 */	
 	@Override
 	public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
-		if(!minOperandsToOperate(2))
+		if(!minOperandsToOperate(stack.size()))
 			throw new StackErrorException();
 		
 		stack.push(stack.elementAt(stack.size() - 2 ));

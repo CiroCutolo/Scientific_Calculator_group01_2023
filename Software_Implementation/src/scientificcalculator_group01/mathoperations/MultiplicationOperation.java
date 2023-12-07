@@ -13,8 +13,8 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  *
  * @author Gaetano Frasca
  * 
- * Questa classe fornisce un metodo per eseguire una moltiplicazione tra
- * due numeri complessi presenti nello stack.
+ * La classe rappresenta l'operazione matematica di moltiplicazione esguita
+ * su due numeri complessi presenti nello stack.
  */
 public class MultiplicationOperation extends MathOperation{
     
@@ -26,12 +26,13 @@ public class MultiplicationOperation extends MathOperation{
      * @descrizione Esegue l'operazione matematica di moltiplicazione sugli
      *              ultimi due elementi inseriti nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException 
+     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
      */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         
-        if(!super.minOperandsToOperate(2))
+        if(!super.minOperandsToOperate(stack.size()))
             throw new StackErrorException("Not enough operands given...");
         
         ComplexNumber num1 = stack.pop();

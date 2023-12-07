@@ -13,12 +13,21 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Claudia Carucci
+ * La classe rappresenta l'operazione matematica di sottrazione esguita
+ * su due numeri complessi presenti nello stack.
  */
 public class DifferenceOperation extends MathOperation{
     public DifferenceOperation(){
         super(2);
     }
 
+    /**
+     * @descrizione Esegue l'operazione matematica di sottrazione sugli
+     *              ultimi due elementi inseriti nello stack.
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
+     */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){

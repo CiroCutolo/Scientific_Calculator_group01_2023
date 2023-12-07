@@ -14,12 +14,23 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author ciroc
+ * 
+ * La classe rappresenta l'operazione matematica di divisione esguita
+ * su due numeri complessi presenti nello stack.
  */
 public class DivisionOperation extends MathOperation{
+
     public DivisionOperation(){
         super(2);
     }
 
+    /**
+     * @descrizione Esegue l'operazione matematica di divisione sugli
+     *              ultimi due elementi inseriti nello stack.
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
+     */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException, MathErrorException{
         if(super.minOperandsToOperate(stack.size())){

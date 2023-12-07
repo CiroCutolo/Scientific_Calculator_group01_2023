@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Aurora Campione
- * La classe consente di effettuare l'inversione del segno di un operando
+ * La classe consente di effettuare l'inversione del segno di un numero complesso.
  */
 public class InversionOperation extends MathOperation {
     public InversionOperation(){
@@ -22,8 +22,9 @@ public class InversionOperation extends MathOperation {
 
     /**@descrizione Esegue l'operazione matematica di inversione di segno sull'
      *              ultimo elemento inserito nello stack.
-     * @param stack
-     * @throws StackErrorException
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
     */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {

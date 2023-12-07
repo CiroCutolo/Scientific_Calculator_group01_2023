@@ -43,7 +43,7 @@ public class MinusVarOperation extends VariablesOperation{
 	@Override
 	public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException{
 		
-		if(!minOperandsToOperate(1))
+		if(!minOperandsToOperate(stack.size()))
 			throw new StackErrorException("Not enough operands given...");
 
 		ComplexNumber var = variable.getVariable(name);

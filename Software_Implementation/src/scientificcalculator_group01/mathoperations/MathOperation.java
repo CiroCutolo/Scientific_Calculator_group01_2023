@@ -14,15 +14,21 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 /**
  *
  * @author Aurora Campione
+ * La classe rappresenta un'operazione matematica eseguibile
+ * sugli elementi contenuti nello stack.
  */
 public abstract class MathOperation implements MathInterface{
+    /**Numero di operandi necessari per eseguire l'operazione matematica */
     private final int numOperands;
     
+    /**Costruttore di default*/
     public MathOperation(){
         numOperands = 0;
     }
     
-    
+    /**Costruttore sovraccarico
+     * @param Numero minimo di operandi utili per eseguire l'operazione.
+     */
     public MathOperation(int numOperands){
         this.numOperands = numOperands;
     }
@@ -30,6 +36,13 @@ public abstract class MathOperation implements MathInterface{
     @Override
     public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException, SyntaxErrorException, MathErrorException;
     
+    /**
+     * Verifica se lo stack contiene abbastanza elementi, affinchè sia possibile
+     *        eseguire l'operazione.
+     * @param size Numero di elementi presenti nello stack.
+     * @return `true` se size è maggiore o uguale del numero di operandi necessari;
+     *         `false` altrimenti.
+     */
     protected boolean minOperandsToOperate(int size){
         return size >= numOperands;    
     }
