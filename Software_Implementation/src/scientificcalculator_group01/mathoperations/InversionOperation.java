@@ -13,12 +13,18 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Aurora Campione
+ * La classe consente di effettuare l'inversione del segno di un operando
  */
 public class InversionOperation extends MathOperation {
     public InversionOperation(){
         super(1);
     }
 
+    /**@descrizione Esegue l'operazione matematica di inversione di segno sull'
+     *              ultimo elemento inserito nello stack.
+     * @param stack
+     * @throws StackErrorException
+    */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
         if(super.minOperandsToOperate(stack.size())){

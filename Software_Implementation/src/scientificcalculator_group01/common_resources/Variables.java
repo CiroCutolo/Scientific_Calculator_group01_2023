@@ -11,6 +11,7 @@ import java.util.Map;
 /**
  *
  * @author Aurora Campione
+ * La classe istanzia una mappa di variabili e permette di mostrarle o modificarle 
  */
 public class Variables {
     private Map <Character,ComplexNumber> varMap;
@@ -24,12 +25,24 @@ public class Variables {
         
     }
     
+    /**
+     * 
+     * @param name
+     * @return Restituisce il valore (numero complesso) associato alla variabile specificata come 
+     *          parametro.
+     */
     public ComplexNumber getVariable(char name){
         return varMap.get(name);
     
         
     }
     
+    /**
+     * @descrizione Consente di modificare una variabile specificando la coppia nome-valore
+     * @param name
+     * @param value
+     * 
+     */
     public void setVariable(char name, ComplexNumber value){
         varMap.put(name, value);
     }
