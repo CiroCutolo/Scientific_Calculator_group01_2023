@@ -30,6 +30,9 @@ public class DivisionOperation extends MathOperation{
                 throw new MathErrorException("Cannot divide anything by 0...");
             }
             if(num1.getB() == 0.0 && num2.getB() == 0.0){
+                if(num2.getA() == 0.0){
+                    throw new MathErrorException("Cannot divide anything by 0...");
+                }
                 result = new ComplexNumber(num1.getA()/num2.getA());
             }else{
                 result = new ComplexNumber((((num1.getA()*num2.getA()) + (num1.getB()*num2.getB()))/((num2.getA()*num2.getA())+(num2.getB()*num2.getB()))), (((num1.getB()*num2.getA())-(num1.getA()*num2.getB()))/((num2.getA()*num2.getA())+(num2.getB()*num2.getB()))));
