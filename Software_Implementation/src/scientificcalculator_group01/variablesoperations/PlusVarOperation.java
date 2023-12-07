@@ -37,7 +37,7 @@ public class PlusVarOperation extends VariablesOperation{
                 stack.push(var);
                 SumOperation sum = new SumOperation();
                 sum.execute(stack);
-                variable.setVariable(name, stack.pop());
+                variable.setVariable(name, stack.peek());
 
     }
     
