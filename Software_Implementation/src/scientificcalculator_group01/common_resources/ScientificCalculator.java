@@ -156,7 +156,7 @@ public class ScientificCalculator {
         }
     }
     
-    public void calculateVariablesOperation(String operation){
+    public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException{
 
         char[] ch = new char[2];
         
