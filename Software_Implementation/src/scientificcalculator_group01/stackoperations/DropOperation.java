@@ -13,12 +13,17 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Aurora Campione
+ * La classe consente di eseguire il comando drop sull'ultimo elemento inserito nello stack..
  */
 public class DropOperation extends StackOperation{
     public DropOperation(){
         super(1);
     }
 
+    /**@descrizione Il comando eseguito elimina l'ultimo elemento presente nello stack.
+     * @param stack
+     * @throws StackErrorException
+    */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
         if(super.minOperandsToOperate(stack.size())){
