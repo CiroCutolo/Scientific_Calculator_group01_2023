@@ -21,8 +21,9 @@ public class DropOperation extends StackOperation{
     }
 
     /**@descrizione Il comando eseguito elimina l'ultimo elemento presente nello stack.
-     * @param stack
-     * @throws StackErrorException
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
     */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {

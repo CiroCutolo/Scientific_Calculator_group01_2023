@@ -27,7 +27,6 @@ public class ClearOperation extends StackOperation{
      */
     @Override
     public void execute(Stack<ComplexNumber> stack){
-        
         stack.clear();
     }
 }
