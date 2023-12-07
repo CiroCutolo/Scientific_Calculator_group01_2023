@@ -14,18 +14,10 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  * @author Gaetano Frasca
  * 
  * Questa classe fornisce un metodo per eseguire il comando "over", che
- * consente di eliminare tutti gli elementi presenti nello stack.
+ * consente di inserire nello stack una copia del penultimo elemento inserito.
  */
 public class OverOperation extends StackOperation{
 
-	/**
-	 * @descrizione Costruttore di default
-     *              Richiama il costruttore della superclasse StackOperation, 
-     *              fornendo come parametro il numero di operandi necessari 
-     *              affinchè il comando "over" possa essere eseguito 
-     *              correttamente, in questo caso viene specificato come
-     *              parametro 2.
-	 */
 	public OverOperation(){
 		super(2);
 	}

@@ -17,22 +17,12 @@ import scientificcalculator_group01.common_resources.ComplexNumber;
  */
 public class ClearOperation extends StackOperation{
     
-    /**
-     * @descrizione Costruttore di default
-     *              Richiama il costruttore della superclasse StackOperation, 
-     *              fornendo come parametro il numero di operandi necessari 
-     *              affinchè il comando "clear" possa essere eseguito 
-     *              correttamente, in questo caso viene specificato come
-     *              parametro 0, perchè il comando non necessita di un nummero
-     *              minimo di elementi per operare.
-     */
     public ClearOperation(){
         super(0);
     }
     
     /**
-     * @descrizione Esegue il comando "clear", il metodo non fa altro che
-     *              richiamare il metodo già presente nella libreria java.util.Stack.
+     * @descrizione Elimina tutti gli elementi dallo stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
      */
     @Override
