@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Aurora Campione
  */
 public abstract class MathOperation implements MathInterface{
     private final int numOperands;

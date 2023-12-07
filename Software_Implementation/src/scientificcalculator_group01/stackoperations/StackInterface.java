@@ -11,7 +11,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Gaetano Frasca
  */
 public interface StackInterface {
     public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException;

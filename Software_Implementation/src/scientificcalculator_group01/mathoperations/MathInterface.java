@@ -13,7 +13,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Gaetano Frasca
  */
 public interface MathInterface {
     public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException, SyntaxErrorException, MathErrorException;
