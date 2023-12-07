@@ -14,9 +14,19 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Claudia Carucci
+ * 
+ * La classe rappresenta l'operazione matematica di estrazione di radice
+ * quadrata eseguita su due numeri complessi presenti nello stack.
  */
 public class SqrtOperation extends MathOperation{
 
+    /**
+     * @descrizione Esegue l'operazione matematica di radice quadrata
+     *              sull'ultimo elemento inserito nello stack.
+     * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * 								abbastanza elementi per eseguire il comando.
+     */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
         if(!super.minOperandsToOperate(stack.size())){

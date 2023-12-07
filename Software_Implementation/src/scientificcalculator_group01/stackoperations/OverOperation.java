@@ -25,12 +25,12 @@ public class OverOperation extends StackOperation{
 	/**
 	 * @descrizione Inserisce nello stack una copia del penultimo elemento inserito.
 	 * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-	 * @throws StackErrorException lanciata se lo stack non contiene abbastanza
+	 * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
 	 */	
 	@Override
 	public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
-		if(!minOperandsToOperate(2))
+		if(!minOperandsToOperate(stack.size()))
 			throw new StackErrorException();
 		
 		stack.push(stack.elementAt(stack.size() - 2 ));

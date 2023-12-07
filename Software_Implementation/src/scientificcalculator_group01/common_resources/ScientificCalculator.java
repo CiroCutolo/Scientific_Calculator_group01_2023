@@ -22,7 +22,6 @@ import scientificcalculator_group01.stackoperations.ClearOperation;
 import scientificcalculator_group01.stackoperations.DropOperation;
 import scientificcalculator_group01.stackoperations.DupOperation;
 import scientificcalculator_group01.stackoperations.OverOperation;
-import scientificcalculator_group01.stackoperations.StackOperation;
 import scientificcalculator_group01.stackoperations.SwapOperation;
 import scientificcalculator_group01.variablesoperations.GetFromVarOperation;
 import scientificcalculator_group01.variablesoperations.MinusVarOperation;
@@ -156,7 +155,7 @@ public class ScientificCalculator {
         }
     }
     
-    public void calculateVariablesOperation(String operation){
+    public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException{
 
         char[] ch = new char[2];
         
