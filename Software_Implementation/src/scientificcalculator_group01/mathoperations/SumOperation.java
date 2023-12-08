@@ -14,9 +14,11 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Aurora Campione
- * La classe rappresenta l'operazione matematica di addizione esguita
+ */
+ 
+ /** 
+ * La classe definisce ed implementa l'operazione matematica di addizione esguita
  * su due numeri complessi presenti nello stack.
- * 
  */
 public class SumOperation extends MathOperation{
     public SumOperation(){
@@ -27,7 +29,7 @@ public class SumOperation extends MathOperation{
      * @descrizione Esegue l'operazione matematica di addizione sugli
      *              ultimi due elementi inseriti nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+     * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
      */
     @Override

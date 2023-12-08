@@ -17,9 +17,10 @@ import scientificcalculator_group01.stackoperations.SwapOperation;
 /**
  *
  * @author Gaetano Frasca
- * 
- * La classe fornisce un metodo che consente di sottrarre ad una 
- * variabile il valore dell'utlimo elemento inserito nello stack.
+ */
+
+/** 
+ * La classe definisce ed implementa l'operazione con le variabili "-x".
  */
 
 public class MinusVarOperation extends VariablesOperation{
@@ -31,11 +32,15 @@ public class MinusVarOperation extends VariablesOperation{
 	/**
 	 * @descrizione Esegue la sottrazione tra il valore della variabile specificata
 	 * 				e l'ultimo elemento inserito nello stack.
- 	 * @param stack Struttura su cui si basa la calcolatrice.
- 	 * @param variable mappa di variabili in cui viene salvato il valore corrispondente al nome della variabile (ad esempio'x').
-	 * @param name Nome della variabile in cui deve essere salvato il valore dell'ultimo operando inserito nello stack.  
-	 * @throws StackErrorException Lanciata se lo stack non contiene abbastanza elementi per eseguire il comando.
- 	 * @throws SyntaxErrorException Lanciata se gli input non sono stati inseriti nel formato corretto o nella maniera corretta.
+	 * 
+	 * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+     * @param variable Refence alla Mappa delle variabili.
+     * @param name Nome della variabile sulla quale eseguire l'operazione.
+     * 
+	 * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
+	 * 										abbastanza elementi per eseguire l'operazione.
+     * @throws SyntaxErrorException Eccezione lanciata se la variabile specificata
+	 * 											non ha valore.
 	 */
 	@Override
 	public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException{

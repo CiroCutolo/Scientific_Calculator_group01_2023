@@ -11,8 +11,10 @@ import scientificcalculator_group01.common_resources.ComplexNumber;
 /**
  *
  * @author Gaetano Frasca
- * 
- * Questa classe fornisce un metodo per eseguire il comando "clear", che
+ */
+ 
+ /** 
+ * La classe definisce ed implementa il comando "clear", che
  * consente di eliminare tutti gli elementi presenti nello stack.
  */
 public class ClearOperation extends StackOperation{
