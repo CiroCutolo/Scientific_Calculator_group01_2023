@@ -98,7 +98,7 @@ public class ScientificCalculator {
     }
 
     public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
-        if(stack.size() >= 12){
+        if(stack.size() > 12){
             return stack.subList((stack.size()-12), stack.size());
         }
         return stack.subList(0, stack.size());
