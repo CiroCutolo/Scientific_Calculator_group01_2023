@@ -9,20 +9,23 @@ package scientificcalculator_group01.exceptions;
  *
  * @author Claudia Carucci
  */
+/**
+  * Questa eccezione viene lanciata utilizzare in caso di errori 
+  * riguardanti le operazioni effettuate rispetto lo stack.
+  */
 public class StackErrorException extends Exception {
 
     /**
-     * Creates a new instance of <code>StackErrorException</code> without detail
-     * message.
+     * Costruttore di default
      */
     public StackErrorException() {
     }
 
     /**
-     * Constructs an instance of <code>StackErrorException</code> with the
-     * specified detail message.
+     * Costruttore sovraccarico che consente di 
+     * specificare un messaggio di errore.
      *
-     * @param msg the detail message.
+     * @param msg messaggio di errore.
      */
     public StackErrorException(String msg) {
         super(msg);

@@ -12,17 +12,17 @@ package scientificcalculator_group01.exceptions;
 public class SyntaxErrorException extends Exception {
 
     /**
-     * Creates a new instance of <code>SyntaxErrorException</code> without
-     * detail message.
+     * Questa eccezione viene lanciata utilizzare in caso di errori 
+     * riguardanti il formato dell’operazione o dell'input.
      */
     public SyntaxErrorException() {
     }
 
     /**
-     * Constructs an instance of <code>SyntaxErrorException</code> with the
-     * specified detail message.
+     * Costruttore sovraccarico che consente di 
+     * specificare un messaggio di errore.
      *
-     * @param msg the detail message.
+     * @param msg messaggio di errore.
      */
     public SyntaxErrorException(String msg) {
         super(msg);
