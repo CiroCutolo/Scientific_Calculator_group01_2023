@@ -152,8 +152,6 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private Button enter;
     
     private ScientificCalculator calculator;
-    
-    private ObservableList<ComplexNumber> list;
    
     
     @Override
