@@ -6,6 +6,7 @@ package scientificcalculator_group01.graphicInterface;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.MathErrorException;
 import scientificcalculator_group01.exceptions.StackErrorException;
@@ -150,6 +152,8 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private Button enter;
     
     private ScientificCalculator calculator;
+    
+    private ObservableList<ComplexNumber> list;
    
     
     @Override
@@ -158,6 +162,9 @@ public class ScienticCalculator_Group01Controller implements Initializable {
         //rendo invisibile il pannello delle lettere
         LA.setVisible(false);
         binding();
+        calculator = new ScientificCalculator();
+        //list = FXCollections.observableArrayList();
+        //list.addAll(calculator.getTop12Numbers());
     }
     
     public void binding(){
@@ -494,8 +501,17 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private void makeEnter(ActionEvent event) {
         try {
             calculator.calculate(inputNum.getText());
-        } catch (MathErrorException | StackErrorException | SyntaxErrorException e) {
-            e.printStackTrace();
+            inputNum.setText("");
+            inputLet.setText("");
+        } catch (MathErrorException e){
+            inputNum.setText("MATH ERROR");
+            inputLet.setText("MATH ERROR");
+        } catch (StackErrorException e){
+            inputNum.setText("STACK ERROR");
+            inputLet.setText("STACK ERROR");
+        } catch (SyntaxErrorException e){
+            inputNum.setText("SYNTAX ERROR");
+            inputLet.setText("SYNTAX ERROR");
         }finally{
             stackn.setText(calculator.getTop12Numbers().toString());
             stackl.setText(calculator.getTop12Numbers().toString());

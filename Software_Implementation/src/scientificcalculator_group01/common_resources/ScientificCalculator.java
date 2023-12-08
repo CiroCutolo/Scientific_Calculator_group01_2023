@@ -38,7 +38,9 @@ public class ScientificCalculator {
     private InputDistinguisher inputDistinguisher;
     
     public ScientificCalculator(){
-        
+        complexNumberStack = new Stack<>();
+        variable = new Variables();
+        inputDistinguisher = new InputDistinguisher();
     }
 
     /** 
@@ -107,6 +109,7 @@ public class ScientificCalculator {
     }
     
     public void saveComplexNumber(String number){
+        System.out.println("Salvo il numero...");
         
         ComplexNumber num = new ComplexNumber(number);
         

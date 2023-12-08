@@ -41,43 +41,43 @@ public class InputDistinguisher {
     public boolean isStackOperation(String text){
         if(text.matches("drop")){
             return true;
-        }else if(text.matches("dup")){
+        }else if(text.equals("dup")){
             return true;
-        }else if(text.matches("clear")){
+        }else if(text.equals("clear")){
             return true;
-        }else if(text.matches("over")){
+        }else if(text.equals("over")){
             return true;
-        }else if(text.matches("swap")){
+        }else if(text.equals("swap")){
             return true;
         }
         return false;
     }
     
     public boolean isMathOperation(String text){
-        if(text.matches("+")){
+        if(text.matches("^[+]$")){
             return true;
-        }else if(text.matches("-")){
+        }else if(text.matches("^[-]$")){
             return true;
-        }else if(text.matches("*")){
+        }else if(text.matches("^[*]$")){
             return true;
-        }else if(text.matches("/")){
+        }else if(text.matches("^[/]$")){
             return true;
-        }else if(text.matches("+-")){
+        }else if(text.equals("+-")){
             return true;
-        }else if(text.matches("sqrt")){
+        }else if(text.equals("sqrt")){
             return true;
         }
         return false;
     }
     
     public boolean isVariablesOperation(String text){
-        if(text.matches("^<[a-z]$")){
+        if(text.matches("^[<]+[a-z]$")){
             return true;
-        }else if(text.matches("^>[a-z]$")){
+        }else if(text.matches("^[>]+[a-z]$")){
             return true;
-        }else if(text.matches("^+[a-z]$")){
+        }else if(text.matches("^[+]+[a-z]$")){
             return true;
-        }else if(text.matches("^-[a-z]$")){
+        }else if(text.matches("^[-]+[a-z]$")){
             return true;
         }
         return false;

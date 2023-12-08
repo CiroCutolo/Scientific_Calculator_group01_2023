@@ -26,7 +26,7 @@ public class ComplexNumber {
     
     public ComplexNumber(String text){
         String a,b;
-
+        
         int pos = text.indexOf("+", 1);
         if(pos < 0)
             pos = text.indexOf("-", 1);
@@ -45,6 +45,8 @@ public class ComplexNumber {
         }else{
             a = text.substring(0, pos);
             b = text.substring(pos, text.length()-1);
+            if(b.length() == 1)
+                b += "1";
         }
 
         this.a = Double.parseDouble(a);
