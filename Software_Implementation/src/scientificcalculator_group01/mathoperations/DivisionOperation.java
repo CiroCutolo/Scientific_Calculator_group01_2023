@@ -36,8 +36,8 @@ public class DivisionOperation extends MathOperation{
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException, MathErrorException{
         if(super.minOperandsToOperate(stack.size())){
-            ComplexNumber num1 = stack.pop();
             ComplexNumber num2 = stack.pop();
+            ComplexNumber num1 = stack.pop();
             ComplexNumber result = null;
             if(num2.getA() == 0.0 && num2.getB() == 0.0){
                 throw new MathErrorException("Cannot divide anything by 0...");

@@ -126,7 +126,7 @@ public class ScientificCalculator {
         
             DifferenceOperation dif = new DifferenceOperation();
         
-            dif.execute(complexNumberStack);
+            dif.execute(this.complexNumberStack);
         
         }else if(operation.equals("*")){
         
@@ -138,13 +138,13 @@ public class ScientificCalculator {
         
             DivisionOperation div = new DivisionOperation();
         
-            div.execute(complexNumberStack); 
+            div.execute(this.complexNumberStack); 
         
         }else if(operation.equals("sqrt")){
         
             SqrtOperation sqrt = new SqrtOperation();
         
-            sqrt.execute(complexNumberStack);
+            sqrt.execute(this.complexNumberStack);
         
         }else if(operation.equals("+-")){
         
@@ -167,7 +167,7 @@ public class ScientificCalculator {
         
             DropOperation drop = new DropOperation();
         
-            drop.execute(complexNumberStack);
+            drop.execute(this.complexNumberStack);
         
         }else if(operation.equals("swap")){
         
@@ -179,13 +179,13 @@ public class ScientificCalculator {
         
             ClearOperation clear = new ClearOperation();
         
-            clear.execute(complexNumberStack); 
+            clear.execute(this.complexNumberStack); 
         
         }else if(operation.equals("over")){
            
             OverOperation over = new OverOperation();
            
-            over.execute(complexNumberStack);
+            over.execute(this.complexNumberStack);
         
         }
     }
@@ -209,7 +209,7 @@ public class ScientificCalculator {
             
             operation.getChars(0, 1, ch, 0);
             
-            save.execute(this.variable, complexNumberStack, ch[1]);
+            save.execute(this.variable, this.complexNumberStack, ch[1]);
         
         }else if(operation.matches("^+[a-z]$")){
         
@@ -225,7 +225,7 @@ public class ScientificCalculator {
 
             operation.getChars(0, 1, ch, 0);
             
-            minus.execute(this.variable, complexNumberStack, ch[1]); 
+            minus.execute(this.variable, this.complexNumberStack, ch[1]); 
         
         }
     }
