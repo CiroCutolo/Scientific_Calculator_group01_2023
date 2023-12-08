@@ -12,10 +12,15 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Aurora Campione
- * La classe rappresenta un'operazione di manipolazione dello stack eseguibile
- * sugli elementi contenuti nello stack.
+ */
+
+/**
+ * La classe rappresenta un operazione di manipolazione dello stack
+ * eseguibile sugli elementi contenuti in esso.
  */
 public abstract class StackOperation implements StackInterface{
+
+    /**Numero di operandi necessari per eseguire l'operazione sullo stack */
     private final int numOperands;
     
     /**Costruttore di default*/
@@ -24,8 +29,8 @@ public abstract class StackOperation implements StackInterface{
     }
     
     /**Costruttore sovraccarico
-     * @param Numero minimo di operandi utili per eseguire l'operazione.
-     */
+     * @param numOperands Numero minimo di operandi utili per eseguire l'operazione.
+     */    
     public StackOperation(int numOperands){
         this.numOperands = numOperands;
     }
@@ -40,7 +45,6 @@ public abstract class StackOperation implements StackInterface{
      * @return `true` se size è maggiore o uguale del numero di operandi necessari;
      *         `false` altrimenti.
      */
-    
     protected boolean minOperandsToOperate(int size){
         return size >= numOperands; 
         

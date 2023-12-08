@@ -11,18 +11,23 @@ import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
- *
+ * 
  * @author Aurora Campione
- * La classe consente di eseguire il comando drop sull'ultimo elemento inserito nello stack..
+ */
+ 
+ /** 
+ * La classe definisce ed implementa il comando "drop", che consente di rimuovere
+ * l'ultimo elemento inserito nello stack.
  */
 public class DropOperation extends StackOperation{
     public DropOperation(){
         super(1);
     }
 
-    /**@descrizione Il comando eseguito elimina l'ultimo elemento presente nello stack.
+    /**
+     * @descrizione Rimuove l'ultimo elemento inserito nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException StackErrorException Lanciata se lo stack non contiene abbastanza
+	 * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
     */
     @Override

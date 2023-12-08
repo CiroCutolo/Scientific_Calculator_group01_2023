@@ -15,7 +15,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  *
  * @author Ciro Cutolo
  * 
- * La classe rappresenta l'operazione matematica di divisione esguita
+ * La classe definisce ed implementa l'operazione matematica di divisione eseguita
  * su due numeri complessi presenti nello stack.
  */
 public class DivisionOperation extends MathOperation{
@@ -28,7 +28,7 @@ public class DivisionOperation extends MathOperation{
      * @descrizione Esegue l'operazione matematica di divisione sugli
      *              ultimi due elementi inseriti nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException Lanciata se lo stack non contiene abbastanza
+     * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
 	 * 								abbastanza elementi per eseguire il comando.
      * @throws MathErrorException Lanciata se l'operazione prende dallo stack un
      *                              divisore uguale a 0.

@@ -12,22 +12,26 @@ import scientificcalculator_group01.common_resources.Variables;
 import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
- * 
+ *
  * @author Ciro Cutolo
- * 
- * La classe consente di salvare l'ultimo elemento dello stack nella variabile.
+ */
+
+ /** 
+ * La classe definisce ed implementa l'operazione "<x".
  */
 public class SaveIntoVarOperation extends VariablesOperation{
     public SaveIntoVarOperation(){
         super(1);
     }
+
     /**
- * @descrizione Consente di salvare l'ultimo elemento dello stack nella variabile.
- * @param stack Struttura su cui si basa la calcolatrice.
- * @param variable mappa di variabili in cui viene salvato il valore corrispondente al nome della variabile (ad esempio'x').
- * @param name Nome della variabile in cui deve essere salvato il valore dell'ultimo operando inserito nello stack.  
- * @throws StackErrorException Lanciata se lo stack non contiene abbastanza elementi per eseguire il comando.
- */
+    * @descrizione Salva l'ultimo elemento dello stack nella variabile sèecificata.
+    * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+    * @param variable Refence alla Mappa delle variabili.
+    * @param name Nome della variabile sulla quale eseguire l'operazione.
+    * @throws StackErrorException Eccezione lanciata se la variabile specificata
+    *                                  non ha valore.
+    */
 
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){

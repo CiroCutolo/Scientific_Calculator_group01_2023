@@ -15,21 +15,24 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 /**
  *
  * @author Aurora Campione
- * La classe consente di salvare il valore di una variabile nello stack.
+ */
+
+ /** 
+ * La classe definisce ed implementa l'operazione "<x".
  */
 public class GetFromVarOperation extends VariablesOperation{
     public GetFromVarOperation(){
         super();
     }
 
-     /**
-     * @descrizione Aggiunge come ultimo elemento dello stack il valore della variabile 
-     *              corrispodente al nome.
- 	 * @param stack Struttura su cui si basa la calcolatrice.
- 	 * @param variable mappa di variabili in cui viene salvato il valore corrispondente al nome della variabile (ad esempio'x').
-	 * @param name Nome della variabile in cui deve essere salvato il valore dell'ultimo operando inserito nello stack.  
-	 * @throws SyntaxErrorException Lanciata se gli input non sono stati inseriti nel formato corretto o nella maniera corretta.
-     */
+    /**
+    * @descrizione Salva nello stack il valore della variabile specificata.
+    * @param stack Stack su cui si basa il funzionamento della calcolatrice.
+    * @param variable Refence alla Mappa delle variabili.
+    * @param name Nome della variabile sulla quale eseguire l'operazione.
+    * @throws SyntaxErrorException Eccezione lanciata se la variabile specificata
+    *                                  non ha valore.
+    */
 
     @Override
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws SyntaxErrorException {
