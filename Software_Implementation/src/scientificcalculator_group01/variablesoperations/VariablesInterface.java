@@ -15,7 +15,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
  *
  * @author Gaetano Frasca
  * 
- * Questa interfaccia dichiara un metodo che esegue una generica
+ * Questa interfaccia dichiara un singolo metodo che esegue una generica
  * operazione su una variabile.
  */
 public interface VariablesInterface {

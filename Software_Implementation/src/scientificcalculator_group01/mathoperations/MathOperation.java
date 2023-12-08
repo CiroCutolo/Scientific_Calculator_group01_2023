@@ -14,6 +14,9 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 /**
  *
  * @author Aurora Campione
+ */
+ 
+ /** 
  * La classe rappresenta un'operazione matematica eseguibile
  * sugli elementi contenuti nello stack.
  */
@@ -27,7 +30,7 @@ public abstract class MathOperation implements MathInterface{
     }
     
     /**Costruttore sovraccarico
-     * @param Numero minimo di operandi utili per eseguire l'operazione.
+     * @param numOperands Numero minimo di operandi utili per eseguire l'operazione.
      */
     public MathOperation(int numOperands){
         this.numOperands = numOperands;
