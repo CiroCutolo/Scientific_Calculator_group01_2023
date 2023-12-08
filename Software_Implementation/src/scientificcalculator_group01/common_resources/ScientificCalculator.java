@@ -94,7 +94,7 @@ public class ScientificCalculator {
     
         }else{
     
-            throw new SyntaxErrorException("The input was wrongly typed...");
+            throw new SyntaxErrorException();
     
         }
     }
@@ -109,7 +109,7 @@ public class ScientificCalculator {
     }
     
     public void saveComplexNumber(String number){
-        
+
         ComplexNumber num = new ComplexNumber(number);
         
         this.complexNumberStack.push(num);

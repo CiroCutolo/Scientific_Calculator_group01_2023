@@ -75,7 +75,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="complex" layoutX="113.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeComplex" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="i" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="complex" layoutX="113.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeComplex" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="j" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                         <Button fx:id="zero" layoutX="199.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeZero" prefHeight="52.0" prefWidth="52.0" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                         <Button fx:id="drop" layoutX="460.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeDrop" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="drop" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>

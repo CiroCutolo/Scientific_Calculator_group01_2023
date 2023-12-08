@@ -34,7 +34,7 @@ public class DifferenceOperation extends MathOperation{
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){
-            throw new StackErrorException("Not enough operands given...");
+            throw new StackErrorException();
         }
         
         ComplexNumber num1 = stack.pop();

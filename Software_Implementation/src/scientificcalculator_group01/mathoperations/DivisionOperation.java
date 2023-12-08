@@ -40,11 +40,11 @@ public class DivisionOperation extends MathOperation{
             ComplexNumber num1 = stack.pop();
             ComplexNumber result = null;
             if(num2.getA() == 0.0 && num2.getB() == 0.0){
-                throw new MathErrorException("Cannot divide anything by 0...");
+                throw new MathErrorException();
             }
             if(num1.getB() == 0.0 && num2.getB() == 0.0){
                 if(num2.getA() == 0.0){
-                    throw new MathErrorException("Cannot divide anything by 0...");
+                    throw new MathErrorException();
                 }
                 result = new ComplexNumber(num1.getA()/num2.getA());
             }else{
@@ -52,7 +52,7 @@ public class DivisionOperation extends MathOperation{
             }
             stack.push(result);
         }else{
-            throw new StackErrorException("Not enough operands given...");
+            throw new StackErrorException();
         }
     }
 }

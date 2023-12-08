@@ -34,7 +34,7 @@ public class DupOperation extends StackOperation{
         if(super.minOperandsToOperate(stack.size())){
             stack.push(stack.peek());
         }else{
-            throw new StackErrorException("Not enough operands given...");
+            throw new StackErrorException();
         }
     }
 }

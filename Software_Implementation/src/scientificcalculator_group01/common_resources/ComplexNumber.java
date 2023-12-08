@@ -32,10 +32,10 @@ public class ComplexNumber {
             pos = text.indexOf("-", 1);
         
         if(pos < 0){
-            if(text.compareTo("i") == 0){
+            if(text.compareTo("j") == 0){
                 a = "0";
                 b = "1";
-            }else if(text.indexOf("i") > 0){
+            }else if(text.indexOf("j") > 0){
                 a = "0";
                 b = text.substring(0, text.length()-1);
             }else{
@@ -78,21 +78,21 @@ public class ComplexNumber {
         }else if(this.getA() == 0 && this.getB() != 0){
                 if(this.b > 0){
                     if(this.b == 1){
-                        return "+"+"i";
+                        return "+"+"j";
                     }
-                    return "+"+ Double.toString(this.b) + "i";
+                    return "+"+ Double.toString(this.b) + "j";
                 }
-                return Double.toString(this.b) + "i";
+                return Double.toString(this.b) + "j";
         }else if(this.getA() != 0 && this.getB() == 0){
             return Double.toString(this.a);
         }else{
             if(this.b > 0){
                 if(this.b == 1){
-                    return Double.toString(a) + "+"+"i";
+                    return Double.toString(a) + "+"+"j";
                 }
-                return Double.toString(a) + "+"+ Double.toString(this.b) + "i";
+                return Double.toString(a) + "+"+ Double.toString(this.b) + "j";
             }else{
-                return Double.toString(a) + Double.toString(this.b) + "i";
+                return Double.toString(a) + Double.toString(this.b) + "j";
             }
         }
     }

@@ -41,7 +41,7 @@ public class GetFromVarOperation extends VariablesOperation{
             stack.push(value);
         }
         else{
-            throw new SyntaxErrorException("SYNTAX ERROR: used variable hasn't a value");
+            throw new SyntaxErrorException();
         }
 
     }

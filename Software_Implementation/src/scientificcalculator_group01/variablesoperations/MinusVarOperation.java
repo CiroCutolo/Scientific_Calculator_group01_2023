@@ -46,11 +46,11 @@ public class MinusVarOperation extends VariablesOperation{
 	public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException, SyntaxErrorException{
 		
 		if(!minOperandsToOperate(stack.size()))
-			throw new StackErrorException("Not enough operands given...");
+			throw new StackErrorException();
 
 		ComplexNumber var = variable.getVariable(name);
 		if(var == null)
-			throw new SyntaxErrorException("SYNTAX ERROR: used varible hasn't a value...");
+			throw new SyntaxErrorException();
 		
 		SwapOperation swap = new SwapOperation();
 		DifferenceOperation diff = new DifferenceOperation();

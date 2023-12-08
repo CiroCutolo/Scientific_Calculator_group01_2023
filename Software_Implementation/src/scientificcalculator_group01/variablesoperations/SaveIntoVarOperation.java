@@ -35,7 +35,7 @@ public class SaveIntoVarOperation extends VariablesOperation{
 
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){
-            throw new StackErrorException("Not enough operands given...");
+            throw new StackErrorException();
         }else{
          
             ComplexNumber num = stack.peek();

@@ -36,7 +36,7 @@ public class DropOperation extends StackOperation{
             stack.pop();
         }
         else{
-            throw new StackErrorException("STACK ERROR: too few elements in the stack");
+            throw new StackErrorException();
         }
     }
     

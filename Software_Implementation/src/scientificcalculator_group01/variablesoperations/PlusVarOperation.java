@@ -43,10 +43,10 @@ public class PlusVarOperation extends VariablesOperation{
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name)
             throws StackErrorException,SyntaxErrorException{
                 if(!super.minOperandsToOperate(stack.size())){
-                    throw new StackErrorException("Not enough operands given...");
+                    throw new StackErrorException();
                 }
                 if (variable.getVariable(name) == null){
-                    throw new SyntaxErrorException("SYNTAX ERROR: used variable hasn't a value");
+                    throw new SyntaxErrorException();
                 }
 
                 ComplexNumber var = variable.getVariable(name);

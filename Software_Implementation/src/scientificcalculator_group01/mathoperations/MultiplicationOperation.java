@@ -35,7 +35,7 @@ public class MultiplicationOperation extends MathOperation{
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
         
         if(!super.minOperandsToOperate(stack.size()))
-            throw new StackErrorException("Not enough operands given...");
+            throw new StackErrorException();
         
         ComplexNumber num1 = stack.pop();
         ComplexNumber num2 = stack.pop();

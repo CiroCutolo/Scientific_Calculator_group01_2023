@@ -40,7 +40,7 @@ public class InversionOperation extends MathOperation {
             stack.push(result);
         }
         else{
-            throw new StackErrorException("STACK ERROR: too few elements in the stack");
+            throw new StackErrorException();
         }
     }
 
