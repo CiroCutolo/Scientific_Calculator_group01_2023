@@ -97,11 +97,11 @@ public class ScientificCalculator {
         }
     }
 
-    public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack){
-        if(stack.size() > 12){
-            return stack.subList((stack.size()-12), stack.size());
+    public List<ComplexNumber> getTop12Numbers(){
+        if(this.complexNumberStack.size() > 12){
+            return this.complexNumberStack.subList((this.complexNumberStack.size()-12), this.complexNumberStack.size());
         }
-        return stack.subList(0, stack.size());
+        return this.complexNumberStack.subList(0, this.complexNumberStack.size());
     
 
     }
