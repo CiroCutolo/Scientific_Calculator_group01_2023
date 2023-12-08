@@ -38,7 +38,9 @@ public class ScientificCalculator {
     private InputDistinguisher inputDistinguisher;
     
     public ScientificCalculator(){
-        
+        complexNumberStack = new Stack<>();
+        variable = new Variables();
+        inputDistinguisher = new InputDistinguisher();
     }
 
     /** 
