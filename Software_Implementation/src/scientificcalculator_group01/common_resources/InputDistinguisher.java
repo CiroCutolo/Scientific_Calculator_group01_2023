@@ -30,9 +30,9 @@ public class InputDistinguisher {
         // '?' esplicita che il testo da cui è preceduto nella matches non debba per forza essere presente nella stringa od al massimo una singola volta.
         if(text.matches("^[+-]?[0-9]+[.]?[0-9]*$")){
             return true;
-        }else if(text.matches("^[+-]([0-9]+[.]?[0-9]*)?[ij]$")){
+        }else if(text.matches("^[+-]?([0-9]+[.]?[0-9]*)?[i]$")){
             return true;
-        }else if(text.matches("^[+-]?[0-9]+[.]?[0-9]*[+-]([0-9]+[.]?[0-9]*)?[ij]$")){
+        }else if(text.matches("^[+-]?[0-9]+[.]?[0-9]*[+-]([0-9]+[.]?[0-9]*)?[i]$")){
             return true;
         }
         return false;

@@ -71,9 +71,9 @@ public class ComplexNumber {
 
     @Override 
     public String toString(){
-        if(getA() == 0 && getB() == 0){
+        if(this.getA() == 0 && this.getB() == 0){
             return "0";
-        }else if(getA() == 0 && getB() != 0){
+        }else if(this.getA() == 0 && this.getB() != 0){
                 if(this.b > 0){
                     if(this.b == 1){
                         return "+"+"i";
@@ -81,7 +81,7 @@ public class ComplexNumber {
                     return "+"+ Double.toString(this.b) + "i";
                 }
                 return Double.toString(this.b) + "i";
-        }else if( getA() != 0 && getB() == 0){
+        }else if(this.getA() != 0 && this.getB() == 0){
             return Double.toString(this.a);
         }else{
             if(this.b > 0){
