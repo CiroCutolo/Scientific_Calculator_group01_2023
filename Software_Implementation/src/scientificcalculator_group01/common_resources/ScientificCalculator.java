@@ -109,7 +109,6 @@ public class ScientificCalculator {
     }
     
     public void saveComplexNumber(String number){
-        System.out.println("Salvo il numero...");
         
         ComplexNumber num = new ComplexNumber(number);
         
