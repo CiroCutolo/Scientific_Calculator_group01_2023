@@ -37,52 +37,30 @@ public class SqrtOperation extends MathOperation{
         }
 
         ComplexNumber num = stack.pop();
-        Vector<ComplexNumber> ans = new Vector<ComplexNumber>();
-        
-        if(num.getA() != 0 && num.getB() == 0){
-            if(num.getA() < 0){
-                double x1 = Math.abs(num.getA());
-                ans.add(new ComplexNumber(0, Math.sqrt(x1)));
-            }else{
-                double x1 = num.getA();
-                ans.add(new ComplexNumber(Math.sqrt(x1)));
-            }
+        double mod = 0;
+        if(num.getA()!= 0 || num.getB()!= 0){
+            mod = Math.sqrt(num.getA()*num.getA()+num.getB()*num.getB());
         }else{
-        double x1 = Math.abs(Math.sqrt((num.getA() + Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())/2)));
-        double y1 = num.getB() / (2*x1);
-
-        ans.add(new ComplexNumber(x1, y1));
-
-        double x2 = -1 * x1;
-        double y2 = num.getB() / (2 * x2);
-
-        if (x2 != 0){
-            ans.add(new ComplexNumber(x2, y2));
+            mod = 0;
         }
-        
-        double x3 = (num.getA() - Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())) / 2;
 
-        if(x3 > 0){
-            x3 = Math.abs(Math.sqrt(x3));
-            double y3 = num.getB() / (2* x3);
-            ans.add(new ComplexNumber(x3, y3));
-
-            double x4 = -1 * x3;
-            double y4 = num.getB() / (2 * x4);
-
-            if( x4 != 0){
-                ans.add(new ComplexNumber(x4, y4));
+        if(num.getA() != 0 && num.getB() == 0){
+            if(num.getA() >= 0){
+                mod = Math.sqrt(num.getA());
+                stack.push(new ComplexNumber(mod));
+            }else{
+                mod = Math.abs(num.getA());
+                stack.push(new ComplexNumber(0,Math.sqrt(mod)));
             }
         }
-        }
         
-
-        for(ComplexNumber c : ans){
-            stack.push(c);
+        if(num.getB()!=0){
+        double r = Math.sqrt(mod);
+        double theta= (Math.atan2(num.getB(),num.getA()))/2;
+        stack.push(new ComplexNumber(r*Math.cos(theta), r*Math.sin(theta)));
         }
 
     }
 
-    
     
 }
