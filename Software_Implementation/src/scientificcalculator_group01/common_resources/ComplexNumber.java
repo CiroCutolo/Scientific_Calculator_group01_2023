@@ -71,7 +71,7 @@ public class ComplexNumber {
         this.b = b;
     }
 
-    @Override 
+    /*@Override 
     public String toString(){
         if(this.getA() == 0 && this.getB() == 0){
             return "0";
@@ -93,6 +93,64 @@ public class ComplexNumber {
                 return Double.toString(a) + "+"+ Double.toString(this.b) + "j";
             }else{
                 return Double.toString(a) + Double.toString(this.b) + "j";
+            }
+        }
+    }*/
+    @Override
+    public String toString() {
+        
+        if (a == 0 && b == 0) {
+            return "0";
+        } else if (a == 0 && b != 0) {
+            
+            if(b-(int)b==0){
+                return Integer.toString((int)b) + "j";
+            }else{
+                return Double.toString(b) + "j";
+            }
+
+        } else if (a != 0 && b == 0) {
+            if(a-(int)a==0){
+                return Integer.toString((int)a);
+            }else{
+                return Double.toString(a);
+            }
+        } else {
+            
+            if (this.b > 0) {
+
+                if (this.b == 1) {
+                    if(a-(int)a==0){
+                        return Integer.toString((int)a) + "+j";
+                    }else{
+                        return Double.toString(a) + "+j";
+                    }
+                }
+                String out;
+                if(a-(int)a==0){
+                    out = Integer.toString((int)a);
+                }else{
+                    out = Double.toString(a);
+                }
+                if(b-(int)b==0){
+                    out += '+' + Integer.toString((int)b)+ 'j';
+                }else{
+                    out += '+' + Double.toString(b)+ 'j';
+                }
+                return out;
+            } else {
+                String out;
+                if(a-(int)a==0){
+                    out = Integer.toString((int)a);
+                }else{
+                    out = Double.toString(a);
+                }
+                if(b-(int)b==0){
+                    out += Integer.toString((int)b) + 'j';
+                }else{
+                    out += Double.toString(b) + 'j';
+                }
+                return out;
             }
         }
     }
