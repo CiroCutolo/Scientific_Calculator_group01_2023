@@ -15,7 +15,7 @@
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="676.0">
                <children>
-                  <Label fx:id="stackn" layoutX="72.0" layoutY="45.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3;" wrapText="true" />
+                  <Label fx:id="stackn" layoutX="72.0" layoutY="45.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" />
                   <AnchorPane layoutX="73.0" layoutY="45.0" style="-fx-border-color: black;">
                      <children>
                         <Label fx:id="inputNum" alignment="CENTER_RIGHT" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true">
@@ -132,7 +132,7 @@
          <children>
             <AnchorPane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="629.0">
                <children>
-                  <Label fx:id="stackl" layoutX="62.0" layoutY="30.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3;" wrapText="true" />
+                  <Label fx:id="stackl" layoutX="62.0" layoutY="30.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" />
                   <AnchorPane layoutX="62.0" layoutY="30.0" style="-fx-border-color: black;">
                      <children>
                         <Label fx:id="inputLet" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true">
