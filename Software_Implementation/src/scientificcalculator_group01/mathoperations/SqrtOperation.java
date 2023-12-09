@@ -43,8 +43,10 @@ public class SqrtOperation extends MathOperation{
             if(num.getA() < 0){
                 double x1 = Math.abs(num.getA());
                 ans.add(new ComplexNumber(0, Math.sqrt(x1)));
+            }else{
+                double x1 = num.getA();
+                ans.add(new ComplexNumber(Math.sqrt(x1)));
             }
-
         }else{
         double x1 = Math.abs(Math.sqrt((num.getA() + Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())/2)));
         double y1 = num.getB() / (2*x1);
@@ -57,7 +59,7 @@ public class SqrtOperation extends MathOperation{
         if (x2 != 0){
             ans.add(new ComplexNumber(x2, y2));
         }
-
+        
         double x3 = (num.getA() - Math.sqrt(num.getA()*num.getA() + num.getB()*num.getB())) / 2;
 
         if(x3 > 0){
@@ -73,6 +75,7 @@ public class SqrtOperation extends MathOperation{
             }
         }
         }
+        
 
         for(ComplexNumber c : ans){
             stack.push(c);
