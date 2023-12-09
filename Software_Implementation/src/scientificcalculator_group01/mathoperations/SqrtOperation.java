@@ -46,17 +46,19 @@ public class SqrtOperation extends MathOperation{
         if(num.getA() != 0 && num.getB() == 0){
             if(num.getA() >= 0){
                 mod = Math.sqrt(num.getA());
+                mod = (Math.round(mod * 1000.0)/1000.0);
                 stack.push(new ComplexNumber(mod));
+
             }else{
                 mod = Math.abs(num.getA());
-                stack.push(new ComplexNumber(0,Math.sqrt(mod)));
+                stack.push(new ComplexNumber(0,Math.round(Math.sqrt(mod) * 1000.0)/1000.0));
             }
         }
         
         if(num.getB()!=0){
-        double r = Math.sqrt(mod);
-        double theta= (Math.atan2(num.getB(),num.getA()))/2;
-        stack.push(new ComplexNumber(r*Math.cos(theta), r*Math.sin(theta)));
+            double r = Math.sqrt(mod);
+            double theta= (Math.atan2(num.getB(),num.getA()))/2;
+            stack.push(new ComplexNumber(Math.round(r*Math.cos(theta) * 1000.0)/1000.0, Math.round(r*Math.sin(theta) * 1000.0)/1000.0));
         }
 
     }

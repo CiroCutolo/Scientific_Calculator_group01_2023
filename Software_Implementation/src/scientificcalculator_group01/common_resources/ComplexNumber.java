@@ -39,7 +39,7 @@ public class ComplexNumber {
                 a = "0";
                 b = text.substring(0, text.length()-1);
             }else{
-                a = text.substring(0, text.length()-1);
+                a = text;
                 b = "0";
             }
         }else{
