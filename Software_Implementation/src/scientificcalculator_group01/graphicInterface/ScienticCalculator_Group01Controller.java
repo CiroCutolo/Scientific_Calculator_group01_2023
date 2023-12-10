@@ -5,6 +5,8 @@
 package scientificcalculator_group01.graphicInterface;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.MathErrorException;
 import scientificcalculator_group01.exceptions.StackErrorException;
@@ -20,7 +23,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author giuli
+ * 
  */
 public class ScienticCalculator_Group01Controller implements Initializable {
     
@@ -150,6 +153,8 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private Button enter;
     
     private ScientificCalculator calculator;
+
+    private List<ComplexNumber> lista;
    
     
     @Override
@@ -159,8 +164,7 @@ public class ScienticCalculator_Group01Controller implements Initializable {
         LA.setVisible(false);
         binding();
         calculator = new ScientificCalculator();
-        //list = FXCollections.observableArrayList();
-        //list.addAll(calculator.getTop12Numbers());
+        lista = new ArrayList<>();
     }
     
     public void binding(){
@@ -509,8 +513,16 @@ public class ScienticCalculator_Group01Controller implements Initializable {
             inputNum.setText("SYNTAX ERROR");
             inputLet.setText("SYNTAX ERROR");
         }finally{
-            stackn.setText(calculator.getTop12Numbers().toString());
-            stackl.setText(calculator.getTop12Numbers().toString());
+            lista = calculator.getTop12Numbers();
+            String s = lista.toString();
+
+            int pos1= s.indexOf("[");
+            int pos2 = s.indexOf("]");
+
+            String sub = s.substring(pos1+1, pos2);
+
+            stackn.setText(sub);
+            stackl.setText(sub);
         }
         
     }
