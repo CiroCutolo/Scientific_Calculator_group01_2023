@@ -45,11 +45,11 @@ public class PlusVarOperation extends VariablesOperation{
                 if(!super.minOperandsToOperate(stack.size())){
                     throw new StackErrorException();
                 }
-                if (variable.getVariable(name) == null){
+                ComplexNumber var = variable.getVariable(name);
+                if (var == null){
                     throw new SyntaxErrorException();
                 }
 
-                ComplexNumber var = variable.getVariable(name);
                 SumOperation sum = new SumOperation();
                 ComplexNumber num = stack.peek();
                 
