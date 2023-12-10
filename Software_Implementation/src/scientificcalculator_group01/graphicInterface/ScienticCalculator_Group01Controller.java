@@ -159,7 +159,6 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         //rendo invisibile il pannello delle lettere
         LA.setVisible(false);
         binding();
