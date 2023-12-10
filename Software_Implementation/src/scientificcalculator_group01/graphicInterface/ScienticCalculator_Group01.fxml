@@ -9,332 +9,377 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="722.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scientificcalculator_group01.graphicInterface.ScienticCalculator_Group01Controller">
+<HBox alignment="BASELINE_CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scientificcalculator_group01.graphicInterface.ScienticCalculator_Group01Controller">
    <children>
-      <AnchorPane fx:id="NA" prefHeight="722.0" prefWidth="940.0">
+      <AnchorPane prefHeight="722.0" prefWidth="940.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="940.0">
+            <AnchorPane fx:id="NA" prefHeight="722.0" prefWidth="940.0">
                <children>
-                  <Label fx:id="stackn" layoutX="72.0" layoutY="45.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" AnchorPane.bottomAnchor="610.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0" />
-                  <AnchorPane layoutX="73.0" layoutY="45.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="940.0">
                      <children>
-                        <Label fx:id="inputNum" alignment="CENTER_RIGHT" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-                           <font>
-                              <Font name="Courier New" size="32.0" />
-                           </font>
-                        </Label>
+                        <Label fx:id="stackn" layoutX="72.0" layoutY="45.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" AnchorPane.bottomAnchor="610.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0" />
+                        <AnchorPane layoutX="73.0" layoutY="45.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <Label fx:id="inputNum" alignment="CENTER_RIGHT" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font name="Courier New" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <GridPane layoutX="62.0" layoutY="217.0" prefHeight="449.0" prefWidth="829.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="245.0">
+                           <children>
+                              <Button fx:id="sum" mnemonicParsing="false" onAction="#makesum" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="+" textAlignment="RIGHT" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="mult" mnemonicParsing="false" onAction="#makemult" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="*" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="one" mnemonicParsing="false" onAction="#make1" prefHeight="70.0" prefWidth="70.0" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="two" mnemonicParsing="false" onAction="#write2" prefHeight="70.0" prefWidth="70.0" text="2" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="three" mnemonicParsing="false" onAction="#write3" prefHeight="70.0" prefWidth="70.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="canc" mnemonicParsing="false" onAction="#cancel" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: red; -fx-border-color: black;" text="C" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="numbersToLetters" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-border-color: black;" text="abc" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="diff" mnemonicParsing="false" onAction="#makediff" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="div" mnemonicParsing="false" onAction="#makediv" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="/" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="four" mnemonicParsing="false" onAction="#write4" prefHeight="70.0" prefWidth="70.0" text="4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="five" mnemonicParsing="false" onAction="#make5" prefHeight="70.0" prefWidth="70.0" text="5" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="six" mnemonicParsing="false" onAction="#make6" prefHeight="70.0" prefWidth="70.0" text="6" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="inver" mnemonicParsing="false" onAction="#makeinv" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="+-" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="sqrt" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#makesqrt" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="sqrt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="seven" mnemonicParsing="false" onAction="#write7" prefHeight="70.0" prefWidth="70.0" text="7" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="eight" layoutX="199.0" layoutY="157.0" mnemonicParsing="false" onAction="#write8" prefHeight="70.0" prefWidth="70.0" text="8" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="nine" layoutX="286.0" layoutY="157.0" mnemonicParsing="false" onAction="#write9" prefHeight="70.0" prefWidth="70.0" text="9" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="clear" layoutX="373.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeClear" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="clear" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="over" layoutX="460.0" layoutY="157.0" mnemonicParsing="false" onAction="#makeOver" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="over" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="magg" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeMagg" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="&gt;" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="min" layoutX="27.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeMin" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="&lt;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="complex" layoutX="113.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeComplex" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="j" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="zero" layoutX="199.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeZero" prefHeight="70.0" prefWidth="70.0" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="drop" layoutX="460.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeDrop" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="drop" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="dup" layoutX="373.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeDup" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="dup" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="swap" layoutX="460.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeSwap" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="swap" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="dot" layoutX="172.0" layoutY="17.0" mnemonicParsing="false" onAction="#writedot" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: bdbebd; -fx-border-color: black;" text="." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="enter" layoutX="172.0" layoutY="215.0" mnemonicParsing="false" onAction="#makeEnter" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="↵" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
                      </children>
                   </AnchorPane>
-                  <GridPane layoutX="62.0" layoutY="217.0" prefHeight="449.0" prefWidth="829.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="245.0">
-                     <children>
-                        <Button fx:id="sum" mnemonicParsing="false" onAction="#makesum" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="+" textAlignment="RIGHT" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="mult" mnemonicParsing="false" onAction="#makemult" prefHeight="70.0" prefWidth="70.0" text="*" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="one" mnemonicParsing="false" onAction="#make1" prefHeight="70.0" prefWidth="70.0" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="two" mnemonicParsing="false" onAction="#write2" prefHeight="70.0" prefWidth="70.0" text="2" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="three" mnemonicParsing="false" onAction="#write3" prefHeight="70.0" prefWidth="70.0" text="3" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="canc" mnemonicParsing="false" onAction="#cancel" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: red; -fx-border-color: black;" text="C" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="numbersToLetters" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-border-color: black;" text="abc" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="22.0" />
-                           </font></Button>
-                        <Button fx:id="diff" mnemonicParsing="false" onAction="#makediff" prefHeight="70.0" prefWidth="70.0" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="div" mnemonicParsing="false" onAction="#makediv" prefHeight="70.0" prefWidth="70.0" text="/" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="four" mnemonicParsing="false" onAction="#write4" prefHeight="70.0" prefWidth="70.0" text="4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="five" mnemonicParsing="false" onAction="#make5" prefHeight="70.0" prefWidth="70.0" text="5" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="six" mnemonicParsing="false" onAction="#make6" prefHeight="70.0" prefWidth="70.0" text="6" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="inver" mnemonicParsing="false" onAction="#makeinv" prefHeight="70.0" prefWidth="70.0" text="+-" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="sqrt" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#makesqrt" prefHeight="70.0" prefWidth="70.0" text="sqrt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="seven" mnemonicParsing="false" onAction="#write7" prefHeight="70.0" prefWidth="70.0" text="7" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="eight" layoutX="199.0" layoutY="157.0" mnemonicParsing="false" onAction="#write8" prefHeight="70.0" prefWidth="70.0" text="8" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="nine" layoutX="286.0" layoutY="157.0" mnemonicParsing="false" onAction="#write9" prefHeight="70.0" prefWidth="70.0" text="9" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="clear" layoutX="373.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeClear" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="clear" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="over" layoutX="460.0" layoutY="157.0" mnemonicParsing="false" onAction="#makeOver" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="over" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="magg" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeMagg" prefHeight="70.0" prefWidth="70.0" text="&gt;" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="min" layoutX="27.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeMin" prefHeight="70.0" prefWidth="70.0" text="&lt;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="complex" layoutX="113.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeComplex" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="j" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="zero" layoutX="199.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeZero" prefHeight="70.0" prefWidth="70.0" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="drop" layoutX="460.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeDrop" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="drop" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="dup" layoutX="373.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeDup" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="dup" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="swap" layoutX="460.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeSwap" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #808080; -fx-border-color: black;" text="swap" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="dot" layoutX="172.0" layoutY="17.0" mnemonicParsing="false" onAction="#writedot" prefHeight="70.0" prefWidth="70.0" text="." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="22.0" />
-                           </font></Button>
-                        <Button fx:id="enter" layoutX="172.0" layoutY="215.0" mnemonicParsing="false" onAction="#makeEnter" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: ffc26c; -fx-border-color: black;" text="↵" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                     </children>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
                </children>
             </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="LA" layoutX="-1.0" layoutY="-2.0" prefHeight="722.0" prefWidth="940.0">
-         <children>
-            <AnchorPane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="940.0">
+            <AnchorPane fx:id="LA" layoutX="-1.0" layoutY="-2.0" prefHeight="722.0" prefWidth="940.0">
                <children>
-                  <Label fx:id="stackl" layoutX="62.0" layoutY="30.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" AnchorPane.bottomAnchor="610.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0" />
-                  <AnchorPane layoutX="62.0" layoutY="30.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                  <AnchorPane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="940.0">
                      <children>
-                        <Label fx:id="inputLet" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
-                           <font>
-                              <Font name="Courier New" size="32.0" />
-                           </font>
-                        </Label>
+                        <Label fx:id="stackl" layoutX="62.0" layoutY="30.0" prefHeight="46.0" prefWidth="364.0" style="-fx-border-color: d3d3d3; -fx-background-color: e9e9e9;" wrapText="true" AnchorPane.bottomAnchor="610.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0" />
+                        <AnchorPane layoutX="62.0" layoutY="30.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <Label fx:id="inputLet" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="219.0" layoutY="107.0" prefHeight="59.0" prefWidth="286.0" style="-fx-text-alignment: right;" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                    <Font name="Courier New" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <GridPane layoutX="53.0" layoutY="245.0" prefHeight="449.0" prefWidth="829.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="245.0">
+                           <children>
+                              <Button fx:id="a" mnemonicParsing="false" onAction="#writeA" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="a" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="b" mnemonicParsing="false" onAction="#writeB" prefHeight="70.0" prefWidth="70.0" text="b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="c" mnemonicParsing="false" onAction="#writeC" prefHeight="70.0" prefWidth="70.0" text="c" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="d" mnemonicParsing="false" onAction="#writeD" prefHeight="70.0" prefWidth="70.0" text="d" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="e" mnemonicParsing="false" onAction="#writeE" prefHeight="70.0" prefWidth="70.0" text="e" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="canc" mnemonicParsing="false" onAction="#cancel" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: red; -fx-border-color: black;" text="C" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="lettersToNumbers" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-border-color: black;" text="123" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="f" mnemonicParsing="false" onAction="#writeF" prefHeight="70.0" prefWidth="70.0" text="f" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="g" mnemonicParsing="false" onAction="#writeG" prefHeight="70.0" prefWidth="70.0" text="g" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="h" mnemonicParsing="false" onAction="#writeH" prefHeight="70.0" prefWidth="70.0" text="h" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="i" mnemonicParsing="false" onAction="#writeI" prefHeight="70.0" prefWidth="70.0" text="i" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="j" mnemonicParsing="false" onAction="#writeJ" prefHeight="70.0" prefWidth="70.0" text="j" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="m" mnemonicParsing="false" onAction="#writeM" prefHeight="70.0" prefWidth="70.0" text="m" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="n" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeN" prefHeight="70.0" prefWidth="70.0" text="n" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="o" mnemonicParsing="false" onAction="#writeO" prefHeight="70.0" prefWidth="70.0" text="o" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="p" layoutX="199.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeP" prefHeight="70.0" prefWidth="70.0" text="p" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="q" layoutX="286.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeQ" prefHeight="70.0" prefWidth="70.0" text="q" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="t" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeT" prefHeight="70.0" prefWidth="70.0" text="t" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="u" layoutX="27.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeU" prefHeight="70.0" prefWidth="70.0" text="u" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="w" layoutX="199.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeW" prefHeight="70.0" prefWidth="70.0" text="w" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="l" layoutX="373.0" layoutY="88.0" mnemonicParsing="false" onAction="#writeL" prefHeight="70.0" prefWidth="70.0" text="l" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="k" layoutX="373.0" layoutY="88.0" mnemonicParsing="false" onAction="#writeK" prefHeight="70.0" prefWidth="70.0" text="k" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="s" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeS" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="s" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="r" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeR" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="r" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="v" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeV" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="v" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="529.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeX" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="x" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" fx:id="x">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="y" layoutX="355.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeY" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="y" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="z" layoutX="442.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeZ" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="z" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
                      </children>
                   </AnchorPane>
-                  <GridPane layoutX="53.0" layoutY="245.0" prefHeight="449.0" prefWidth="829.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="245.0">
-                     <children>
-                        <Button fx:id="a" mnemonicParsing="false" onAction="#writeA" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="a" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="b" mnemonicParsing="false" onAction="#writeB" prefHeight="70.0" prefWidth="70.0" text="b" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="c" mnemonicParsing="false" onAction="#writeC" prefHeight="70.0" prefWidth="70.0" text="c" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="d" mnemonicParsing="false" onAction="#writeD" prefHeight="70.0" prefWidth="70.0" text="d" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="e" mnemonicParsing="false" onAction="#writeE" prefHeight="70.0" prefWidth="70.0" text="e" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="canc" mnemonicParsing="false" onAction="#cancel" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: red; -fx-border-color: black;" text="C" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="lettersToNumbers" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: orange; -fx-border-color: black;" text="123" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="22.0" />
-                           </font></Button>
-                        <Button fx:id="f" mnemonicParsing="false" onAction="#writeF" prefHeight="70.0" prefWidth="70.0" text="f" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="g" mnemonicParsing="false" onAction="#writeG" prefHeight="70.0" prefWidth="70.0" text="g" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="h" mnemonicParsing="false" onAction="#writeH" prefHeight="70.0" prefWidth="70.0" text="h" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="i" mnemonicParsing="false" onAction="#writeI" prefHeight="70.0" prefWidth="70.0" text="i" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="j" mnemonicParsing="false" onAction="#writeJ" prefHeight="70.0" prefWidth="70.0" text="j" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="m" mnemonicParsing="false" onAction="#writeM" prefHeight="70.0" prefWidth="70.0" text="m" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="n" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeN" prefHeight="70.0" prefWidth="70.0" text="n" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="o" mnemonicParsing="false" onAction="#writeO" prefHeight="70.0" prefWidth="70.0" text="o" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="p" layoutX="199.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeP" prefHeight="70.0" prefWidth="70.0" text="p" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="q" layoutX="286.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeQ" prefHeight="70.0" prefWidth="70.0" text="q" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="t" layoutX="27.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeT" prefHeight="70.0" prefWidth="70.0" text="t" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="u" layoutX="27.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeU" prefHeight="70.0" prefWidth="70.0" text="u" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="w" layoutX="199.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeW" prefHeight="70.0" prefWidth="70.0" text="w" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="l" layoutX="373.0" layoutY="88.0" mnemonicParsing="false" onAction="#writeL" prefHeight="70.0" prefWidth="70.0" text="l" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="k" layoutX="373.0" layoutY="88.0" mnemonicParsing="false" onAction="#writeK" prefHeight="70.0" prefWidth="70.0" text="k" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="s" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeS" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="s" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="r" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeR" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="r" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="v" layoutX="10.0" layoutY="19.0" mnemonicParsing="false" onAction="#writeV" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="v" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button layoutX="529.0" layoutY="157.0" mnemonicParsing="false" onAction="#writeX" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="x" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" fx:id="x">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="y" layoutX="355.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeY" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="y" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                        <Button fx:id="z" layoutX="442.0" layoutY="225.0" mnemonicParsing="false" onAction="#writeZ" prefHeight="70.0" prefWidth="70.0" style="-fx-border-style: double;" text="z" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                           <font>
-                              <Font size="24.0" />
-                           </font></Button>
-                     </children>
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
    </children>
-</AnchorPane>
+</HBox>
