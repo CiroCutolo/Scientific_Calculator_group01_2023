@@ -43,8 +43,12 @@ public class SqrtOperation extends MathOperation{
             mod = 0;
         }
 
+        if(num.getA() == 0 && num.getB() == 0){
+            stack.push(new ComplexNumber(0));
+        }
+
         if(num.getA() != 0 && num.getB() == 0){
-            if(num.getA() >= 0){
+            if(num.getA() > 0){
                 mod = Math.sqrt(num.getA());
                 mod = (Math.round(mod * 1000.0)/1000.0);
                 stack.push(new ComplexNumber(mod));
