@@ -20,7 +20,7 @@ public class ScentificCalculator_Group01 extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("ScienticCalculator_Group01.fxml"));
         
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,940,722);
         
         stage.setTitle("My Scientific Calculator");
         stage.setScene(scene);
