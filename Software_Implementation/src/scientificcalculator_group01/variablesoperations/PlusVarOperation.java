@@ -50,11 +50,14 @@ public class PlusVarOperation extends VariablesOperation{
                 }
 
                 ComplexNumber var = variable.getVariable(name);
-
-                stack.push(var);
                 SumOperation sum = new SumOperation();
+                ComplexNumber num = stack.peek();
+                
+                stack.push(var);
                 sum.execute(stack);
-                variable.setVariable(name, stack.peek());
+                variable.setVariable(name, stack.pop());
+                stack.push(num);
+
 
     }
     
