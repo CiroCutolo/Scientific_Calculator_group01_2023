@@ -5,8 +5,6 @@
 package scientificcalculator_group01.graphicInterface;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.MathErrorException;
 import scientificcalculator_group01.exceptions.StackErrorException;
