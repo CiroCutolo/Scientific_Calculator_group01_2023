@@ -50,8 +50,8 @@ public class DivisionOperation extends MathOperation{
             }else{
                 result = new ComplexNumber((((num1.getA()*num2.getA()) + (num1.getB()*num2.getB()))/((num2.getA()*num2.getA())+(num2.getB()*num2.getB()))), (((num1.getB()*num2.getA())-(num1.getA()*num2.getB()))/((num2.getA()*num2.getA())+(num2.getB()*num2.getB()))));   
             }
-            result.setA(Math.round((result.getA() * 100.0))/100.0);
-            result.setB(Math.round((result.getB() * 100.0))/100.0);
+            result.setA(Math.round(result.getA() * 100.0)/100.0);
+            result.setB(Math.round(result.getB() * 100.0)/100.0);
             
             stack.push(result);
         }else{
