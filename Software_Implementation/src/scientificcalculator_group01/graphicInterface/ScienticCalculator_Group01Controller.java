@@ -153,8 +153,6 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private Button enter;
     
     private ScientificCalculator calculator;
-
-    private List<ComplexNumber> lista;
    
     
     @Override
@@ -163,7 +161,6 @@ public class ScienticCalculator_Group01Controller implements Initializable {
         LA.setVisible(false);
         binding();
         calculator = new ScientificCalculator();
-        lista = new ArrayList<>();
     }
     
     public void binding(){
@@ -512,8 +509,7 @@ public class ScienticCalculator_Group01Controller implements Initializable {
             inputNum.setText("SYNTAX ERROR");
             inputLet.setText("SYNTAX ERROR");
         }finally{
-            lista = calculator.getTop12Numbers();
-            String s = lista.toString();
+            String s = calculator.getTop12Numbers().toString();
 
             int pos1= s.indexOf("[");
             int pos2 = s.indexOf("]");
