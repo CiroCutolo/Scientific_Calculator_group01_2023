@@ -9,9 +9,11 @@ package scientificcalculator_group01.common_resources;
  *
  * @author Ciro Cutolo
  */
+
 public class InputDistinguisher {
     public InputDistinguisher(){
     }
+    
     /** 
      * @method public boolean isComplexNumber(String text):
      *         Utile al riconoscimento dell'input come numero complesso.
