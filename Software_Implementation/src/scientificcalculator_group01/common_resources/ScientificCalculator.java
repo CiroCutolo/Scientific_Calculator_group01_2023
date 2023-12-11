@@ -213,7 +213,7 @@ public class ScientificCalculator {
             
             save.execute(this.variable, this.complexNumberStack, ch[1]);
         
-        }else if(operation.matches("^+[a-z]$")){
+        }else if(operation.matches("^[+]+[a-z]$")){
         
             PlusVarOperation plus = new PlusVarOperation();
             
@@ -221,7 +221,7 @@ public class ScientificCalculator {
             
             plus.execute(this.variable, this.complexNumberStack, ch[1]);
         
-        }else if(operation.matches("^-[a-z]$")){
+        }else if(operation.matches("^[-]+[a-z]$")){
         
             MinusVarOperation minus = new MinusVarOperation();
 
