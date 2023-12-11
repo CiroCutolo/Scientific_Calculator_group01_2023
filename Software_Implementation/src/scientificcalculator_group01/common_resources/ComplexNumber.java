@@ -71,31 +71,6 @@ public class ComplexNumber {
         this.b = b;
     }
 
-    /*@Override 
-    public String toString(){
-        if(this.getA() == 0 && this.getB() == 0){
-            return "0";
-        }else if(this.getA() == 0 && this.getB() != 0){
-                if(this.b > 0){
-                    if(this.b == 1){
-                        return "+"+"j";
-                    }
-                    return "+"+ Double.toString(this.b) + "j";
-                }
-                return Double.toString(this.b) + "j";
-        }else if(this.getA() != 0 && this.getB() == 0){
-            return Double.toString(this.a);
-        }else{
-            if(this.b > 0){
-                if(this.b == 1){
-                    return Double.toString(a) + "+"+"j";
-                }
-                return Double.toString(a) + "+"+ Double.toString(this.b) + "j";
-            }else{
-                return Double.toString(a) + Double.toString(this.b) + "j";
-            }
-        }
-    }*/
     @Override
     public String toString() {
         
