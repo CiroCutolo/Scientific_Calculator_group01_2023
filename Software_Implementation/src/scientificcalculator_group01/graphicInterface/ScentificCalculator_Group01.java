@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author giuli
+ * 
  */
 public class ScentificCalculator_Group01 extends Application {
     
