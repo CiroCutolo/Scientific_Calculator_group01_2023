@@ -57,6 +57,9 @@ public class ScientificCalculator {
      * @method public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException:
      *         Sfrutta l'input distinguisher per differenziare i possibili input, 
      *         così da reindirizzarli ai metodi dediti al calcolo delle specifiche operazioni, od al salvataggio del numero inserito.
+     * 
+     * @method public Stack<ComplexNumber> getComplexNumberStack():
+     *         Restituisce reference dello stack su cui si basa il funzionamento della calcolatrice.
      *    
      * @method public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack):
      *         Restituisce una lista contenente gli ultimi 12 elementi dello stack. 
@@ -97,6 +100,10 @@ public class ScientificCalculator {
             throw new SyntaxErrorException();
     
         }
+    }
+
+    public Stack<ComplexNumber> getComplexNumberStack() {
+        return complexNumberStack;
     }
 
     public List<ComplexNumber> getTop12Numbers(){
@@ -193,8 +200,6 @@ public class ScientificCalculator {
     }
     
     public void calculateVariablesOperation(String operation) throws StackErrorException, SyntaxErrorException{
-
-        char[] ch = new char[2];
         
         if(operation.matches("^[<][a-z]$")){
         
