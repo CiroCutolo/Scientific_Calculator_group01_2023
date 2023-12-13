@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package scientificcalculator_group01.variablesoperations;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -18,7 +13,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author auror
+ * @author Aurora Campione
  */
 public class SaveIntoVarOperationTest {
     private static SaveIntoVarOperation saveIntoVar;
@@ -78,6 +73,8 @@ public class SaveIntoVarOperationTest {
     
     @Test
     public void testExecute() throws Exception {
+        //test per tutte le possibili variabili 
+
         stack.push(number0);
         saveIntoVar.execute(variable, stack, 'a');
         assertEquals(number0.getA(), variable.getVariable('a').getA());
