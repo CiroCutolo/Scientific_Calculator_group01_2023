@@ -196,38 +196,31 @@ public class ScientificCalculator {
 
         char[] ch = new char[2];
         
-        if(operation.matches("^[<]+[a-z]$")){
+        if(operation.matches("^[<][a-z]$")){
         
             GetFromVarOperation get = new GetFromVarOperation();
+            //essendo l'operazione formata da 2 char di cui il secondo è la variabile, 
+            //trasformo la stringa in un array di char, cosa che permette di prendere separatamente gli elementi.
             
-            operation.getChars(0, 1, ch, 0);//essendo l'operazione formata da 2 char di cui il secondo è la variabile, 
-                                            //trasformo la stringa in un array di char, cosa che permette di prendere separatamente gli elementi.
-            
-            get.execute(this.variable, this.complexNumberStack, ch[1]);
+            get.execute(this.variable, this.complexNumberStack, operation.charAt(1));
         
-        }else if(operation.matches("^[>]+[a-z]$")){
+        }else if(operation.matches("^[>][a-z]$")){
         
             SaveIntoVarOperation save = new SaveIntoVarOperation();
             
-            operation.getChars(0, 1, ch, 0);
-            
-            save.execute(this.variable, this.complexNumberStack, ch[1]);
+            save.execute(this.variable, this.complexNumberStack, operation.charAt(1));
         
         }else if(operation.matches("^[+]+[a-z]$")){
         
             PlusVarOperation plus = new PlusVarOperation();
             
-            operation.getChars(0, 1, ch, 0);
-            
-            plus.execute(this.variable, this.complexNumberStack, ch[1]);
+            plus.execute(this.variable, this.complexNumberStack, operation.charAt(1));
         
         }else if(operation.matches("^[-]+[a-z]$")){
         
             MinusVarOperation minus = new MinusVarOperation();
 
-            operation.getChars(0, 1, ch, 0);
-            
-            minus.execute(this.variable, this.complexNumberStack, ch[1]); 
+            minus.execute(this.variable, this.complexNumberStack, operation.charAt(1)); 
         
         }
     }
