@@ -20,6 +20,7 @@ class ComplexNumber{
     + getB() : double 
     + setA(a : double) : void
     + setB(b : double) : void
+    + toString() : String
 }
 
 
@@ -33,11 +34,11 @@ class InputDistinguisher{
 
 class ScientificCalculator{
     - complexNumbersStack : Stack<ComplexNumber>
-    - variables : Variables
+    - variable : Variables
     - inputDistinguisher : InputDistinguisher
-    + Calculator()
+    + ScientificCalculator()
     + calculate(input : String) : void 
-    + getTop12Numbers(stack : Stack<ComplexNumber>) : List<ComplexNumber>
+    + getTop12Numbers() : List<ComplexNumber>
     + saveComplexNumber(number : String) : void
     + calculateMathOperation(operation : String) : void
     + calculateStackOperation(operation : String) : void

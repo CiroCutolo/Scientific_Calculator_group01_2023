@@ -85,35 +85,35 @@ class OverOperation{
 }
 
 interface VariablesInterface{
-	+ {abstract} execute(variables : Variables, stack : Stack<ComplexNumber>, name : char): void
+	+ {abstract} execute(variable : Variables, stack : Stack<ComplexNumber>, name : char): void
 }
 
 abstract class VariablesOperation{
 	- numOperands: int
 	+ VariablesOperation()	
 	+ VariablesOperation(numOperands : int)
-	+ abstract execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+	+ abstract execute(variable : Variables, stack : Stack<ComplexNumber>, name : char) : void
 	# minOperandsToOperate(size : int) : boolean
 }
 
 class SaveIntoVarOperation{
         + SaveIntoVarOperation()
-        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+        + execute(variable : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
 class GetFromVarOperation{
         + GetFromVarOperation()
-        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+        + execute(variable : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
 class MinusVarOperation{
         + MinusVarOperation()
-        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+        + execute(variable : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
 class PlusVarOperation{
         + PlusVarOperation()
-        + execute(variables : Variables, stack : Stack<ComplexNumber>, name : char) : void
+        + execute(variable : Variables, stack : Stack<ComplexNumber>, name : char) : void
 }
 
 class Variables{
@@ -133,6 +133,7 @@ class ComplexNumber{
     + getB() : double 
     + setA(a : double) : void
     + setB(b : double) : void
+    + toString() : String
 }
 
 class InputDistinguisher{
@@ -163,11 +164,11 @@ class SyntaxErrorException{
 
 class ScientificCalculator{
     - complexNumbersStack : Stack<ComplexNumber>
-    - variables : Variables
+    - variable : Variables
     - inputDistinguisher : InputDistinguisher
-    + Calculator()
+    + ScientificCalculator()
     + calculate(input : String) : void 
-    + getTop12Numbers(stack : Stack<ComplexNumber>) : List<ComplexNumber>
+    + getTop12Numbers() : List<ComplexNumber>
     + saveComplexNumber(number : String) : void
     + calculateMathOperation(operation : String) : void
     + calculateStackOperation(operation : String) : void
