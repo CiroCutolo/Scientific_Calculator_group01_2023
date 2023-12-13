@@ -55,7 +55,7 @@ public class ScientificCalculator {
      *        alla distinzione del tipo di input ricevuto dalla calcolatrice
      * 
      * @method public void calculate(String input) throws MathErrorException, StackErrorException, SyntaxErrorException:
-     *         Sfrutta l'inut distinguisher per differenziare i possibili input, 
+     *         Sfrutta l'input distinguisher per differenziare i possibili input, 
      *         così da reindirizzarli ai metodi dediti al calcolo delle specifiche operazioni, od al salvataggio del numero inserito.
      *    
      * @method public List<ComplexNumber> getTop12Numbers(Stack<ComplexNumber> stack):
