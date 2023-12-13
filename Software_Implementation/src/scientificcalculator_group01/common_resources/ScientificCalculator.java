@@ -196,7 +196,7 @@ public class ScientificCalculator {
 
         char[] ch = new char[2];
         
-        if(operation.matches("^<[a-z]$")){
+        if(operation.matches("^[<]+[a-z]$")){
         
             GetFromVarOperation get = new GetFromVarOperation();
             
@@ -205,7 +205,7 @@ public class ScientificCalculator {
             
             get.execute(this.variable, this.complexNumberStack, ch[1]);
         
-        }else if(operation.matches("^>[a-z]$")){
+        }else if(operation.matches("^[>]+[a-z]$")){
         
             SaveIntoVarOperation save = new SaveIntoVarOperation();
             

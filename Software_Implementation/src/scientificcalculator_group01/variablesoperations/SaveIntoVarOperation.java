@@ -32,15 +32,14 @@ public class SaveIntoVarOperation extends VariablesOperation{
     * @throws StackErrorException Eccezione lanciata se la variabile specificata
     *                                  non ha valore.
     */
-
+    @Override
     public void execute(Variables variable, Stack<ComplexNumber> stack, char name) throws StackErrorException{
         if(!super.minOperandsToOperate(stack.size())){
             throw new StackErrorException();
         }else{
-         
-            ComplexNumber num = stack.peek();
 
-            variable.setVariable(name, num);
+            variable.setVariable(name, stack.peek());
+
         }
 
     }
