@@ -20,7 +20,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  */
 public class DupOperation extends StackOperation{
     public DupOperation(){
-        super();
+        super(1);
     }
 
     /**
