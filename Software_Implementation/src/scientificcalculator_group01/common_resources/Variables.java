@@ -18,11 +18,6 @@ public class Variables {
     
     public Variables(){
         varMap = new HashMap <Character,ComplexNumber> ();
-
-        for (char letter = 'a'; letter <= 'z'; letter++) {
-            varMap.put(Character.valueOf(letter), null);
-        }
-        
     }
     
     /**
@@ -32,7 +27,7 @@ public class Variables {
      *          parametro.
      */
     public ComplexNumber getVariable(char name){
-        return varMap.get(Character.valueOf(name));
+        return varMap.get(name);
     
         
     }
@@ -44,6 +39,7 @@ public class Variables {
      * 
      */
     public void setVariable(char name, ComplexNumber value){
-        varMap.put(Character.valueOf(name), value);
+       
+        varMap.put(name, value);
     }
 }

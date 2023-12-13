@@ -37,7 +37,6 @@ public class SaveIntoVarOperation extends VariablesOperation{
         if(!super.minOperandsToOperate(stack.size())){
             throw new StackErrorException();
         }else{
-
             variable.setVariable(name, stack.peek());
 
         }
