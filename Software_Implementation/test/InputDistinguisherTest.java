@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import scientificcalculator_group01.common_resources.InputDistinguisher;
 import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
