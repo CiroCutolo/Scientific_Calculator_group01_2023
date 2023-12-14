@@ -57,14 +57,14 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
             }else{
                 mod = Math.abs(num.getA());
-                stack.push(new ComplexNumber(0,Math.round(Math.sqrt(mod) * 1000.0)/1000.0));
+                stack.push(new ComplexNumber(0,Math.round(Math.sqrt(mod) * 100.0)/100.0));
             }
         }
         
         if(num.getB()!=0){
             double r = Math.sqrt(mod);
             double theta= (Math.atan2(num.getB(),num.getA()))/2;
-            stack.push(new ComplexNumber(Math.round(r*Math.cos(theta) * 1000.0)/1000.0, Math.round(r*Math.sin(theta) * 1000.0)/1000.0));
+            stack.push(new ComplexNumber(Math.round(r*Math.cos(theta) * 100.0)/100.0, Math.round(r*Math.sin(theta) * 100.0)/100.0));
         }
 
     }

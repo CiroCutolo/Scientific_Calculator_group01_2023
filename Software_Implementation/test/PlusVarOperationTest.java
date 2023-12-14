@@ -88,10 +88,10 @@ public class PlusVarOperationTest {
     
     @Test
     public void testSyntaxErrorExecute() throws SyntaxErrorException{
+        stack.clear();
         stack.push(number0);
-        variable.setVariable('a', null);
         SyntaxErrorException thrown = assertThrows(SyntaxErrorException.class,
-                ()->plusVarOperation.execute(variable, stack, 'a'), "SYNTAX ERROR");
+                ()->plusVarOperation.execute(variable, stack, 'z'), "SYNTAX ERROR");
     }
     
     /**

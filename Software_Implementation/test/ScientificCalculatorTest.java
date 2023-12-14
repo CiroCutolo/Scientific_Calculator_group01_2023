@@ -68,7 +68,7 @@ public class ScientificCalculatorTest {
         result03 = new ComplexNumber(-37, 49);
         result04 = new ComplexNumber(-0.08, 0.14);
         result05 = new ComplexNumber(0.08, -0.14);
-        result06 = new ComplexNumber(0.347, -0.202);
+        result06 = new ComplexNumber(0.35, -0.2);
                 
     }
     

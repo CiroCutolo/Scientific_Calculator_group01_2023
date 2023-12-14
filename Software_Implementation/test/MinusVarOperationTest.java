@@ -91,7 +91,7 @@ public class MinusVarOperationTest {
         stack.push(number0);
         SyntaxErrorException thrown = assertThrows(
             SyntaxErrorException.class,
-            () -> minusVariable.execute(variable, stack , 'a'), "SYNTAX ERROR");
+            () -> minusVariable.execute(variable, stack , 'z'), "SYNTAX ERROR");
     }
     //gestisco il caso in cui all'interno dello stack non ci sia un numero che permette l'esecuzione della sottrazione con la variabile.
     @Test
