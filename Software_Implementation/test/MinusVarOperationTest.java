@@ -19,7 +19,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author giuli
+ * @author Claudia Carucci
  */
 public class MinusVarOperationTest {
     private static MinusVarOperation minusVariable;

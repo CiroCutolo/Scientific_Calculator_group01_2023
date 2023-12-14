@@ -16,7 +16,7 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 
 /**
  *
- * @author giuli
+ * @author Claudia Carucci
  */
 public class OverOperationTest {
     private static OverOperation over;
