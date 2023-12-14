@@ -14,37 +14,39 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  * @author Gaetano Frasca
  */
 
- /**
- * La classe definisce ed implementa l'operazione matematica di moltiplicazione esguita
+/**
+ * La classe definisce ed implementa l'operazione matematica di moltiplicazione
+ * esguita
  * su due numeri complessi presenti nello stack.
  */
-public class MultiplicationOperation extends MathOperation{
-    
-    public MultiplicationOperation(){
+public class MultiplicationOperation extends MathOperation {
+
+    public MultiplicationOperation() {
         super(2);
     }
-    
+
     /**
      * @descrizione Esegue l'operazione matematica di moltiplicazione sugli
      *              ultimi due elementi inseriti nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
-	 * 								abbastanza elementi per eseguire il comando.
+     * @throws StackErrorException Eccezione lanciata se lo stack non contiene
+     *                             abbastanza
+     *                             abbastanza elementi per eseguire il comando.
      */
     @Override
-    public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
-        
-        if(!super.minOperandsToOperate(stack.size()))
+    public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
+
+        if (!super.minOperandsToOperate(stack.size()))
             throw new StackErrorException();
-        
+
         ComplexNumber num1 = stack.pop();
         ComplexNumber num2 = stack.pop();
-        
+
         ComplexNumber result = new ComplexNumber(
-                num1.getA() * num2.getA() - num1.getB() * num2.getB() ,
-                num1.getA() * num2.getB() + num2.getA() * num1.getB()   );
-        
+                num1.getA() * num2.getA() - num1.getB() * num2.getB(),
+                num1.getA() * num2.getB() + num2.getA() * num1.getB());
+
         stack.push(result);
     }
-    
+
 }

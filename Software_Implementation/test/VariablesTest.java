@@ -22,9 +22,9 @@ import scientificcalculator_group01.mathoperations.SumOperation;
  * @author Ciro Cutolo
  */
 public class VariablesTest {
-    
+
     private static Variables variable;
-    
+
     private static ComplexNumber number0;
     private static ComplexNumber number1;
     private static ComplexNumber number2;
@@ -32,32 +32,32 @@ public class VariablesTest {
     private static ComplexNumber number4;
     private static ComplexNumber number5;
     private static ComplexNumber number6;
-    
+
     public VariablesTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
         variable = new Variables();
-        
-        number0 = new ComplexNumber(0,0);
-        number1 = new ComplexNumber(5,2);
-        number2 = new ComplexNumber(-4,-9);
-        number3 = new ComplexNumber(2,-5);
-        number4 = new ComplexNumber(-7,6);
-        number5 = new ComplexNumber(4,0);
-        number6 = new ComplexNumber(0,9);
-        
+
+        number0 = new ComplexNumber(0, 0);
+        number1 = new ComplexNumber(5, 2);
+        number2 = new ComplexNumber(-4, -9);
+        number3 = new ComplexNumber(2, -5);
+        number4 = new ComplexNumber(-7, 6);
+        number5 = new ComplexNumber(4, 0);
+        number6 = new ComplexNumber(0, 9);
+
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
@@ -67,7 +67,7 @@ public class VariablesTest {
      */
     @Test
     public void testGetAndSetVariable() {
-        
+
         variable.setVariable('a', number0);
         variable.setVariable('b', number1);
         variable.setVariable('c', number2);
@@ -121,8 +121,7 @@ public class VariablesTest {
         assertEquals(number2, variable.getVariable('x'));
         assertEquals(number3, variable.getVariable('y'));
         assertEquals(number4, variable.getVariable('z'));
-        
+
     }
 
-    
 }

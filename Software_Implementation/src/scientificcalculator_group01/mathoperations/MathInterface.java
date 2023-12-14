@@ -16,11 +16,13 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
  * @author Gaetano Frasca
  */
 
-/** 
- * Questa interfaccia dichiara un singolo metodo per eseguire una generica operazione
+/**
+ * Questa interfaccia dichiara un singolo metodo per eseguire una generica
+ * operazione
  * matematica sugli elementi dello stack.
  */
 public interface MathInterface {
 
-    public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException, SyntaxErrorException, MathErrorException;
+    public abstract void execute(Stack<ComplexNumber> stack)
+            throws StackErrorException, SyntaxErrorException, MathErrorException;
 }

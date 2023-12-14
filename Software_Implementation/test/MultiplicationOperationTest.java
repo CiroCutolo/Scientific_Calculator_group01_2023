@@ -16,7 +16,6 @@ import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.StackErrorException;
 import scientificcalculator_group01.mathoperations.MultiplicationOperation;
 
-
 /**
  *
  * @author Claudia Carucci
@@ -24,8 +23,8 @@ import scientificcalculator_group01.mathoperations.MultiplicationOperation;
 public class MultiplicationOperationTest {
     private static MultiplicationOperation multiplication;
     private static Stack<ComplexNumber> stack;
-    
-    //numeri utilizzati per il test 
+
+    // numeri utilizzati per il test
     private static ComplexNumber number0;
     private static ComplexNumber number1;
     private static ComplexNumber number2;
@@ -33,8 +32,8 @@ public class MultiplicationOperationTest {
     private static ComplexNumber number4;
     private static ComplexNumber number5;
     private static ComplexNumber number6;
-    
-    //risultati attesi
+
+    // risultati attesi
     private static ComplexNumber result00;
     private static ComplexNumber result01;
     private static ComplexNumber result02;
@@ -63,77 +62,75 @@ public class MultiplicationOperationTest {
     private static ComplexNumber result55;
     private static ComplexNumber result56;
     private static ComplexNumber result66;
-    
-    
-    
-    
+
     public MultiplicationOperationTest() {
-        
+
     }
+
     @BeforeAll
     public static void initStack() {
-       multiplication = new MultiplicationOperation();
+        multiplication = new MultiplicationOperation();
         stack = new Stack<ComplexNumber>();
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
-        //assegno ai numeri complessi dei valori
-        number0 = new ComplexNumber(0,0);
-        number1 = new ComplexNumber(5,2);
-        number2 = new ComplexNumber(-4,-9);
-        number3 = new ComplexNumber(2,-5);
-        number4 = new ComplexNumber(-7,6);
-        number5 = new ComplexNumber(4,0);
-        number6 = new ComplexNumber(0,9);
-        
-        //assegno i risultati attesi delle varie combinazioni di numeri
-        result00 = new ComplexNumber(0,0);
-        result01 = new ComplexNumber(0,0);
-        result02 = new ComplexNumber(0,0);
-        result03 = new ComplexNumber(0,0);
-        result04 = new ComplexNumber(0,0);
-        result05 = new ComplexNumber(0,0);
-        result06 = new ComplexNumber(0,0);
-        
-        result11 = new ComplexNumber(21,20);
-        result12 = new ComplexNumber(-2,-53);
-        result13 = new ComplexNumber(20,-21);
-        result14 = new ComplexNumber(-47,16);
-        result15 = new ComplexNumber(20,8);
-        result16 = new ComplexNumber(-18,45);
-        
-        result22 = new ComplexNumber(-65,72);
-        result23 = new ComplexNumber(-53,2);
-        result24 = new ComplexNumber(82,39);
-        result25 = new ComplexNumber(-16,-36);
-        result26 = new ComplexNumber(81,-36);
-        
-        result33 = new ComplexNumber(-21,-20);
-        result34 = new ComplexNumber(16,47);
-        result35 = new ComplexNumber(8,-20);
-        result36 = new ComplexNumber(45,18);
-        
-        result44 = new ComplexNumber(13,-84);
-        result45 = new ComplexNumber(-28,24);
-        result46 = new ComplexNumber(-54,-63);
-        
-        result55 = new ComplexNumber(16,0);
-        result56 = new ComplexNumber(0,36);
-        
-        result66 = new ComplexNumber(-81,0);
-           
+        // assegno ai numeri complessi dei valori
+        number0 = new ComplexNumber(0, 0);
+        number1 = new ComplexNumber(5, 2);
+        number2 = new ComplexNumber(-4, -9);
+        number3 = new ComplexNumber(2, -5);
+        number4 = new ComplexNumber(-7, 6);
+        number5 = new ComplexNumber(4, 0);
+        number6 = new ComplexNumber(0, 9);
+
+        // assegno i risultati attesi delle varie combinazioni di numeri
+        result00 = new ComplexNumber(0, 0);
+        result01 = new ComplexNumber(0, 0);
+        result02 = new ComplexNumber(0, 0);
+        result03 = new ComplexNumber(0, 0);
+        result04 = new ComplexNumber(0, 0);
+        result05 = new ComplexNumber(0, 0);
+        result06 = new ComplexNumber(0, 0);
+
+        result11 = new ComplexNumber(21, 20);
+        result12 = new ComplexNumber(-2, -53);
+        result13 = new ComplexNumber(20, -21);
+        result14 = new ComplexNumber(-47, 16);
+        result15 = new ComplexNumber(20, 8);
+        result16 = new ComplexNumber(-18, 45);
+
+        result22 = new ComplexNumber(-65, 72);
+        result23 = new ComplexNumber(-53, 2);
+        result24 = new ComplexNumber(82, 39);
+        result25 = new ComplexNumber(-16, -36);
+        result26 = new ComplexNumber(81, -36);
+
+        result33 = new ComplexNumber(-21, -20);
+        result34 = new ComplexNumber(16, 47);
+        result35 = new ComplexNumber(8, -20);
+        result36 = new ComplexNumber(45, 18);
+
+        result44 = new ComplexNumber(13, -84);
+        result45 = new ComplexNumber(-28, 24);
+        result46 = new ComplexNumber(-54, -63);
+
+        result55 = new ComplexNumber(16, 0);
+        result56 = new ComplexNumber(0, 36);
+
+        result66 = new ComplexNumber(-81, 0);
+
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
-        
+
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
@@ -141,20 +138,24 @@ public class MultiplicationOperationTest {
     /**
      * Test of execute method, of class MultiplicationOperation.
      */
-    //gestisco il caso in cui è presente un unico elemento nello stack ed eseguo la moltiplicazione per controllare che l'eccezione venga lanciata.
+    // gestisco il caso in cui è presente un unico elemento nello stack ed eseguo la
+    // moltiplicazione per controllare che l'eccezione venga lanciata.
     @Test
-    public void testStackErrorExecute() throws StackErrorException{
+    public void testStackErrorExecute() throws StackErrorException {
         stack.clear();
         stack.push(number0);
         StackErrorException thrown = assertThrows(
-            StackErrorException.class,
-            () -> multiplication.execute(stack), "STACK ERROR");
+                StackErrorException.class,
+                () -> multiplication.execute(stack), "STACK ERROR");
     }
-    
+
     @Test
     public void testExecute() throws Exception {
-        //eseguo una serie di moltiplicazioni senza sollevare eccezioni e successivamente confronto la parte reale del risultato atteso con la parte reale del risultato
-        //calcolato mentre la parte complessa del risultato atteso con la parte complessa del risultato calcolato.
+        // eseguo una serie di moltiplicazioni senza sollevare eccezioni e
+        // successivamente confronto la parte reale del risultato atteso con la parte
+        // reale del risultato
+        // calcolato mentre la parte complessa del risultato atteso con la parte
+        // complessa del risultato calcolato.
         stack.clear();
         stack.push(number0);
         stack.push(number0);
@@ -187,7 +188,7 @@ public class MultiplicationOperationTest {
         stack.push(number0);
         stack.push(number4);
         multiplication.execute(stack);
-        assertEquals(result04.getA(), stack.peek().getA(),1e-15);
+        assertEquals(result04.getA(), stack.peek().getA(), 1e-15);
         assertEquals(result04.getB(), stack.peek().getB());
 
         stack.clear();
@@ -273,7 +274,7 @@ public class MultiplicationOperationTest {
         multiplication.execute(stack);
         assertEquals(result25.getA(), stack.peek().getA());
         assertEquals(result25.getB(), stack.peek().getB());
-        
+
         stack.clear();
         stack.push(number2);
         stack.push(number6);
@@ -301,14 +302,14 @@ public class MultiplicationOperationTest {
         multiplication.execute(stack);
         assertEquals(result35.getA(), stack.peek().getA());
         assertEquals(result35.getB(), stack.peek().getB());
-        
+
         stack.clear();
         stack.push(number3);
         stack.push(number6);
         multiplication.execute(stack);
         assertEquals(result36.getA(), stack.peek().getA());
         assertEquals(result36.getB(), stack.peek().getB());
-        
+
         stack.clear();
         stack.push(number4);
         stack.push(number4);
@@ -351,5 +352,5 @@ public class MultiplicationOperationTest {
         assertEquals(result66.getA(), stack.peek().getA());
         assertEquals(result66.getB(), stack.peek().getB());
     }
-    
+
 }

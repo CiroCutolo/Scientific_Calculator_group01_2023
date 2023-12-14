@@ -23,17 +23,17 @@ import scientificcalculator_group01.mathoperations.DifferenceOperation;
 public class DifferenceOperationTest {
     private static DifferenceOperation difference;
     private static Stack<ComplexNumber> stack;
-    
-    //numeri utilizzati per testare le operazioni
-    private static ComplexNumber number0;   // numero con entrambe le parti nulle
-    private static ComplexNumber number1;   // numero con entrambe le parti negative
-    private static ComplexNumber number2;   // numero con entrambe le parti positive
-    private static ComplexNumber number3;   // numero con parte reale negativa ed immaginaria positiva
-    private static ComplexNumber number4;   // numero con parte reale positiva ed immaginaria negativa
-    private static ComplexNumber number5;   // numero con parte immaginaria nulla
-    private static ComplexNumber number6;   // numero con parte reale nulla
-    
-    //risultati attesi per i test delle operazioni
+
+    // numeri utilizzati per testare le operazioni
+    private static ComplexNumber number0; // numero con entrambe le parti nulle
+    private static ComplexNumber number1; // numero con entrambe le parti negative
+    private static ComplexNumber number2; // numero con entrambe le parti positive
+    private static ComplexNumber number3; // numero con parte reale negativa ed immaginaria positiva
+    private static ComplexNumber number4; // numero con parte reale positiva ed immaginaria negativa
+    private static ComplexNumber number5; // numero con parte immaginaria nulla
+    private static ComplexNumber number6; // numero con parte reale nulla
+
+    // risultati attesi per i test delle operazioni
     private static ComplexNumber result00; // risultato per number 0 e 1
     private static ComplexNumber result01; // risultato per number 0 e 1
     private static ComplexNumber result02; // risultato per number 0 e 2
@@ -83,23 +83,23 @@ public class DifferenceOperationTest {
     private static ComplexNumber result54; // risultato per number 5 e 4
     private static ComplexNumber result64; // risultato per number 6 e 4
     private static ComplexNumber result65; // risultato per number 6 e 5
-    
+
     public DifferenceOperationTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
         difference = new DifferenceOperation();
         stack = new Stack<>();
-        
-        number0 = new ComplexNumber(0,0);
-        number1 = new ComplexNumber(5,2);
-        number2 = new ComplexNumber(-4,-9);
-        number3 = new ComplexNumber(2,-5);
-        number4 = new ComplexNumber(-7,6);
-        number5 = new ComplexNumber(4,0);
-        number6 = new ComplexNumber(0,9);
-        
+
+        number0 = new ComplexNumber(0, 0);
+        number1 = new ComplexNumber(5, 2);
+        number2 = new ComplexNumber(-4, -9);
+        number3 = new ComplexNumber(2, -5);
+        number4 = new ComplexNumber(-7, 6);
+        number5 = new ComplexNumber(4, 0);
+        number6 = new ComplexNumber(0, 9);
+
         result00 = new ComplexNumber(0, 0);
         result01 = new ComplexNumber(-5, -2);
         result02 = new ComplexNumber(4, 9);
@@ -133,7 +133,7 @@ public class DifferenceOperationTest {
         result30 = new ComplexNumber(2, -5);
         result40 = new ComplexNumber(-7, 6);
         result50 = new ComplexNumber(4, 0);
-        result60 = new ComplexNumber(0,9);
+        result60 = new ComplexNumber(0, 9);
         result21 = new ComplexNumber(-9, -11);
         result31 = new ComplexNumber(-3, -7);
         result41 = new ComplexNumber(-12, 4);
@@ -150,36 +150,35 @@ public class DifferenceOperationTest {
         result64 = new ComplexNumber(7, 3);
         result65 = new ComplexNumber(-4, 9);
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
-        
-        
+
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
-    
+
     @Test
-    public void testStackErrorExecute() throws StackErrorException{
+    public void testStackErrorExecute() throws StackErrorException {
         stack.clear();
         stack.push(number0);
         StackErrorException thrown = assertThrows(StackErrorException.class,
-                ()->difference.execute(stack), "STACK ERROR");
+                () -> difference.execute(stack), "STACK ERROR");
     }
-    
+
     /**
      * Test of execute method, of class DifferenceOperation.
      */
     @Test
     public void testExecute() throws StackErrorException {
         // TODO review the generated test code and remove the default call to fail.
-        
+
         stack.clear();
         stack.push(number0);
         stack.push(number0);
@@ -494,7 +493,7 @@ public class DifferenceOperationTest {
         difference.execute(stack);
         assertEquals(result53.getA(), stack.peek().getA());
         assertEquals(result53.getB(), stack.peek().getB());
-        
+
         stack.clear();
         stack.push(number6);
         stack.push(number3);
@@ -522,9 +521,7 @@ public class DifferenceOperationTest {
         difference.execute(stack);
         assertEquals(result65.getA(), stack.peek().getA());
         assertEquals(result65.getB(), stack.peek().getB());
-        
-        
-        
+
     }
-    
+
 }

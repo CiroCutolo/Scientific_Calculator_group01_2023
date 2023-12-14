@@ -15,13 +15,13 @@ import javafx.stage.Stage;
  * 
  */
 public class ScentificCalculator_Group01 extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("ScienticCalculator_Group01.fxml"));
-        
-        Scene scene = new Scene(root,940,722);
-        
+
+        Scene scene = new Scene(root, 940, 722);
+
         stage.setTitle("My Scientific Calculator");
         stage.setScene(scene);
         stage.show();
@@ -33,5 +33,5 @@ public class ScentificCalculator_Group01 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

@@ -22,45 +22,46 @@ public class DupOperationTest {
     private static ComplexNumber number0;
     private static ComplexNumber number1;
     private static ComplexNumber number2;
-    
+
     public DupOperationTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
         dup = new DupOperation();
         stack = new Stack<>();
-        
-        number0 = new ComplexNumber(0,0);
-        number1 = new ComplexNumber(5,2);
-        number2 = new ComplexNumber(-4,-9);
+
+        number0 = new ComplexNumber(0, 0);
+        number1 = new ComplexNumber(5, 2);
+        number2 = new ComplexNumber(-4, -9);
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
 
     /**
      * Test of execute method, of class DupOperation.
+     * 
      * @throws scientificcalculator_group01.exceptions.StackErrorException
      */
-    
+
     @Test
     public void testStackErrorExecute() throws StackErrorException {
         stack.clear();
         StackErrorException thrown = assertThrows(
                 StackErrorException.class,
-                ()->dup.execute(stack), "STACK ERROR");
+                () -> dup.execute(stack), "STACK ERROR");
     }
-    
+
     @Test
     public void testExecute() throws Exception {
         stack.push(number0);
@@ -70,5 +71,5 @@ public class DupOperationTest {
         assertEquals(number2, stack.pop());
         assertEquals(number2, stack.pop());
     }
-    
+
 }

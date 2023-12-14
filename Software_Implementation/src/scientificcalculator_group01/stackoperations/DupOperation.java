@@ -13,27 +13,28 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 /**
  *
  * @author Ciro Cutolo
- */ 
- /** 
+ */
+/**
  * La classe definisce ed implementa il comando "dup", che
  * consente di duplicare l'ultimo elemento inserito nello stack.
  */
-public class DupOperation extends StackOperation{
-    public DupOperation(){
+public class DupOperation extends StackOperation {
+    public DupOperation() {
         super(1);
     }
 
     /**
      * @descrizione Inserisce nello stack una copia dell'ultimo elemento inserito.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-	 * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
-	 * 								abbastanza elementi per eseguire il comando.
-    */
+     * @throws StackErrorException Eccezione lanciata se lo stack non contiene
+     *                             abbastanza
+     *                             abbastanza elementi per eseguire il comando.
+     */
     @Override
-    public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
-        if(super.minOperandsToOperate(stack.size())){
+    public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
+        if (super.minOperandsToOperate(stack.size())) {
             stack.push(stack.peek());
-        }else{
+        } else {
             throw new StackErrorException();
         }
     }

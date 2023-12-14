@@ -10,10 +10,10 @@ package scientificcalculator_group01.exceptions;
  * @author Claudia Carucci
  */
 
- /**
-  * Questa eccezione viene lanciata in caso di errori 
-  * riguardanti la correttezza delle operazioni matematiche
-  */
+/**
+ * Questa eccezione viene lanciata in caso di errori
+ * riguardanti la correttezza delle operazioni matematiche
+ */
 public class MathErrorException extends Exception {
 
     /**
@@ -23,7 +23,7 @@ public class MathErrorException extends Exception {
     }
 
     /**
-     * Costruttore sovraccarico che consente di 
+     * Costruttore sovraccarico che consente di
      * specificare un messaggio di errore.
      *
      * @param msg messaggio di errore.

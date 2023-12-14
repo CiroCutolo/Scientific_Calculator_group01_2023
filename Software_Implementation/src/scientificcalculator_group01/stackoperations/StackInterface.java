@@ -14,8 +14,9 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  * @author Gaetano Frasca
  */
 
-/** 
- * Questa interfaccia dichiara un singolo metodo per eseguire una generica operazione
+/**
+ * Questa interfaccia dichiara un singolo metodo per eseguire una generica
+ * operazione
  * di manipolazione dello stack.
  */
 public interface StackInterface {

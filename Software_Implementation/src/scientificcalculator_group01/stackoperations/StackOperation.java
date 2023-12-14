@@ -18,37 +18,39 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  * La classe rappresenta un operazione di manipolazione dello stack
  * eseguibile sugli elementi contenuti in esso.
  */
-public abstract class StackOperation implements StackInterface{
+public abstract class StackOperation implements StackInterface {
 
-    /**Numero di operandi necessari per eseguire l'operazione sullo stack */
+    /** Numero di operandi necessari per eseguire l'operazione sullo stack */
     private final int numOperands;
-    
-    /**Costruttore di default*/
-    public StackOperation(){
+
+    /** Costruttore di default */
+    public StackOperation() {
         numOperands = 0;
     }
-    
-    /**Costruttore sovraccarico
+
+    /**
+     * Costruttore sovraccarico
+     * 
      * @param numOperands Numero minimo di operandi utili per eseguire l'operazione.
-     */    
-    public StackOperation(int numOperands){
+     */
+    public StackOperation(int numOperands) {
         this.numOperands = numOperands;
     }
-    
+
     @Override
     public abstract void execute(Stack<ComplexNumber> stack) throws StackErrorException;
 
     /**
      * Verifica se lo stack contiene abbastanza elementi, affinchè sia possibile
-     *        eseguire l'operazione.
+     * eseguire l'operazione.
+     * 
      * @param size Numero di elementi presenti nello stack.
      * @return `true` se size è maggiore o uguale del numero di operandi necessari;
      *         `false` altrimenti.
      */
-    protected boolean minOperandsToOperate(int size){
-        return size >= numOperands; 
-        
+    protected boolean minOperandsToOperate(int size) {
+        return size >= numOperands;
+
     }
-    
-    
+
 }

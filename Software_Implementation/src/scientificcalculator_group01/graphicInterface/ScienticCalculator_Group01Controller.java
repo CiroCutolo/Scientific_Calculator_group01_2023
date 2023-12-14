@@ -23,7 +23,7 @@ import scientificcalculator_group01.exceptions.SyntaxErrorException;
  * 
  */
 public class ScienticCalculator_Group01Controller implements Initializable {
-    
+
     @FXML
     private StackPane lettersStackPane;
     @FXML
@@ -148,33 +148,30 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private Button swap;
     @FXML
     private Button enter;
-    
+
     private ScientificCalculator calculator;
-   
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //rendo invisibile il pannello delle lettere
+        // rendo invisibile il pannello delle lettere
         LA.setVisible(false);
         binding();
         calculator = new ScientificCalculator();
     }
-    
-    public void binding(){
+
+    public void binding() {
         LA.setVisible(false);
-        
+
         numbersToLetters.setOnAction((event) -> {
             NA.setVisible(false);
-            LA.setVisible(true);  
+            LA.setVisible(true);
         });
-        
+
         lettersToNumbers.setOnAction((event) -> {
             NA.setVisible(true);
-            LA.setVisible(false); 
+            LA.setVisible(false);
         });
-        
-        
-        
+
     }
 
     @FXML
@@ -233,16 +230,16 @@ public class ScienticCalculator_Group01Controller implements Initializable {
 
     @FXML
     private void writeJ(ActionEvent event) {
-       inputNum.setText(inputNum.getText() + j.getText());
+        inputNum.setText(inputNum.getText() + j.getText());
         inputLet.setText(inputLet.getText() + j.getText());
     }
-    
+
     @FXML
     private void writeK(ActionEvent event) {
         inputNum.setText(inputNum.getText() + k.getText());
         inputLet.setText(inputLet.getText() + k.getText());
     }
-    
+
     @FXML
     private void writeL(ActionEvent event) {
         inputNum.setText(inputNum.getText() + l.getText());
@@ -355,7 +352,7 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     private void make1(ActionEvent event) {
         inputNum.setText(inputNum.getText() + one.getText());
         inputLet.setText(inputLet.getText() + one.getText());
-        
+
     }
 
     @FXML
@@ -461,7 +458,7 @@ public class ScienticCalculator_Group01Controller implements Initializable {
     }
 
     @FXML
-    private void writeComplex(ActionEvent event){
+    private void writeComplex(ActionEvent event) {
         inputNum.setText(inputNum.getText() + complex.getText());
         inputLet.setText(inputLet.getText() + complex.getText());
     }
@@ -496,27 +493,27 @@ public class ScienticCalculator_Group01Controller implements Initializable {
             calculator.calculate(inputNum.getText());
             inputNum.setText("");
             inputLet.setText("");
-        } catch (MathErrorException e){
+        } catch (MathErrorException e) {
             inputNum.setText("MATH ERROR");
             inputLet.setText("MATH ERROR");
-        } catch (StackErrorException e){
+        } catch (StackErrorException e) {
             inputNum.setText("STACK ERROR");
             inputLet.setText("STACK ERROR");
-        } catch (SyntaxErrorException e){
+        } catch (SyntaxErrorException e) {
             inputNum.setText("SYNTAX ERROR");
             inputLet.setText("SYNTAX ERROR");
-        }finally{
+        } finally {
             String s = calculator.getTop12Numbers().toString();
 
-            int pos1= s.indexOf("[");
+            int pos1 = s.indexOf("[");
             int pos2 = s.indexOf("]");
 
-            String sub = s.substring(pos1+1, pos2);
+            String sub = s.substring(pos1 + 1, pos2);
 
             stackn.setText(sub);
             stackl.setText(sub);
         }
-        
+
     }
 
 }

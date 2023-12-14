@@ -10,64 +10,66 @@ import java.util.Stack;
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.exceptions.StackErrorException;
 
-
 /**
  *
  * @author Claudia Carucci
  */
- 
- /** 
- * La classe definisce ed implementa l'operazione matematica di estrazione di radice
+
+/**
+ * La classe definisce ed implementa l'operazione matematica di estrazione di
+ * radice
  * quadrata eseguita su due numeri complessi presenti nello stack.
  */
-    public class SqrtOperation extends MathOperation{
-    public SqrtOperation(){
+public class SqrtOperation extends MathOperation {
+    public SqrtOperation() {
         super(1);
     }
+
     /**
      * @descrizione Esegue l'operazione matematica di radice quadrata
      *              sull'ultimo elemento inserito nello stack.
      * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-     * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
-	 * 								abbastanza elementi per eseguire il comando.
+     * @throws StackErrorException Eccezione lanciata se lo stack non contiene
+     *                             abbastanza
+     *                             abbastanza elementi per eseguire il comando.
      */
     @Override
     public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
-        if(!super.minOperandsToOperate(stack.size())){
+        if (!super.minOperandsToOperate(stack.size())) {
             throw new StackErrorException();
         }
 
         ComplexNumber num = stack.pop();
         double mod = 0;
-        if(num.getA()!= 0 || num.getB()!= 0){
-            mod = Math.sqrt(num.getA()*num.getA()+num.getB()*num.getB());
-        }else{
+        if (num.getA() != 0 || num.getB() != 0) {
+            mod = Math.sqrt(num.getA() * num.getA() + num.getB() * num.getB());
+        } else {
             mod = 0;
         }
 
-        if(num.getA() == 0 && num.getB() == 0){
+        if (num.getA() == 0 && num.getB() == 0) {
             stack.push(new ComplexNumber(0));
         }
 
-        if(num.getA() != 0 && num.getB() == 0){
-            if(num.getA() > 0){
+        if (num.getA() != 0 && num.getB() == 0) {
+            if (num.getA() > 0) {
                 mod = Math.sqrt(num.getA());
-                mod = (Math.round(mod * 100.0)/100.0);
+                mod = (Math.round(mod * 100.0) / 100.0);
                 stack.push(new ComplexNumber(mod));
 
-            }else{
+            } else {
                 mod = Math.abs(num.getA());
-                stack.push(new ComplexNumber(0,Math.round(Math.sqrt(mod) * 100.0)/100.0));
+                stack.push(new ComplexNumber(0, Math.round(Math.sqrt(mod) * 100.0) / 100.0));
             }
         }
-        
-        if(num.getB()!=0){
+
+        if (num.getB() != 0) {
             double r = Math.sqrt(mod);
-            double theta= (Math.atan2(num.getB(),num.getA()))/2;
-            stack.push(new ComplexNumber(Math.round(r*Math.cos(theta) * 100.0)/100.0, Math.round(r*Math.sin(theta) * 100.0)/100.0));
+            double theta = (Math.atan2(num.getB(), num.getA())) / 2;
+            stack.push(new ComplexNumber(Math.round(r * Math.cos(theta) * 100.0) / 100.0,
+                    Math.round(r * Math.sin(theta) * 100.0) / 100.0));
         }
 
     }
 
-    
 }

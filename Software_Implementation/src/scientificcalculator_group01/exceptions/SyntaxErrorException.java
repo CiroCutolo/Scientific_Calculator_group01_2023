@@ -12,14 +12,14 @@ package scientificcalculator_group01.exceptions;
 public class SyntaxErrorException extends Exception {
 
     /**
-     * Questa eccezione viene lanciata utilizzare in caso di errori 
+     * Questa eccezione viene lanciata utilizzare in caso di errori
      * riguardanti il formato dell’operazione o dell'input.
      */
     public SyntaxErrorException() {
     }
 
     /**
-     * Costruttore sovraccarico che consente di 
+     * Costruttore sovraccarico che consente di
      * specificare un messaggio di errore.
      *
      * @param msg messaggio di errore.

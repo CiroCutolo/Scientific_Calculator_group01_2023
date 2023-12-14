@@ -13,30 +13,31 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  *
  * @author Gaetano Frasca
  */
- 
- /** 
+
+/**
  * La classe definisce ed implementa il comando "over", che
  * consente di duplicare il penultimo elemento inserito.
  */
-public class OverOperation extends StackOperation{
+public class OverOperation extends StackOperation {
 
-	public OverOperation(){
+	public OverOperation() {
 		super(2);
 	}
 
 	/**
 	 * @descrizione Inserisce nello stack una copia del penultimo elemento inserito.
 	 * @param stack Stack su cui si basa il funzionamento della calcolatrice.
-	 * @throws StackErrorException Eccezione lanciata se lo stack non contiene abbastanza
-	 * 								abbastanza elementi per eseguire il comando.
-	 */	
+	 * @throws StackErrorException Eccezione lanciata se lo stack non contiene
+	 *                             abbastanza
+	 *                             abbastanza elementi per eseguire il comando.
+	 */
 	@Override
-	public void execute(Stack<ComplexNumber> stack) throws StackErrorException{
-		if(!super.minOperandsToOperate(stack.size()))
+	public void execute(Stack<ComplexNumber> stack) throws StackErrorException {
+		if (!super.minOperandsToOperate(stack.size()))
 			throw new StackErrorException();
-		
-		stack.push(stack.elementAt(stack.size() - 2 ));
+
+		stack.push(stack.elementAt(stack.size() - 2));
 
 	}
-    
+
 }
