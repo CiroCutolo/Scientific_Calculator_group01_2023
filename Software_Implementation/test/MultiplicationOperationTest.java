@@ -14,6 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.StackErrorException;
+import scientificcalculator_group01.mathoperations.MultiplicationOperation;
+
 
 /**
  *
