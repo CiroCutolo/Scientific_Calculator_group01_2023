@@ -20,8 +20,10 @@ import scientificcalculator_group01.exceptions.StackErrorException;
  * La classe definisce ed implementa l'operazione matematica di estrazione di radice
  * quadrata eseguita su due numeri complessi presenti nello stack.
  */
-public class SqrtOperation extends MathOperation{
-
+    public class SqrtOperation extends MathOperation{
+    public SqrtOperation(){
+        super(1);
+    }
     /**
      * @descrizione Esegue l'operazione matematica di radice quadrata
      *              sull'ultimo elemento inserito nello stack.
@@ -50,7 +52,7 @@ public class SqrtOperation extends MathOperation{
         if(num.getA() != 0 && num.getB() == 0){
             if(num.getA() > 0){
                 mod = Math.sqrt(num.getA());
-                mod = (Math.round(mod * 1000.0)/1000.0);
+                mod = (Math.round(mod * 100.0)/100.0);
                 stack.push(new ComplexNumber(mod));
 
             }else{
