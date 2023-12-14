@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator_group01.common_resources;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -12,16 +12,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import scientificcalculator_group01.mathoperations.InversionOperation;
+
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.common_resources.Variables;
 import scientificcalculator_group01.mathoperations.SumOperation;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  */
 public class VariablesTest {
     
-    private static InversionOperation inversion;
     private static Variables variable;
     
     private static ComplexNumber number0;

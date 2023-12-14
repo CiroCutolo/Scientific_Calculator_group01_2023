@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package scientificcalculator_group01.variablesoperations;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -16,6 +16,7 @@ import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.common_resources.Variables;
 import scientificcalculator_group01.exceptions.StackErrorException;
 import scientificcalculator_group01.exceptions.SyntaxErrorException;
+import scientificcalculator_group01.variablesoperations.PlusVarOperation;
 
 /**
  *

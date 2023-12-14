@@ -23,7 +23,6 @@ import scientificcalculator_group01.mathoperations.MultiplicationOperation;
  */
 public class MultiplicationOperationTest {
     private static MultiplicationOperation multiplication;
-    private static ScientificCalculator calculator;
     private static Stack<ComplexNumber> stack;
     
     //numeri utilizzati per il test 
@@ -74,7 +73,6 @@ public class MultiplicationOperationTest {
     @BeforeAll
     public static void initStack() {
        multiplication = new MultiplicationOperation();
-        calculator = new ScientificCalculator();
         stack = new Stack<ComplexNumber>();
     }
     

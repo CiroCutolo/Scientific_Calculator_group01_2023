@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator_group01.variablesoperations;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -16,11 +16,12 @@ import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.Variables;
 import scientificcalculator_group01.exceptions.StackErrorException;
 import scientificcalculator_group01.exceptions.SyntaxErrorException;
+import scientificcalculator_group01.variablesoperations.GetFromVarOperation;
 
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  */
 public class GetFromVarOperationTest {
     

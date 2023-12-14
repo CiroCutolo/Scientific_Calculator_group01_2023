@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator_group01.common_resources;
+package test;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,19 +13,22 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import scientificcalculator_group01.common_resources.ComplexNumber;
+import scientificcalculator_group01.common_resources.ScientificCalculator;
+import scientificcalculator_group01.common_resources.Variables;
 import scientificcalculator_group01.exceptions.MathErrorException;
 import scientificcalculator_group01.exceptions.StackErrorException;
 import scientificcalculator_group01.exceptions.SyntaxErrorException;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  */
 public class ScientificCalculatorTest {
     
     private static ScientificCalculator calculator;
     private static List<ComplexNumber> list;
-    private static Variables variable;
     
     private static ComplexNumber number0;
     private static ComplexNumber number1;
@@ -41,7 +44,6 @@ public class ScientificCalculatorTest {
     private static ComplexNumber result04;
     private static ComplexNumber result05;
     private static ComplexNumber result06;
-    private static ComplexNumber result07;
     
     
     public ScientificCalculatorTest() {
@@ -52,7 +54,6 @@ public class ScientificCalculatorTest {
         
         calculator = new ScientificCalculator();
         list = new LinkedList<>();
-        variable = new Variables();
         
         number0 = new ComplexNumber(0,0);
         number1 = new ComplexNumber(5,2);
@@ -68,7 +69,6 @@ public class ScientificCalculatorTest {
         result04 = new ComplexNumber(-0.08, 0.14);
         result05 = new ComplexNumber(0.08, -0.14);
         result06 = new ComplexNumber(0.347, -0.202);
-        result07 = new ComplexNumber(-11, -3);
                 
     }
     

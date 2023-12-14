@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scientificcalculator_group01.stackoperations;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -14,11 +14,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.exceptions.StackErrorException;
-import scientificcalculator_group01.mathoperations.InversionOperation;
+import scientificcalculator_group01.stackoperations.DropOperation;
 
 /**
  *
- * @author ciroc
+ * @author Ciro Cutolo
  */
 public class DropOperationTest {
     

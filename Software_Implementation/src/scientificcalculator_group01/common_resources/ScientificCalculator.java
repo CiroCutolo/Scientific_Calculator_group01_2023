@@ -102,9 +102,6 @@ public class ScientificCalculator {
         }
     }
 
-    public Stack<ComplexNumber> getComplexNumberStack() {
-        return complexNumberStack;
-    }
 
     public List<ComplexNumber> getTop12Numbers(){
         if(this.complexNumberStack.size() > 12){

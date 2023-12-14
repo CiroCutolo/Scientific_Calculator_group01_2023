@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package scientificcalculator_group01.mathoperations;
+package test;
 
 import java.util.Stack;
 import org.junit.jupiter.api.AfterEach;
@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import scientificcalculator_group01.common_resources.ComplexNumber;
 import scientificcalculator_group01.common_resources.ScientificCalculator;
 import scientificcalculator_group01.exceptions.StackErrorException;
+import scientificcalculator_group01.mathoperations.DifferenceOperation;
 
 /**
  *
@@ -22,7 +23,6 @@ import scientificcalculator_group01.exceptions.StackErrorException;
 public class DifferenceOperationTest {
     private static DifferenceOperation difference;
     private static Stack<ComplexNumber> stack;
-    private static ScientificCalculator calculator;
     
     //numeri utilizzati per testare le operazioni
     private static ComplexNumber number0;   // numero con entrambe le parti nulle
@@ -89,9 +89,8 @@ public class DifferenceOperationTest {
     
     @BeforeAll
     public static void setUpClass() {
-        calculator = new ScientificCalculator();
         difference = new DifferenceOperation();
-        stack = calculator.getComplexNumberStack();
+        stack = new Stack<>();
         
         number0 = new ComplexNumber(0,0);
         number1 = new ComplexNumber(5,2);
