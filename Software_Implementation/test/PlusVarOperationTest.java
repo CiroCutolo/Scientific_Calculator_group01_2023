@@ -24,7 +24,6 @@ import scientificcalculator_group01.variablesoperations.PlusVarOperation;
  */
 public class PlusVarOperationTest {
     
-    private static ScientificCalculator calculator;
     private static PlusVarOperation plusVarOperation;
     private static Stack<ComplexNumber> stack;
     private static Variables variable;
@@ -47,9 +46,8 @@ public class PlusVarOperationTest {
     
     @BeforeAll
     public static void setUpClass() {
-        calculator = new ScientificCalculator();
         plusVarOperation = new PlusVarOperation();
-        stack = calculator.getComplexNumberStack();
+        stack = new Stack<>();
         variable = new Variables();
         
         number0 = new ComplexNumber(0, 0);

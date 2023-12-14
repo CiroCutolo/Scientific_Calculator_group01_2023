@@ -24,7 +24,6 @@ import scientificcalculator_group01.mathoperations.SqrtOperation;
 public class SqrtOperationTest {
     private static SqrtOperation squareRoot;
     private static Stack<ComplexNumber> stack;
-    private static ScientificCalculator calculator;
     
     //numeri utilizzati per testare le operazioni
     private static ComplexNumber number0;   // numero con entrambe le parti nulle
@@ -49,9 +48,8 @@ public class SqrtOperationTest {
     
     @BeforeAll
     public static void setUpClass() {
-        calculator = new ScientificCalculator();
         squareRoot = new SqrtOperation();
-        stack = calculator.getComplexNumberStack();
+        stack = new Stack<>();
         
         number0 = new ComplexNumber(0,0);
         number1 = new ComplexNumber(5,2);
