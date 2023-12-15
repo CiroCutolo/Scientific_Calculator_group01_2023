@@ -1,5 +1,5 @@
 # Scientific Calculator - Group 01 AH
-Lo scopo del progetto è implementare una calcolatrice scientifica.
+Lo scopo del progetto è implementare una calcolatrice scientifica.<br>
 La calcolatrice permette di eseguire operazioni matematiche con numeri reali e complessi. Supporta l'utilizzo di 26 variabili letterali, una per ogni lettera dell'alfabeto e diversi comandi finalizzati alla manipolazione dei numeri salvati in memoria.
 - - - -
 ## Utilizzo della calcolatrice
